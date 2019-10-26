@@ -32,7 +32,7 @@ const Login = () => {
                     alert("Sorry we couldn't find an account with that email.\n\n Try to register first.")
                 } else {
                     alert('LOGIN SUCCESSFUL');
-                    localStorage.setItem('token', token)
+                    localStorage.setItem('token', token);
                     localStorage.setItem('email', email);
                     localStorage.setItem('firstname', firstname);
                     localStorage.setItem('lastname', lastname);

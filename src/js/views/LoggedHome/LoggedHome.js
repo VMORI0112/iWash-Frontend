@@ -11,16 +11,16 @@ const LoggedHome = () => {
                 <div className="row">
 
                     <div className="col">
-                        <img className="card-img-top" src={washerOpen} alt="washer" />
+                        <img className={styles.available} src={washerOpen} alt="washer" />
                     </div>
                     <div className="col">
-                        <img className="card-img-top" src={washerClose} alt="washer" />
+                        <img className={styles.noavailable} src={washerClose} alt="washer" />
                     </div>
                     <div className="col">
-                        <img className="card-img-top" src={washerOpen} alt="washer" />
+                        <img className={styles.available} src={washerOpen} alt="washer" />
                     </div>
                     <div className="col">
-                        <img className="card-img-top" src={washerClose} alt="washer" />
+                        <img className={styles.noavailable} src={washerClose} alt="washer" />
                     </div>
 
                     

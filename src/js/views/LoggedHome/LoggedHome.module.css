@@ -2,3 +2,9 @@
     margin-top: 80px;
     background-color: #eeeeee;
 }
+.available {
+    width: 100%;
+}
+.noavailable {
+    width: 70%;
+}
