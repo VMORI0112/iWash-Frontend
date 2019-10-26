@@ -8,6 +8,7 @@ import NotFound from './js/components/NotFound/NotFound';
 
 const Home = lazy(() => import('./js/views/Home/Home'));
 const Login = lazy(() => import('./js/views/Login/Login'));
+const Register = lazy(() => import('./js/views/Register/Register'));
 
 function App() {
   const [user, setUser] = useState(null);
@@ -21,8 +22,9 @@ function App() {
         <Suspense fallback={<div>Loading...</div>}>
         <IwashNavBar/>
           <Switch>
-            <Route path="/login" component={Login} />
             <Route exact path="/" component={Home} />
+            <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
             <Route render={() => <NotFound/>} />
           </Switch>
         </Suspense>

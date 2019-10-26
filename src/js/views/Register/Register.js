@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Login.module.css';
+import styles from './Register.module.css';
 
 import coin from '../../../img/coin.png';
 
-const Login = () => {
+const Register = () => {
 
+    const [firstname, setFirstname] = useState('');
+    const [lastname, setLastname] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -13,6 +15,22 @@ const Login = () => {
         <section className={styles.section}>
             
                 <img className={styles.coin} src={coin} alt="coin"/>
+                <br/>
+                <input 
+                    className={styles.inputForm} 
+                    type="text" 
+                    placeholder="First Name"
+                    value={firstname}
+                    onChange={(e) => setFirstname(e.target.value)}
+                />
+                <br/>
+                <input 
+                    className={styles.inputForm} 
+                    type="text" 
+                    placeholder="Last Name"
+                    value={lastname}
+                    onChange={(e) => setLastname(e.target.value)}
+                />
                 <br/>
                 <input 
                     className={styles.inputForm} 
@@ -33,8 +51,8 @@ const Login = () => {
                 <button className={["btn",styles.buttLogin].join(' ')}>Login</button>
                 <br/>
                 <br/>
-                <Link to="/" className={styles.forgotP}>
-                    Forgot password?
+                <Link to="/login" className={styles.forgotP}>
+                    Already have an account? Login here
                 </Link>
            
 
@@ -42,4 +60,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;
