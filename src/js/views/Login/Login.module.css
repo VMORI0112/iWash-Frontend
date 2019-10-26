@@ -1,0 +1,15 @@
+.section {
+    margin-top: 80px;
+    text-align: center;
+}
+.inputForm{
+    font-size: 14pt;
+    outline: none;
+    border-radius: 10px;
+}
+.coin {
+    width: 120px;
+    height: 120px;
+    animation: spin 15s linear infinite;
+}
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

@@ -1,3 +1,10 @@
-body {
-    background-color: #eeeeee;
+body{
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.textOrange {
+    color: #f8b663;
+}
+.textDarkGreen {
+    color: #0b383b;
 }

@@ -1,0 +1,11 @@
+.navBarI {
+    background-color: white;
+}
+.btnGreen {
+    border-color: transparent!important;
+    background-color: #f8b663!important;
+    font-weight: bold;
+}
+.btnGreen:hover {
+    background-color: #f7b057!important;
+}
