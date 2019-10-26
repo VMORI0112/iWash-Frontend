@@ -2,9 +2,11 @@
     background-color: white;
 }
 .btnGreen {
-    border-color: transparent!important;
     background-color: #f8b663!important;
+    border-color: transparent!important;
+    color: #fff!important;
     font-weight: bold;
+    margin-left: 20px;
 }
 .btnGreen:hover {
     background-color: #f7b057!important;

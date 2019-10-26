@@ -17,7 +17,7 @@ const Login = () => {
                 <button className={["btn",styles.buttLogin].join(' ')}>Login</button>
                 <br/>
                 <br/>
-                <Link className={styles.forgotP}>
+                <Link to="/" className={styles.forgotP}>
                     Forgot password?
                 </Link>
            
