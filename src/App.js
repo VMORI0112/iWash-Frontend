@@ -15,7 +15,6 @@ function App() {
 
   const [user, setUser] = useState(null);
   const [Auth, setAuth] = useState(null);
-  console.log(Auth);
 
 
   const providerValue = useMemo(() => ({ user, setUser, Auth, setAuth }), [user, setUser, Auth, setAuth]);
