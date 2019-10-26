@@ -4,7 +4,9 @@ import styles from './Home.module.css';
 const Home = () => {
     return (
         <section className={styles.section}>
-            <h1>Home</h1>
+            <div className="container text-center">
+                <h1>Welcome To iWASH</h1>
+            </div>
         </section>
     );
 };

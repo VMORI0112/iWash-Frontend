@@ -10,7 +10,9 @@ const IwashNavBar = () => {
             <div className="container">
                 <Link className="navbar-brand" to="/">
                     <img src={coin} width="30" height="30" className="d-inline-block align-top" alt="coin"/>
-                    &nbsp;IWASH
+                    &nbsp;
+                    <i className="fas fa-info"></i>
+                    <span className={styles.wash}>WASH</span>
                 </Link>
                 <ul className="nav navbar-nav navbar-right">
                     {/* <li><a href="//">Home</a></li>
