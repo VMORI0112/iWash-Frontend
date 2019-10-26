@@ -16,6 +16,8 @@ function App() {
   const [user, setUser] = useState(null);
   const [Auth, setAuth] = useState(null);
 
+  let tokenAuth = localStorage.getItem('token');
+
 
   const providerValue = useMemo(() => ({ user, setUser, Auth, setAuth }), [user, setUser, Auth, setAuth]);
 
@@ -25,7 +27,7 @@ function App() {
         <Suspense fallback={<div>Loading...</div>}>
         <IwashNavBar/>
           <Switch>
-            {!Auth ? <Route exact path="/" component={Home} /> : <Route exact path="/" component={LoggedHome}/> }
+            {!tokenAuth ? <Route exact path="/" component={Home} /> : <Route exact path="/" component={LoggedHome}/> }
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
             <Route render={() => <NotFound/>} />

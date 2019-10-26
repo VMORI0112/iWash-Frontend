@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import styles from './Navbar.module.css';
 import coin from '../../../img/coin.png';
 import avatar from '../../../img/avatar/avatar.png';
 
 const IwashNavBar = () => {
-    const firstname = localStorage.getItem('firstname');
-    const lastname = localStorage.getItem('lastname');
-    const token = localStorage.getItem('token');
+    
+    let tokenAuth = localStorage.getItem('token');
+    let firstname = localStorage.getItem('firstname');
+    let lastname = localStorage.getItem('lastname');
 
     return (
         <>
@@ -20,7 +22,7 @@ const IwashNavBar = () => {
                     <span className={styles.wash}>WASH</span>
                 </Link>
                 <ul className="nav navbar-nav navbar-right">
-                    {!token && !firstname && !lastname ?
+                    {!tokenAuth ?
                         <li>
                             <Link to="/login" className={["btn", styles.btnGreen].join(' ')}> 
                                 Login
