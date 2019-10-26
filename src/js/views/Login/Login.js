@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Login.module.css';
 
 import coin from '../../../img/coin.png';
@@ -13,10 +14,12 @@ const Login = () => {
                 <br/>
                 <input className={styles.inputForm} type="text" placeholder="Password" />
                 <br/>
-                <button>Login</button>
+                <button className={["btn",styles.buttLogin].join(' ')}>Login</button>
                 <br/>
                 <br/>
-                Forgot password?
+                <Link className={styles.forgotP}>
+                    Forgot password?
+                </Link>
            
 
         </section>
