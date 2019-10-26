@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import coin from '../../../img/coin.png';
 import avatar from '../../../img/avatar/avatar.png';
 
 const IwashNavBar = () => {
-
+    let history = useHistory();
     const firstname = localStorage.getItem('firstname');
     const lastname = localStorage.getItem('lastname');
     const token = localStorage.getItem('token');
@@ -21,9 +21,6 @@ const IwashNavBar = () => {
                     <span className={styles.wash}>WASH</span>
                 </Link>
                 <ul className="nav navbar-nav navbar-right">
-                    {/* <li><a href="//">Home</a></li>
-                    <li><a href="//">Page 1</a></li>
-                    <li><a href="//">Page 2</a></li> */}
                     {!token && !firstname && !lastname ?
                         <li>
                             <Link to="/login" className={["btn", styles.btnGreen].join(' ')}> 
@@ -44,14 +41,13 @@ const IwashNavBar = () => {
                                 </button>
                                 <div className="dropdown-menu dropdown-menu-right">
                                     <Link className="dropdown-item" to="/" >Home</Link>
-                                    <Link className="dropdown-item" to="/newjob" >Post a Job</Link>
-                                    <Link className="dropdown-item" to="/myJob" >My Jobs</Link>
-                                    <Link className="dropdown-item" to="/chat">Chat</Link>
-                                    <Link className="dropdown-item" to="/search">Search Jobs</Link>
+                                    <Link className="dropdown-item" to="/wallet" >Wallet</Link>
+                                    <Link className="dropdown-item" to="/map" >Map</Link>
                                     <button 
                                         className="dropdown-item" 
                                         onClick={async () => {
                                             localStorage.clear();
+                                            history.push('/');
                                         }}
                                     >
                                         LogOut
