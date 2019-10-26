@@ -99,7 +99,7 @@ const Register = () => {
                     className={["btn",styles.buttLogin].join(' ')}
                     onClick={registerFormHandler}
                 >
-                    Login
+                    REGISTER
                 </button>
 
                 <br/>

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import { UserContext } from '../../../UserContext';
 import styles from './Login.module.css';
 
 import coin from '../../../img/coin.png';
@@ -8,11 +9,12 @@ const Login = () => {
     let history = useHistory();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const {setAuth} = useContext(UserContext);
 
     const loginFormHandler = () => {
         let userLoginData = JSON.stringify({
-            email: email,
-            password: password
+            "email": email,
+            "password": password
         });
         fetch('http://0.0.0.0:3000/login', {
             method: 'POST',
@@ -34,10 +36,19 @@ const Login = () => {
                     localStorage.setItem('email', email);
                     localStorage.setItem('firstname', firstname);
                     localStorage.setItem('lastname', lastname);
+                    setAuth({
+                        'token': token,
+                        'email': email,
+                        'firstname': firstname,
+                        'lastname': lastname
+                    })
                     history.push('/');
                 }
             })
-            .catch(error => alert('Error:', error));
+            .catch(error => {
+                alert('Something Went Wrong, Try again');
+                console.log('Error:', error);
+            });
     }
 
     return (

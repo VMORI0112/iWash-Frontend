@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import coin from '../../../img/coin.png';
 import avatar from '../../../img/avatar/avatar.png';
 
 const IwashNavBar = () => {
-    let history = useHistory();
     const firstname = localStorage.getItem('firstname');
     const lastname = localStorage.getItem('lastname');
     const token = localStorage.getItem('token');
@@ -47,7 +46,7 @@ const IwashNavBar = () => {
                                         className="dropdown-item" 
                                         onClick={async () => {
                                             localStorage.clear();
-                                            history.push('/');
+                                            window.location.href = "/";
                                         }}
                                     >
                                         LogOut

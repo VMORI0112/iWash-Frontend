@@ -7,14 +7,18 @@ import IwashNavBar from './js/components/Navbar/Navbar';
 import NotFound from './js/components/NotFound/NotFound';
 
 const Home = lazy(() => import('./js/views/Home/Home'));
+const LoggedHome = lazy(() => import('./js/views/LoggedHome/LoggedHome'));
 const Login = lazy(() => import('./js/views/Login/Login'));
 const Register = lazy(() => import('./js/views/Register/Register'));
 
 function App() {
+
   const [user, setUser] = useState(null);
+  const [Auth, setAuth] = useState(null);
+  console.log(Auth);
 
 
-  const providerValue = useMemo(() => ({ user, setUser }), [user, setUser]);
+  const providerValue = useMemo(() => ({ user, setUser, Auth, setAuth }), [user, setUser, Auth, setAuth]);
 
   return (
     <Router>
@@ -22,7 +26,7 @@ function App() {
         <Suspense fallback={<div>Loading...</div>}>
         <IwashNavBar/>
           <Switch>
-            <Route exact path="/" component={Home} />
+            {!Auth ? <Route exact path="/" component={Home} /> : <Route exact path="/" component={LoggedHome}/> }
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
             <Route render={() => <NotFound/>} />
