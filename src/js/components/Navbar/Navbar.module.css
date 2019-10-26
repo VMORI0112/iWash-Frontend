@@ -14,7 +14,6 @@
 .wash {
     vertical-align: text-top;
 }
-
 .dropBtn {
     background-color: #f8b663;
     border: none;
@@ -23,6 +22,7 @@
     padding: 5px 10px 5px 10px;
     border-radius: 4px;
     margin-left: 20px;
+    font-weight: bold;
 }
 .dropBtn:hover {
     background-color: #f7b057;
@@ -30,4 +30,17 @@
 }
 .dropBtn:focus {
     outline: none;
+}
+.wallet {
+    background-color: #f8b663;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 100px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.wallet:hover {
+    background-color: #f7b057;
+    color: #eeeeee;
+    text-decoration: none;
 }

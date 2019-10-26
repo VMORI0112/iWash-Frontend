@@ -35,7 +35,7 @@ const IwashNavBar = () => {
                         </li>
                     : 
                         <li>
-                            <Link className="badge badge-success" to="/">
+                            <Link className={styles.wallet} to="/">
                                 $ 40
                             </Link>
                             <div className="btn-group">
