@@ -14,3 +14,20 @@
 .wash {
     vertical-align: text-top;
 }
+
+.dropBtn {
+    background-color: #f8b663;
+    border: none;
+    color: #ffffff;
+    outline: none;
+    padding: 5px 10px 5px 10px;
+    border-radius: 4px;
+    margin-left: 20px;
+}
+.dropBtn:hover {
+    background-color: #f7b057;
+    color: #ffffff;
+}
+.dropBtn:focus {
+    outline: none;
+}

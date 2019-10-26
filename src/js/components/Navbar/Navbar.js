@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import coin from '../../../img/coin.png';
+import avatar from '../../../img/avatar/avatar.png';
 
 const IwashNavBar = () => {
 
@@ -34,10 +35,30 @@ const IwashNavBar = () => {
                         </li>
                     : 
                         <li>
-                        <Link to="/login"> 
-                            {firstname} {lastname}
-                        </Link>
-                </li>
+                            <Link className="badge badge-success" to="/">
+                                $ 40
+                            </Link>
+                            <div className="btn-group">
+                                <button className={["dropdown-toggle", styles.dropBtn].join(' ')} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src={avatar} alt="avatar" width="30px" /> {firstname} {lastname}
+                                </button>
+                                <div className="dropdown-menu dropdown-menu-right">
+                                    <Link className="dropdown-item" to="/" >Home</Link>
+                                    <Link className="dropdown-item" to="/newjob" >Post a Job</Link>
+                                    <Link className="dropdown-item" to="/myJob" >My Jobs</Link>
+                                    <Link className="dropdown-item" to="/chat">Chat</Link>
+                                    <Link className="dropdown-item" to="/search">Search Jobs</Link>
+                                    <button 
+                                        className="dropdown-item" 
+                                        onClick={async () => {
+                                            localStorage.clear();
+                                        }}
+                                    >
+                                        LogOut
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
                     }
                 </ul>
             </div>
