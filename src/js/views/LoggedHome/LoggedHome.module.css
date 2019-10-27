@@ -11,3 +11,6 @@
 .noavailable {
     width: 70%;
 }
+.machinChoice:hover {
+    opacity: 0.5;
+}

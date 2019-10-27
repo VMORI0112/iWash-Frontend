@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './LoggedHome.module.css';
 import washerOpen from '../../../img/washing/w1.png';
 import washerClose from '../../../img/washing/w2.png';
@@ -13,7 +14,9 @@ const LoggedHome = () => {
                 <div className="row">
 
                     <div className="col-4 text-center">
-                        <img className={styles.available} src={washerOpen} alt="washer" />
+                        <Link to="/wash/1" className={styles.machinChoice}>
+                            <img className={styles.available} src={washerOpen} alt="washer" />
+                        </Link>
                     </div>
                     <div className="col-4 text-center">
                         <img className={styles.noavailable} src={washerClose} alt="washer" />
