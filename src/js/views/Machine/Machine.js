@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../../../UserContext';
+import styles from './Machine.module.css';
 
 const Machine = (props) => {
+
+    const {info} = useContext(UserContext);
+
     return (
-        <>
-        machine = {props.params.id}
-        </>
+        <section className={styles.section}>
+        machine = {info.washers[props.match.params.WID].name}
+        </section>
     );
 };
 

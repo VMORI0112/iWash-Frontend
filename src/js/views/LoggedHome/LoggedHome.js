@@ -15,26 +15,6 @@ const LoggedHome = () => {
     return (
         <>
         <section className={styles.section}>
-
-        {!info ? 'loading' : info.washers.map((item,index) => {
-            return (
-                <p key={index}>
-                    {item.id}
-                    <br/>
-                    {item.type}
-                </p>
-            )
-        })}
-        <br/>
-        {!info ? 'loading' : info.dryers.map((item,index) => {
-            return (
-                <p key={index}>
-                    {item.id}
-                    <br/>
-                    {item.type}
-                </p>
-            )
-        })}
             <h1 className="text-center">Laundromat</h1>
             <div className="container">
                 <h2 className="text-center">Wahers</h2>
@@ -116,6 +96,25 @@ const LoggedHome = () => {
                     
                 </div>
             </div>
+
+            {!info ? 'loading' : info.washers.map((item,index) => {
+            return (
+                <Link to={"machine/"+index} key={index}>
+                    {item.type}
+                    <br/>
+                </Link>
+            )
+        })}
+        <br/>
+        {!info ? 'loading' : info.dryers.map((item,index) => {
+            return (
+                <Link to={"machine/"+index} key={index}>
+                    {item.type}
+                    <br/>
+                </Link>
+            )
+        })}
+
         </section>
         </>
     );
