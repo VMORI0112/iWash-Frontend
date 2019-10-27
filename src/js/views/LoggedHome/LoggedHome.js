@@ -1,13 +1,40 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../../UserContext';
+
 import styles from './LoggedHome.module.css';
 import washerOpen from '../../../img/washing/w1.png';
 import washerClose from '../../../img/washing/w2.png';
 
 const LoggedHome = () => {
+
+    const {info} = useContext(UserContext);
+
+    console.log(info);
+
     return (
         <>
         <section className={styles.section}>
+
+        {!info ? 'loading' : info.washers.map((item,index) => {
+            return (
+                <p key={index}>
+                    {item.id}
+                    <br/>
+                    {item.type}
+                </p>
+            )
+        })}
+        <br/>
+        {!info ? 'loading' : info.dryers.map((item,index) => {
+            return (
+                <p key={index}>
+                    {item.id}
+                    <br/>
+                    {item.type}
+                </p>
+            )
+        })}
             <h1 className="text-center">Laundromat</h1>
             <div className="container">
                 <h2 className="text-center">Wahers</h2>
