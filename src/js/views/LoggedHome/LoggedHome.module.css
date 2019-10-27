@@ -1,5 +1,5 @@
 .section {
-    margin-top: 80px;
+   padding-top: 80px;
     background-color: #eeeeee;
 }
 .section2 {
@@ -10,6 +10,7 @@
 }
 .noavailable {
     width: 70%;
+    opacity: 0.3;
 }
 .machinChoice:hover {
     opacity: 0.5;
