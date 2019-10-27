@@ -14,7 +14,7 @@ const LoggedHome = () => {
                 <div className="row">
 
                     <div className="col-4 text-center">
-                        <Link to="/wash/1" className={styles.machinChoice}>
+                        <Link to="/machine/wash1" className={styles.machinChoice}>
                             <img className={styles.available} src={washerOpen} alt="washer" />
                         </Link>
                     </div>
@@ -22,7 +22,7 @@ const LoggedHome = () => {
                         <img className={styles.noavailable} src={washerClose} alt="washer" />
                     </div>
                     <div className="col-4 text-center">
-                        <Link to="/wash/1" className={styles.machinChoice}>
+                        <Link to="/machine/wash2" className={styles.machinChoice}>
                             <img className={styles.available} src={washerOpen} alt="washer" />
                         </Link>
                     </div>
@@ -31,12 +31,12 @@ const LoggedHome = () => {
                 <div className="row mt-5">
 
                     <div className="col-4 text-center">
-                        <Link to="/wash/1" className={styles.machinChoice}>
+                        <Link to="/machine/wash3" className={styles.machinChoice}>
                             <img className={styles.available} src={washerOpen} alt="washer" />
                         </Link>
                     </div>
                     <div className="col-4 text-center">
-                        <Link to="/wash/1" className={styles.machinChoice}>
+                        <Link to="/machine/wash4" className={styles.machinChoice}>
                             <img className={styles.available} src={washerOpen} alt="washer" />
                         </Link>
                     </div>
@@ -55,7 +55,7 @@ const LoggedHome = () => {
                 <div className="row" style={{backgroundColor: "white"}}>
 
                     <div className="col-4 text-center">
-                        <Link to="/dry/1" className={styles.machinChoice}>
+                        <Link to="/machine/dry1" className={styles.machinChoice}>
                             <img className={styles.available} src={washerOpen} alt="washer" />
                         </Link>
                     </div>
@@ -63,7 +63,7 @@ const LoggedHome = () => {
                         <img className={styles.noavailable} src={washerClose} alt="washer" />
                     </div>
                     <div className="col-4 text-center">
-                        <Link to="/dry/2" className={styles.machinChoice}>
+                        <Link to="/machine/dry2" className={styles.machinChoice}>
                             <img className={styles.available} src={washerOpen} alt="washer" />
                         </Link>
                     </div>
@@ -72,17 +72,17 @@ const LoggedHome = () => {
                 <div className="row mt-5">
 
                     <div className="col-4 text-center">
-                        <Link to="/dry/3" className={styles.machinChoice}>
+                        <Link to="/machine/dry3" className={styles.machinChoice}>
                             <img className={styles.available} src={washerOpen} alt="washer" />
                         </Link>
                     </div>
                     <div className="col-4 text-center">
-                        <Link to="/dry/4" className={styles.machinChoice}>
+                        <Link to="/machine/dry4" className={styles.machinChoice}>
                             <img className={styles.available} src={washerOpen} alt="washer" />
                         </Link>
                     </div>
                     <div className="col-4 text-center">
-                        <Link to="/dry/5" className={styles.machinChoice}>
+                        <Link to="/machine/dry5" className={styles.machinChoice}>
                             <img className={styles.available} src={washerOpen} alt="washer" />
                         </Link>
                     </div>
