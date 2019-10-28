@@ -5,9 +5,31 @@
     background: url(../../../img/home/w.jpg) no-repeat center;
     background-size: cover;
 }
+.bannerInfo {
+    padding-top: 15em;
+    color: white;
+}
+.bannerInfo p {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 1.9;
+}
+.bannerInfo h3 {
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    font-size: 3.5em;
+    text-shadow: 3px 4px 6px rgba(45, 45, 45, 0.15);
+    font-weight: 600;
+    position: relative;
+}
 
 @media (max-width: 1440px) {
     .main {
         min-height: 700px;
+    }
+    .bannerInfo {
+        padding-top: 12em;
     }
 }
