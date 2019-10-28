@@ -65,7 +65,11 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="container">
+            <div className="container py-xl-5 pb-ly-3">
+                <h3 class="w3ls-title text-center font-weight-bold text-da mb-5 pb-lg-4">
+                    <span className={["mb-1", styles.ourService].join(' ')}>What we offer?</span>
+				    Our Services
+                </h3>
                 <div class="row text-center">
                     <div class="col-lg-4 services-w3ls-grid">
                         <img src={fer} alt="" class="img-fluid" />
