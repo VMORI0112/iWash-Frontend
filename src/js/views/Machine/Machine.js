@@ -6,9 +6,18 @@ const Machine = (props) => {
 
     const {info} = useContext(UserContext);
 
+    console.log(info.washers);
+
+    let WasherId = props.match.params.WID;
+
     return (
         <section className={styles.section}>
-        machine = {info.washers[props.match.params.WID].name}
+            <div className="container text-center">
+
+                    name = {info.washers[WasherId].name}
+                    <br/>
+                    type = {info.washers[WasherId].type}
+            </div>
         </section>
     );
 };
