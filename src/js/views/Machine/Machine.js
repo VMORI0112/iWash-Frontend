@@ -17,6 +17,10 @@ const Machine = (props) => {
                     name = {info.washers[WasherId].name}
                     <br/>
                     type = {info.washers[WasherId].type}
+                    <br/>
+                    busy = {info.washers[WasherId].busy}
+                    <br/>
+                    cold info = {info.washers[WasherId].cold[0].what}
             </div>
         </section>
     );
