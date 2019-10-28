@@ -19,7 +19,7 @@ const IwashNavBar = () => {
                     <img src={coin} width="30" height="30" className="d-inline-block align-top" alt="coin"/>
                     &nbsp;
                     <i className="fas fa-info"></i>
-                    <span className={styles.wash}>WASH</span>
+                    <span className={styles.wash}>Wash</span>
                 </Link>
                 <ul className="nav navbar-nav navbar-right">
                     {!tokenAuth ?
