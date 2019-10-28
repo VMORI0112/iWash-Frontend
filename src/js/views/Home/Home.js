@@ -2,6 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
 
+import fer from '../../../img/home/fer.png';
+import lav from '../../../img/home/lav.png';
+import linge from '../../../img/home/linge.png';
+
 const Home = () => {
     return (
         <section className={styles.section}>
@@ -57,6 +61,26 @@ const Home = () => {
                     <div class="buttons-w3pvt text-center mt-lg-4 pb-lg-5">
                         <Link to="/about" class={["scroll mr-3", styles.buttonStyle].join(' ')}>Read More</Link>
                         <Link to="/contact" class={["scroll",styles.buttonStyle, styles.buttonStyle2].join(' ')}>Contact Us</Link>
+                    </div>
+                </div>
+            </div>
+
+            <div className="container">
+                <div class="row text-center">
+                    <div class="col-lg-4 services-w3ls-grid">
+                        <img src={fer} alt="" class="img-fluid" />
+                        <h4 class="mt-lg-5 mt-4 mb-sm-3 mb-2 text-da">Service 1</h4>
+                        <p>Ut enim ad minima veniam, quis nostrum ullam corporis suscipit laboriosam.</p>
+                    </div>
+                    <div class="col-lg-4 services-w3ls-grid my-lg-0 my-4">
+                        <img src={lav} alt="" class="img-fluid" />
+                        <h4 class="mt-lg-5 mt-4 mb-sm-3 mb-2 text-da">Service 2</h4>
+                        <p>Ut enim ad minima veniam, quis nostrum ullam corporis suscipit laboriosam.</p>
+                    </div>
+                    <div class="col-lg-4 services-w3ls-grid">
+                        <img src={linge} alt="" class="img-fluid" />
+                        <h4 class="mt-lg-5 mt-4 mb-sm-3 mb-2 text-da">Service 3</h4>
+                        <p>Ut enim ad minima veniam, quis nostrum ullam corporis suscipit laboriosam.</p>
                     </div>
                 </div>
             </div>
