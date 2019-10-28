@@ -1,10 +1,18 @@
 body{
     font-family: 'Libre Franklin', sans-serif;
 }
-
+.textWhite {
+    color: white;
+}
 .textOrange {
     color: #f8b663;
 }
 .textDarkGreen {
     color: #0b383b;
+}
+.textBold {
+    font-weight: 700 !important;
+}
+.text40px {
+    font-size: 40px;
 }

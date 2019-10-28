@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
 
 const Home = () => {
@@ -20,7 +21,7 @@ const Home = () => {
                 <div class="container py-xl-5 py-lg-3">
                     <div class="row">
                         <div class="col-lg-6 about-left-w3pvt pr-lg-5">
-                            <h4 class="sub-tittle-w3layouts let">Who we are?</h4>
+                            <h4 class="textOrange">Who we are?</h4>
                             <h3 class="tittle-w3layouts text-uppercase mt-3">
                                 Laundry and Dry 
                                 <br/>
@@ -42,6 +43,24 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
+            <div className={["py-5", styles.middleInfo].join(' ')}>
+                <div class="container py-xl-5 py-3">
+                    <h3 class="text40px text-center textBold textWhite mb-5 pb-lg-4 pt-lg-4">
+                        <span class={styles.newCust}>
+                            New customers save $10
+                        </span>
+                        Ut enim ad nostrud ullamco laboris 
+                        <br/>
+                        Nisi ut aliquip ex consequat.
+                    </h3>
+                    <div class="buttons-w3pvt text-center mt-lg-4 pb-lg-5">
+                        <Link to="/about" class={["scroll mr-3", styles.buttonStyle].join(' ')}>Read More</Link>
+                        <Link to="/contact" class={["scroll",styles.buttonStyle, styles.buttonStyle2].join(' ')}>Contact Us</Link>
+                    </div>
+                </div>
+            </div>
+
         </section>
     );
 };
