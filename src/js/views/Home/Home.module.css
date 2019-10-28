@@ -1,3 +1,13 @@
 .section {
-    margin-top: 80px;
+    padding-top: 60px;
+}
+.main {
+    background: url(../../../img/home/w.jpg) no-repeat center;
+    background-size: cover;
+}
+
+@media (max-width: 1440px) {
+    .main {
+        min-height: 700px;
+    }
 }

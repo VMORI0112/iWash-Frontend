@@ -4,8 +4,8 @@ import styles from './Home.module.css';
 const Home = () => {
     return (
         <section className={styles.section}>
-            <div className="container text-center">
-                <h1>Welcome To iWASH</h1>
+            <div className={["text-center", styles.main].join(' ')}>
+                <h1>Welcome</h1>
             </div>
         </section>
     );
