@@ -36,7 +36,7 @@ const Register = () => {
             });
             // console.log(userRegisterData)
             // fetch('http://0.0.0.0:3000/users', {
-            fetch('https://3000-bf8b378d-317f-418a-9df1-db3f60d96c84.ws-us1.gitpod.io/testing', {
+            fetch('https://3000-bf8b378d-317f-418a-9df1-db3f60d96c84.ws-us1.gitpod.io/register', {
                 method: 'POST',
                 body: userRegisterData,
                 cors: '*cors',
