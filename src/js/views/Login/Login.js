@@ -20,15 +20,16 @@ const Login = () => {
         fetch('https://3000-bf8b378d-317f-418a-9df1-db3f60d96c84.ws-us1.gitpod.io/login', {
             method: 'POST',
             body: userLoginData,
+            cors: 'no-cors',
             headers:{
                 'Content-Type': 'application/json'
             }
             }).then(res => res.json())
             .then(response => {
                 let token = response.token;
-                let email = response.user.email;
-                let firstname = response.user.first_name;
-                let lastname = response.user.last_name;
+                let email = response.email;
+                let firstname = response.first_name;
+                let lastname = response.last_name;
                 if (!token && !email && !firstname && !lastname ) {
                     alert("Sorry we couldn't find an account with that email.\n\n Try to register first.")
                 } else {
