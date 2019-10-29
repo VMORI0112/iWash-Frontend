@@ -29,15 +29,18 @@ const Register = () => {
         } else {
 
             let userRegisterData = JSON.stringify({
-                first_name: firstname,
-                last_name: lastname,
+                firstname: firstname,
+                lastname: lastname,
                 email: email,
                 password: password
             });
-            fetch('http://0.0.0.0:3000/users', {
+            console.log(userRegisterData)
+            // fetch('http://0.0.0.0:3000/users', {
+            fetch('https://3000-a548b79d-a9da-432f-a1d0-f5001f995dec.ws-us1.gitpod.io/register', {
                 method: 'POST',
                 body: userRegisterData,
                 headers:{
+                    'Access-Control-Allow-Origin': '*',
                     'Content-Type': 'application/json'
                 }
                 }).then(res => res.json())
