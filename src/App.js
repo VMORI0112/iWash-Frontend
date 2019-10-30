@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useState, useMemo } from 'react';
+import React, { Suspense, lazy, useState, useMemo, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import { UserContext } from './UserContext';
@@ -7,7 +7,6 @@ import IwashNavBar from './js/components/Navbar/Navbar';
 import Footer from './js/components/Footer/Footer';
 import NotFound from './js/components/NotFound/NotFound';
 
-import WashingInfo from './washinInfo';
 
 const Home = lazy(() => import('./js/views/Home/Home'));
 const LoggedHome = lazy(() => import('./js/views/LoggedHome/LoggedHome'));
@@ -18,14 +17,29 @@ const Wallet = lazy(() => import('./js/views/Wallet/Wallet'));
 
 function App() {
 
-  const [info] = useState(WashingInfo);
+  const [washersData, setWashersData] = useState();
+  const [dryersData, setDryersData] = useState();
   
   const [user, setUser] = useState(null);
   const [Auth, setAuth] = useState(null);
   let tokenAuth = localStorage.getItem('token');
 
+  useEffect(() => {
+    fetch('http://0.0.0.0:3000/washers')
+      .then(res => res.json())
+      .then(res => setWashersData(res))
+      .catch(error => console.log('error: ', error) );
+  },[washersData])
 
-  const providerValue = useMemo(() => ({ user, setUser, Auth, setAuth, info }), [user, setUser, Auth, setAuth, info]);
+  useEffect(() => {
+    fetch('http://0.0.0.0:3000/dryers')
+      .then(res => res.json())
+      .then(res => setDryersData(res))
+      .catch(error => console.log('error: ', error) );
+  },[dryersData])
+
+
+  const providerValue = useMemo(() => ({ user, setUser, Auth, setAuth, washersData, dryersData }), [user, setUser, Auth, setAuth, washersData, dryersData]);
 
   return (
     <Router>

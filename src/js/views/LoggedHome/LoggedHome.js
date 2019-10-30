@@ -6,11 +6,11 @@ import styles from './LoggedHome.module.css';
 import washerOpen from '../../../img/washing/w1.png';
 import washerClose from '../../../img/washing/w2.png';
 
+
 const LoggedHome = () => {
 
-    const {info} = useContext(UserContext);
-
-    console.log(info);
+    const {washersData} = useContext(UserContext);
+    const {dryersData} = useContext(UserContext);
 
     return (
         <>
@@ -97,19 +97,19 @@ const LoggedHome = () => {
                 </div>
             </div>
 
-            {!info ? 'loading' : info.washers.map((item,index) => {
+            {!washersData ? 'loading' : washersData.map((item,index) => {
             return (
                 <Link to={"machine/"+index} key={index}>
-                    {item.type}
+                    {item.type} - {item.number}
                     <br/>
                 </Link>
             )
         })}
         <br/>
-        {!info ? 'loading' : info.dryers.map((item,index) => {
+        {!dryersData ? 'loading' : dryersData.map((item,index) => {
             return (
                 <Link to={"machine/"+index} key={index}>
-                    {item.type}
+                    {item.type} - {item.number}
                     <br/>
                 </Link>
             )
