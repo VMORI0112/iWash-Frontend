@@ -42,9 +42,11 @@ const Register = () => {
                 headers:{
                     'Content-Type': 'application/json'
                 }
-                }).then(res => res.json())
-                .then(response => {
+                })
+                .then(res => res.json())
+                .then(res => {
                         alert('REGISTER SUCCESSFUL');
+                        console.log(res);
                         history.push('/login');
                 })
                 .catch(error => console.log('Error:', error));
