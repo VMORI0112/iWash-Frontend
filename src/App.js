@@ -4,6 +4,7 @@ import './App.css';
 import { UserContext } from './UserContext';
 
 import IwashNavBar from './js/components/Navbar/Navbar';
+import Footer from './js/components/Footer/Footer';
 import NotFound from './js/components/NotFound/NotFound';
 
 import WashingInfo from './washinInfo';
@@ -30,15 +31,16 @@ function App() {
     <Router>
       <UserContext.Provider value={providerValue}>
         <Suspense fallback={<div>Loading...</div>}>
-        <IwashNavBar/>
-          <Switch>
-            {!tokenAuth ? <Route exact path="/" component={Home} /> : <Route exact path="/" component={LoggedHome}/> }
-            <Route path="/login" component={Login} />
-            <Route path="/register" component={Register} />
-            <Route path="/machine/:WID" component={Machine} />
-            <Route path="/wallet" component={Wallet} />
-            <Route render={() => <NotFound/>} />
-          </Switch>
+          <IwashNavBar/>
+            <Switch>
+              {!tokenAuth ? <Route exact path="/" component={Home} /> : <Route exact path="/" component={LoggedHome}/> }
+              <Route path="/login" component={Login} />
+              <Route path="/register" component={Register} />
+              <Route path="/machine/:WID" component={Machine} />
+              <Route path="/wallet" component={Wallet} />
+              <Route render={() => <NotFound/>} />
+            </Switch>
+          <Footer/>
         </Suspense>
       </UserContext.Provider>
     </Router>
