@@ -35,8 +35,7 @@ const Register = () => {
                 password: password
             });
             // console.log(userRegisterData)
-            // fetch('http://0.0.0.0:3000/users', {
-            fetch('https://3000-bf8b378d-317f-418a-9df1-db3f60d96c84.ws-us1.gitpod.io/register', {
+            fetch('http://0.0.0.0:3000/register', {
                 method: 'POST',
                 body: userRegisterData,
                 // cors: 'no-cors',
