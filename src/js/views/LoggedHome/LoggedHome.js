@@ -20,15 +20,15 @@ const LoggedHome = () => {
                 <h2 className="text-center">Wahers</h2>
                 <div className="row">
 
-                    <div className="col-4 text-center">
+                    <div className="col-4 text-right p-3">
                         <Link to="/machine/wash1" className={styles.machinChoice}>
                             <img className={styles.available} src={washerOpen} alt="washer" />
                         </Link>
                     </div>
-                    <div className="col-4 text-center">
+                    <div className="col-4 text-right p-3">
                         <img className={styles.noavailable} src={washerClose} alt="washer" />
                     </div>
-                    <div className="col-4 text-center">
+                    <div className="col-4 text-right p-3">
                         <Link to="/machine/wash2" className={styles.machinChoice}>
                             <img className={styles.available} src={washerOpen} alt="washer" />
                         </Link>
@@ -37,17 +37,17 @@ const LoggedHome = () => {
                 </div>
                 <div className="row mt-5">
 
-                    <div className="col-4 text-center">
+                    <div className="col-4 text-right p-3">
                         <Link to="/machine/wash3" className={styles.machinChoice}>
                             <img className={styles.available} src={washerOpen} alt="washer" />
                         </Link>
                     </div>
-                    <div className="col-4 text-center">
+                    <div className="col-4 text-right p-3">
                         <Link to="/machine/wash4" className={styles.machinChoice}>
                             <img className={styles.available} src={washerOpen} alt="washer" />
                         </Link>
                     </div>
-                    <div className="col-4 text-center">
+                    <div className="col-4 text-right p-3">
                         <img className={styles.noavailable} src={washerClose} alt="washer" />
                     </div>
                     

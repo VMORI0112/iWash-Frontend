@@ -15,7 +15,7 @@ const Home = () => {
                     <div className="container">
                         <div className="style-banner text-center">
                             <p className="text-li mb-2">Wash, Dry &amp; Fold</p>
-                            <h3 className="text-wh font-weight-bold text-uppercase">We Are Expert Cleaner</h3>
+                            <h3 className="text-wh font-weight-bold text-uppercase">We Are Expert Cleaners</h3>
                         </div>
                     </div>
                 </div>

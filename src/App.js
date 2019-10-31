@@ -29,14 +29,14 @@ function App() {
       .then(res => res.json())
       .then(res => setWashersData(res))
       .catch(error => console.log('error: ', error) );
-  },[washersData])
+  },[])
 
   useEffect(() => {
     fetch('http://0.0.0.0:3000/dryers')
       .then(res => res.json())
       .then(res => setDryersData(res))
       .catch(error => console.log('error: ', error) );
-  },[dryersData])
+  },[])
 
 
   const providerValue = useMemo(() => ({ user, setUser, Auth, setAuth, washersData, dryersData }), [user, setUser, Auth, setAuth, washersData, dryersData]);
