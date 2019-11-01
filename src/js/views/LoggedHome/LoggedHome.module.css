@@ -38,6 +38,8 @@
 }
 .links:hover {
     text-decoration: none!important;
-    background-color: white!important;
-    opacity: 0.6!important;
+    color: #0b383b;
+}
+.cardContainer:hover {
+    opacity: 0.5;
 }
