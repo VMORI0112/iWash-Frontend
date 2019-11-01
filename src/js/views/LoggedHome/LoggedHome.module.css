@@ -15,3 +15,17 @@
 .machinChoice:hover {
     opacity: 0.5;
 }
+.btnIwash {
+    margin: 10px;
+    background-color: #f8b663;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 100px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.btnIwash:hover {
+    background-color: #f7b057;
+    color: #eeeeee;
+    text-decoration: none;
+}

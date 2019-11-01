@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { UserContext } from '../../../UserContext';
 
 import styles from './LoggedHome.module.css';
-import washerOpen from '../../../img/washing/w1.png';
+// import washerOpen from '../../../img/washing/w1.png';
 import washerClose from '../../../img/washing/w2.png';
 
 
@@ -17,8 +17,38 @@ const LoggedHome = () => {
         <section className={styles.section}>
             <h1 className="text-center">Laundromat</h1>
             <div className="container">
-                <h2 className="text-center">Wahers</h2>
+                <div className="text-center">
+                    <button className={styles.btnIwash}>Wahers</button>
+                    <button className={styles.btnIwash}>Dryers</button>
+                </div>
+
                 <div className="row">
+                    <div className="col-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <span class="badge badge-danger">Danger</span>
+                                    <span class="badge badge-pill badge-primary float-right">10</span>
+                                </p>
+                            </div>
+                            <img src={washerClose} class="card-img-top" alt="..." />
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                {/* <div className="row">
 
                     <div className="col-4 text-right p-3">
                         <Link to="/machine/wash1" className={styles.machinChoice}>
@@ -34,8 +64,8 @@ const LoggedHome = () => {
                         </Link>
                     </div>
                     
-                </div>
-                <div className="row mt-5">
+                </div> */}
+                {/* <div className="row mt-5">
 
                     <div className="col-4 text-right p-3">
                         <Link to="/machine/wash3" className={styles.machinChoice}>
@@ -51,10 +81,10 @@ const LoggedHome = () => {
                         <img className={styles.noavailable} src={washerClose} alt="washer" />
                     </div>
                     
-                </div>
+                </div> */}
                 
                 
-            </div>
+            {/* </div>
         </section>
         <section className={styles.section2}>
             <div className="container">
@@ -94,7 +124,7 @@ const LoggedHome = () => {
                         </Link>
                     </div>
                     
-                </div>
+                </div> */}
             </div>
 
             {!washersData ? 'loading' : washersData.map((item,index) => {
