@@ -14,6 +14,8 @@ const Login = lazy(() => import('./js/views/Login/Login'));
 const Register = lazy(() => import('./js/views/Register/Register'));
 const Machine = lazy(() => import('./js/views/Machine/Machine'));
 const Wallet = lazy(() => import('./js/views/Wallet/Wallet'));
+const Checkout = lazy(() => import('./js/views/Checkout/Checkout'));
+
 const Rasp = lazy(() => import('./js/views/Rasp/Rasp'));
 
 function App() {
@@ -53,6 +55,7 @@ function App() {
               <Route path="/register" component={Register} />
               <Route path="/machine/:WID" component={Machine} />
               <Route path="/wallet" component={Wallet} />
+              <Route path="/checkout" component={Checkout} />
               <Route path="/rasp" component={Rasp} />
               <Route render={() => <NotFound/>} />
             </Switch>
