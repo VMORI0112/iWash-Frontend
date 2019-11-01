@@ -3,7 +3,7 @@ import styles from './Footer.module.css';
 
 const Footer = () => {
     return (
-        <footer className={["mt-auto",styles.footer].join(' ')}>
+        <footer className={styles.footer}>
          <div className="container">
             <div className="agileits-contact-addrss">
                <div className="row top-gap">

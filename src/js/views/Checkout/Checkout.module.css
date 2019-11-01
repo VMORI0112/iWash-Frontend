@@ -1,4 +1,5 @@
 .section {
-    margin-top: 80px;
+    background-color: #eeeeee;
+    padding-top: 80px;
     min-height: 600px!important;
 }
