@@ -32,3 +32,12 @@
 .number {
     font-size: 2rem;
 }
+.links {
+    text-decoration: none;
+    color: #f8b663;
+}
+.links:hover {
+    text-decoration: none!important;
+    background-color: white!important;
+    opacity: 0.6!important;
+}

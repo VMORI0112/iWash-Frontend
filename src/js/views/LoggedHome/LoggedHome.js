@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../../UserContext';
 
@@ -9,6 +9,18 @@ import washerClose from '../../../img/washing/w2.png';
 
 const LoggedHome = () => {
 
+    const [washerContainer, setWasherContainer] = useState('');
+    const [dryerContainer, setDryerContainer] = useState('d-none');
+
+    const washerHandle = () => {
+        setWasherContainer('');
+        setDryerContainer('d-none');
+    }
+    const dryerHandle = () => {
+        setWasherContainer('d-none');
+        setDryerContainer('');
+    }
+
     const {washersData} = useContext(UserContext);
     const {dryersData} = useContext(UserContext);
 
@@ -18,15 +30,15 @@ const LoggedHome = () => {
             <h1 className="text-center">Laundromat</h1>
             <div className="container">
                 <div className="text-center">
-                    <button className={styles.btnIwash}>Wahers</button>
-                    <button className={styles.btnIwash}>Dryers</button>
+                    <button onClick={washerHandle} className={styles.btnIwash}>Wahers</button>
+                    <button onClick={dryerHandle} className={styles.btnIwash}>Dryers</button>
                 </div>
 
-                <div className="row">
+                <div className={["row", washerContainer].join(' ')}>
                     {!washersData ? 'loading' : washersData.map((item,index) => {
                         return (
                             <div key={index} className="col-3 my-3">
-                                <Link to={"machine/"+index} >
+                                <Link className={styles.links} to={"machine/"+index} >
                                     <div className="card">
                                         <div className="card-body">
                                             <div className="card-text">
@@ -42,10 +54,8 @@ const LoggedHome = () => {
                         )
                     })}
                 </div>
-                <br/>
-                <hr/><br/>
 
-                <div className={["row", styles.dryerContainer].join(' ')}>
+                <div className={["row", dryerContainer].join(' ')}>
                     {!dryersData ? 'loading' : dryersData.map((item,index) => {
                         return (
                             <div key={index} className="col-3 my-3">
