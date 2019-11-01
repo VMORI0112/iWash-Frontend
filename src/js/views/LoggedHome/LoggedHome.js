@@ -42,7 +42,7 @@ const LoggedHome = () => {
                 <div className={["row", washerContainer].join(' ')}>
                     {!washersData ? 'loading' : washersData.map((item,index) => {
                         return (
-                            <div key={index} className={["col-3 my-3", styles.cardContainer].join(' ')}>
+                            <div key={index} className={["col-sm-12 col-md-3 col-lg-3 my-3", styles.cardContainer].join(' ')}>
                                 <Link className={styles.links} to={"/washers/"+index} >
                                     <div className="card">
                                         <div className="card-body">
@@ -63,7 +63,7 @@ const LoggedHome = () => {
                 <div className={["row", dryerContainer].join(' ')}>
                     {!dryersData ? 'loading' : dryersData.map((item,index) => {
                         return (
-                            <div key={index} className={["col-3 my-3", styles.cardContainer].join(' ')}>
+                            <div key={index} className={["col-sm-12 col-md-3 col-lg-3 my-3", styles.cardContainer].join(' ')}>
                                 <Link className={styles.links} to={"machine/"+index} >
                                     <div className="card">
                                         <div className="card-body">

@@ -20,45 +20,53 @@ const Machine = (props) => {
                         number = {washersData[WasherId].number}
                     </div>
                     <div className="col">
-                        <button className={styles.btnGreen}>
-                            {washersData[WasherId].cicle_1} 
-                            <br/> 
-                            &#128178; {washersData[WasherId].price_1}
-                            <br/>
-                            &#128336; {washersData[WasherId].time_1}
-                        </button>
-
-                        <button className={styles.btnGreen}>
-                            {washersData[WasherId].cicle_2} 
-                            <br/> 
-                            &#128178; {washersData[WasherId].price_2}
-                            <br/>
-                            &#128336; {washersData[WasherId].time_2}
-                        </button>
-
-                        <button className={styles.btnGreen}>
-                            {washersData[WasherId].cicle_3} 
-                            <br/> 
-                            &#128178; {washersData[WasherId].price_3}
-                            <br/>
-                            &#128336; {washersData[WasherId].time_3}
-                        </button>
-
-                        <button className={styles.btnGreen}>
-                            {washersData[WasherId].cicle_4} 
-                            <br/> 
-                            &#128178; {washersData[WasherId].price_4}
-                            <br/>
-                            &#128336; {washersData[WasherId].time_4}
-                        </button>
-
-                        <button className={styles.btnGreen}>
-                            {washersData[WasherId].cicle_5} 
-                            <br/> 
-                            &#128178; {washersData[WasherId].price_5}
-                            <br/>
-                            &#128336; {washersData[WasherId].time_5}
-                        </button>
+                        <div className="row">
+                            <div className={["col-sm-12 col-md-3 col-lg-3 m-1", styles.btnGreen].join(' ')}>
+                                
+                                    {washersData[WasherId].cicle_1} 
+                                    <br/> 
+                                    &#128178; {washersData[WasherId].price_1}
+                                    <br/>
+                                    &#128336; {washersData[WasherId].time_1}
+                               
+                            </div>
+                            <div className={["col-sm-12 col-md-3 col-lg-3 m-1", styles.btnGreen].join(' ')}>
+                                
+                                    {washersData[WasherId].cicle_2} 
+                                    <br/> 
+                                    &#128178; {washersData[WasherId].price_2}
+                                    <br/>
+                                    &#128336; {washersData[WasherId].time_2}
+                               
+                            </div>
+                            <div className={["col-sm-12 col-md-3 col-lg-3 m-1", styles.btnGreen].join(' ')}>
+                                
+                                    {washersData[WasherId].cicle_3} 
+                                    <br/> 
+                                    &#128178; {washersData[WasherId].price_3}
+                                    <br/>
+                                    &#128336; {washersData[WasherId].time_3}
+                               
+                            </div>
+                            <div className={["col-sm-12 col-md-3 col-lg-3 m-1", styles.btnGreen].join(' ')}>
+                                
+                                    {washersData[WasherId].cicle_4} 
+                                    <br/> 
+                                    &#128178; {washersData[WasherId].price_4}
+                                    <br/>
+                                    &#128336; {washersData[WasherId].time_4}
+                               
+                            </div>
+                            <div className={["col-sm-12 col-md-3 col-lg-3 m-1", styles.btnGreen].join(' ')}>
+                                
+                                    {washersData[WasherId].cicle_5} 
+                                    <br/> 
+                                    &#128178; {washersData[WasherId].price_5}
+                                    <br/>
+                                    &#128336; {washersData[WasherId].time_5}
+                               
+                            </div>
+                        </div>
                     </div>
                 </div>
 
