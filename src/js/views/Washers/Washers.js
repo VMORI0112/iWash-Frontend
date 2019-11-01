@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { UserContext } from '../../../UserContext';
 import styles from './Washers.module.css';
 
@@ -7,6 +7,28 @@ import washerClose from '../../../img/washing/w2.png';
 const Machine = (props) => {
 
     const {washersData} = useContext(UserContext);
+    const [modalVisible, setModalVisible] = useState('invisible');
+
+    const modalToggle = () => {
+        setModalVisible(modalVisible === 'invisible' ? 'visible' : 'invisible');
+    }
+
+    const startMachine = (cycle) => {
+        modalToggle();
+        fetch('http://172.16.100.7:3000/iwash',{
+            method: 'POST',
+            body: JSON.stringify({
+                "action": cycle,
+                "msg": cycle+" WASHING"
+            }),
+            headers:{
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(res => res.json())
+        .then(res => console.log(res.msg))
+        .catch(error => console.log('error: ', error) );
+    }
 
     let WasherId = props.match.params.WID;
 
@@ -16,89 +38,91 @@ const Machine = (props) => {
                 <div className="row">
                     <div className="col">
 
-                        
                         <div className="card">
                             <div className="card-body">
                                 <div className="card-text">
-                                    <h4 className="text-center" >name</h4>
-                                    <span className="badge badge-success float-left">Available</span>
-                                    <span className={["badge badge-pill badge-primary float-right", styles.number].join(' ')}>number</span>
+                                    <h4 className="text-center" >{washersData[WasherId].name}</h4>
+                                    <div className="row">
+                                        <div className="col">
+                                            <span className={["badge badge-success m-1", styles.available].join(' ')}>Available</span>
+                                        </div>
+                                        <div className="col">
+                                            <span className={["badge badge-pill badge-primary", styles.number].join(' ')}>{washersData[WasherId].number}</span>
+                                        </div>
+                                    </div>
+                                    
+                                    
                                 </div>
                             </div>
                             <img src={washerClose} className="card-img-top" alt="name" />
                         </div>
                             
-
-
-
-
-
-
-
-
-
-{/* 
-                        <div>
-                            name = {washersData[WasherId].name}
-                            <br/>
-                            type = {washersData[WasherId].type}
-                            <br/>
-                            number = {washersData[WasherId].number}
-                        </div>
-
-                        <img src={washerClose} alt="washer" width="20%" /> */}
                     </div>
                     <div className="col">
+                        <h3>Choose Your Cycle:</h3>
                         <div className="row">
-                            <div className={["col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}>
+                            <div onClick={modalToggle} className={["col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}>
                                 
                                     {washersData[WasherId].cicle_1} 
                                     <br/> 
                                     &#128178; {washersData[WasherId].price_1}
                                     <br/>
-                                    &#128336; {washersData[WasherId].time_1}
+                                    &#128336; {washersData[WasherId].time_1} min
                                
                             </div>
-                            <div className={["col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}>
+                            <div onClick={modalToggle} className={["col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}>
                                 
                                     {washersData[WasherId].cicle_2} 
                                     <br/> 
                                     &#128178; {washersData[WasherId].price_2}
                                     <br/>
-                                    &#128336; {washersData[WasherId].time_2}
+                                    &#128336; {washersData[WasherId].time_2} min
                                
                             </div>
-                            <div className={["col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}>
+                            <div onClick={modalToggle} className={["col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}>
                                 
                                     {washersData[WasherId].cicle_3} 
                                     <br/> 
                                     &#128178; {washersData[WasherId].price_3}
                                     <br/>
-                                    &#128336; {washersData[WasherId].time_3}
+                                    &#128336; {washersData[WasherId].time_3} min
                                
                             </div>
-                            <div className={["col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}>
+                            <div onClick={modalToggle} className={["col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}>
                                 
                                     {washersData[WasherId].cicle_4} 
                                     <br/> 
                                     &#128178; {washersData[WasherId].price_4}
                                     <br/>
-                                    &#128336; {washersData[WasherId].time_4}
+                                    &#128336; {washersData[WasherId].time_4} min
                                
                             </div>
-                            <div className={["col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}>
+                            <div onClick={modalToggle} className={["col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}>
                                 
                                     {washersData[WasherId].cicle_5} 
                                     <br/> 
                                     &#128178; {washersData[WasherId].price_5}
                                     <br/>
-                                    &#128336; {washersData[WasherId].time_5}
+                                    &#128336; {washersData[WasherId].time_5} min
                                
                             </div>
                         </div>
                     </div>
                 </div>
 
+            </div>
+
+            {/* MODAL CONFIRMATION */}
+            <div className={["modal", modalVisible].join(' ')}>
+                <div className="modal-content">
+                    <span onClick={modalToggle} className="close">&times;</span>
+                    <p>1 - put your clothes inside the washing machine</p>
+                    <p>2 - insert detergent / softener</p>
+                    <p>3 - make sure the door is closed</p>
+                    <h3>Are you ready to start?</h3>
+                    <button onClick={modalToggle} className="btn btn-danger">NO, CANCEL</button>
+                    <button onClick={() => startMachine(washersData[WasherId].cicle_1)} className="btn btn-success">YES, START</button>
+                </div>
             </div>
 
             

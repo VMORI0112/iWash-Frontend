@@ -7,7 +7,7 @@ const Rasp = () => {
         fetch('http://172.16.100.7:3000/iwash',{
             method: 'POST',
             body: JSON.stringify({
-                "action": "delicate",
+                "action": "",
                 "msg": "WASHING"
             }),
             headers:{
@@ -16,7 +16,6 @@ const Rasp = () => {
         })
         .then(res => res.json())
         .then(res => console.log(res.msg))
-        // .then(msg => console.log(msg))
         .catch(error => console.log('error: ', error) );
     }
  
