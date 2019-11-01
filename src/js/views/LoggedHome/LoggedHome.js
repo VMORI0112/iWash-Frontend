@@ -23,17 +23,27 @@ const LoggedHome = () => {
                 </div>
 
                 <div className="row">
-                    <div className="col-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <p class="card-text">
-                                    <span class="badge badge-danger">Danger</span>
-                                    <span class="badge badge-pill badge-primary float-right">10</span>
-                                </p>
-                            </div>
-                            <img src={washerClose} class="card-img-top" alt="..." />
+                {!washersData ? 'loading' : washersData.map((item,index) => {
+                    return (
+                        <div key={index} className="col-3 my-3">
+                            <Link to={"machine/"+index} >
+                                <div className="card">
+                                    <div className="card-body">
+                                        <div className="card-text">
+                                            <h4 className="text-center" >{item.name}</h4>
+                                            <span className="badge badge-success">Available</span>
+                                            <span className="badge badge-pill badge-primary float-right">{item.number}</span>
+                                        </div>
+                                    </div>
+                                    <img src={washerClose} className="card-img-top" alt="..." />
+                                </div>
+                            </Link>
                         </div>
-                    </div>
+                    )
+                })}
+
+                    
+
                 </div>
 
 
