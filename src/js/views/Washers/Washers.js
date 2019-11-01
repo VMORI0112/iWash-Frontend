@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import { UserContext } from '../../../UserContext';
 import styles from './Washers.module.css';
 
+import washerClose from '../../../img/washing/w2.png';
+
 const Machine = (props) => {
 
     const {washersData} = useContext(UserContext);
@@ -13,11 +15,15 @@ const Machine = (props) => {
             <div className="container text-center">
                 <div className="row">
                     <div className="col">
-                        name = {washersData[WasherId].name}
-                        <br/>
-                        type = {washersData[WasherId].type}
-                        <br/>
-                        number = {washersData[WasherId].number}
+                        <div>
+                            name = {washersData[WasherId].name}
+                            <br/>
+                            type = {washersData[WasherId].type}
+                            <br/>
+                            number = {washersData[WasherId].number}
+                        </div>
+
+                        <img src={washerClose} alt="washer" width="20%" />
                     </div>
                     <div className="col">
                         <div className="row">
