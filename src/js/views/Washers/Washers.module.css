@@ -9,8 +9,12 @@
     font-weight: bold;
     margin-left: 20px;
     cursor: pointer;
+    text-transform: uppercase;
 }
 .btnGreen:hover {
     background-color: #f7b057!important;
     opacity: 0.6;
+}
+.number {
+    font-size: 2rem;
 }
