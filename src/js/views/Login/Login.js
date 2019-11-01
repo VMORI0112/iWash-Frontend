@@ -59,14 +59,17 @@ const Login = () => {
                 <br/>
                 <input 
                     className={styles.inputForm} 
+                    name="email"
                     type="email" 
                     placeholder="Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    autoComplete="on"
                 />
                 <br/>
                 <input 
                     className={styles.inputForm} 
+                    name="password"
                     type="password" 
                     placeholder="Password"
                     value={password}

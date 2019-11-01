@@ -62,6 +62,7 @@ const Register = () => {
                 <br/>
                 <input 
                     className={styles.inputForm} 
+                    name="firstname"
                     type="text" 
                     placeholder="First Name"
                     ref={inputFname}
@@ -71,6 +72,7 @@ const Register = () => {
                 <br/>
                 <input 
                     className={styles.inputForm} 
+                    name="lastname"
                     type="text" 
                     placeholder="Last Name"
                     ref={inputLname}
@@ -80,6 +82,7 @@ const Register = () => {
                 <br/>
                 <input 
                     className={styles.inputForm} 
+                    name="email"
                     type="email" 
                     placeholder="Email"
                     ref={inputEmail}
@@ -89,6 +92,7 @@ const Register = () => {
                 <br/>
                 <input 
                     className={styles.inputForm} 
+                    name="password"
                     type="password" 
                     placeholder="Password"
                     ref={inputPass}
