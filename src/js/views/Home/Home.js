@@ -38,11 +38,12 @@ const Home = () => {
                             </p>
                         </div>
                         <div className="col-lg-6 about-right">
-                            <p className="mt-4">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-                                explicabo.</p>
-                            <p className="mt-4 mb-5">Lorem ipsum dolor sit amet Neque porro quisquam est qui dolorem Lorem int ipsum dolor sit
-                                amet sed quia non numquam eius modi tempora incidunt ut labore et dolore.</p>
+                            <p className="mt-4">
+                            Self-service laundry facilities in the United States are most commonly called laundromats. "Washateria" is an alternate name for laundromat, but is not in common use outside of Texas. The term comes from the first laundromat in the United States, which was known as a Washateria and was opened on April 18, 1934 in Fort Worth, Texas, by C.A. Tannahill.
+                            </p>
+                            <p className="mt-4 mb-5">
+                            Though steam-powered laundry machines were invented in the 19th century, their cost put them out of reach of many. Cantrell and others began renting short-term use of their machines. Most laundromats in the US are fully automated and coin-operated and generally unmanned, with many operating 24 hours a day. The invention of the coin-operated laundry machine is ascribed to Harry Greenwald of New York who created Greenwald Industries in 1957; the company marketed the devices through the 20th century.
+                            </p>
                         </div>
                     </div>
                 </div>
