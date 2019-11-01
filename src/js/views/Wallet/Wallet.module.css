@@ -2,6 +2,7 @@
     padding-top: 80px;
     padding-bottom: 20px;
     background-color: #eeeeee;
+    min-height: 600px!important;
 }
 .white {
     background-color: white;

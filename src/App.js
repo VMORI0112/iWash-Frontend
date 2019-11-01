@@ -12,7 +12,7 @@ const Home = lazy(() => import('./js/views/Home/Home'));
 const LoggedHome = lazy(() => import('./js/views/LoggedHome/LoggedHome'));
 const Login = lazy(() => import('./js/views/Login/Login'));
 const Register = lazy(() => import('./js/views/Register/Register'));
-const Machine = lazy(() => import('./js/views/Machine/Machine'));
+const Washers = lazy(() => import('./js/views/Washers/Washers'));
 const Wallet = lazy(() => import('./js/views/Wallet/Wallet'));
 const Checkout = lazy(() => import('./js/views/Checkout/Checkout'));
 
@@ -53,7 +53,7 @@ function App() {
               {!tokenAuth ? <Route exact path="/" component={Home} /> : <Route exact path="/" component={LoggedHome}/> }
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />
-              <Route path="/machine/:WID" component={Machine} />
+              <Route path="/washers/:WID" component={Washers} />
               <Route path="/wallet" component={Wallet} />
               <Route path="/checkout" component={Checkout} />
               <Route path="/rasp" component={Rasp} />

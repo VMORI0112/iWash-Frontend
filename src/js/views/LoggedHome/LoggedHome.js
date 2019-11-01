@@ -27,8 +27,13 @@ const LoggedHome = () => {
     return (
         <>
         <section className={styles.section}>
-            <h1 className="text-center">Laundromat</h1>
             <div className="container">
+
+                <div className={styles.headerPage}>
+                    <span><i class="fas fa-map-marker-alt"></i> <i>Miami Beach</i></span>
+                    <h1 className="text-center">Laundromat</h1>
+                </div>
+
                 <div className="text-center">
                     <button onClick={washerHandle} className={styles.btnIwash}>Wahers</button>
                     <button onClick={dryerHandle} className={styles.btnIwash}>Dryers</button>
@@ -38,7 +43,7 @@ const LoggedHome = () => {
                     {!washersData ? 'loading' : washersData.map((item,index) => {
                         return (
                             <div key={index} className={["col-3 my-3", styles.cardContainer].join(' ')}>
-                                <Link className={styles.links} to={"machine/"+index} >
+                                <Link className={styles.links} to={"/washers/"+index} >
                                     <div className="card">
                                         <div className="card-body">
                                             <div className="card-text">
@@ -47,7 +52,7 @@ const LoggedHome = () => {
                                                 <span className={["badge badge-pill badge-primary float-right", styles.number].join(' ')}>{item.number}</span>
                                             </div>
                                         </div>
-                                        <img src={washerClose} className="card-img-top" alt="..." />
+                                        <img src={washerClose} className="card-img-top" alt={item.name} />
                                     </div>
                                 </Link>
                             </div>
@@ -68,7 +73,7 @@ const LoggedHome = () => {
                                                 <span className={["badge badge-pill badge-primary float-right", styles.number].join(' ')}>{item.number}</span>
                                             </div>
                                         </div>
-                                        <img src={dryerClose} className="card-img-top" alt="..." />
+                                        <img src={dryerClose} className="card-img-top" alt={item.name} />
                                     </div>
                                 </Link>
                             </div>
