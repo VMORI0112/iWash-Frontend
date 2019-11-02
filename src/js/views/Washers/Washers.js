@@ -24,7 +24,7 @@ const Machine = (props) => {
         fetch('http://192.168.0.83:3000/iwash',{
             method: 'POST',
             body: JSON.stringify({
-                "action": "",
+                "action": cycle,
                 "msg": cycle+" WASHING"
             }),
             headers:{
@@ -35,7 +35,7 @@ const Machine = (props) => {
         .then(res => {
             console.log(res.msg);
             if (res.msg === 'success') {
-                history.push('/');
+                history.push('/current-wash');
             } else {
                 setErrorMsg('Something went wrong');
             }
@@ -139,8 +139,24 @@ const Machine = (props) => {
                     <p>2 - insert detergent / softener</p>
                     <p>3 - make sure the door is closed</p>
                     <h3>Are you ready to start?</h3>
-                    <button onClick={modalToggle} className="btn btn-danger">NO, CANCEL</button>
-                    <button onClick={() => startMachine(washersData[WasherId].cicle_1)} className="btn btn-success">YES, START</button>
+                    <div className="row">
+                        <div className="col">
+                            <button 
+                                onClick={modalToggle} 
+                                className="btn btn-danger"
+                            >
+                                NO, CANCEL
+                            </button>
+                        </div>
+                        <div className="col text-right">
+                            <button 
+                                onClick={() => startMachine(washersData[WasherId].cicle_1)} 
+                                className="btn btn-success"
+                            >
+                                YES, START
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
