@@ -28,7 +28,6 @@ const LoggedHome = () => {
         <>
         <section className={styles.section}>
             <div className="container">
-
                 <div className={styles.headerPage}>
                     <span><i className="fas fa-map-marker-alt"></i> <i>Miami Beach</i></span>
                     <h1 className="text-center">Laundromat</h1>
