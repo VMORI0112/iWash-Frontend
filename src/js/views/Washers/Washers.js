@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { useHistory } from 'react-router-dom'
 import { UserContext } from '../../../UserContext';
 import styles from './Washers.module.css';
 
@@ -6,8 +7,11 @@ import washerClose from '../../../img/washing/w2.png';
 
 const Machine = (props) => {
 
+    let history = useHistory();
+
     const {washersData} = useContext(UserContext);
     const [modalVisible, setModalVisible] = useState('invisible');
+    const [errorMsg, setErrorMsg] = useState('');
 
     const modalToggle = () => {
         setModalVisible(modalVisible === 'invisible' ? 'visible' : 'invisible');
@@ -15,10 +19,12 @@ const Machine = (props) => {
 
     const startMachine = (cycle) => {
         modalToggle();
-        fetch('http://172.16.100.7:3000/iwash',{
+        // to have the right address ip, type in rasp terminal: ifconfig wlan0
+        // once you get that address, change it here and in the rasp app.py
+        fetch('http://192.168.0.83:3000/iwash',{
             method: 'POST',
             body: JSON.stringify({
-                "action": cycle,
+                "action": "",
                 "msg": cycle+" WASHING"
             }),
             headers:{
@@ -26,7 +32,14 @@ const Machine = (props) => {
             }
         })
         .then(res => res.json())
-        .then(res => console.log(res.msg))
+        .then(res => {
+            console.log(res.msg);
+            if (res.msg === 'success') {
+                history.push('/');
+            } else {
+                setErrorMsg('Something went wrong');
+            }
+        })
         .catch(error => console.log('error: ', error) );
     }
 
@@ -35,6 +48,12 @@ const Machine = (props) => {
     return (
         <section className={styles.section}>
             <div className="container text-center">
+                {errorMsg ? 
+                    <div className="alert alert-danger" role="alert">
+                    {errorMsg}
+                    </div>
+                    : ''
+                }
                 <div className="row">
                     <div className="col">
 
