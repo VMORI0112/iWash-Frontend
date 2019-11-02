@@ -65,3 +65,14 @@ display: none;
       display: none;
     }
   }
+
+.available {
+    cursor: pointer;
+}
+.available:hover {
+    opacity: 0.5;
+}
+.noavailable {
+    opacity: 0.5;
+    pointer-events: none;
+}

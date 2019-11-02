@@ -42,13 +42,14 @@ const LoggedHome = () => {
                 <div className={["row", washerContainer].join(' ')}>
                     {!washersData ? 'loading' : washersData.map((item,index) => {
                         return (
-                            <div key={index} className={["col-sm-12 col-md-3 col-lg-3 my-3", styles.cardContainer].join(' ')}>
+                            <div key={index} className={["col-sm-12 col-md-3 col-lg-3 my-3", item.available].join(' ')}>
                                 <Link className={styles.links} to={"/washers/"+index} >
                                     <div className="card">
                                         <div className="card-body">
                                             <div className="card-text">
                                                 <h4 className="text-center" >{item.name}</h4>
-                                                <span className="badge badge-success">Available</span>
+                                                {item.available === "available" ? <span className="badge badge-success">Available</span> : <span className="badge badge-danger">Not Available</span>}
+                                                {/* <span className="badge badge-success">{item.available}</span> */}
                                                 <span className={["badge badge-pill badge-primary float-right", styles.number].join(' ')}>{item.number}</span>
                                             </div>
                                         </div>

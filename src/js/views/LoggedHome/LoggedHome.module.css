@@ -40,9 +40,3 @@
     text-decoration: none!important;
     color: #0b383b;
 }
-.cardContainer {
-    cursor: pointer;
-}
-.cardContainer:hover {
-    opacity: 0.5;
-}
