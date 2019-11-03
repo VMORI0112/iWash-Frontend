@@ -124,60 +124,60 @@ const Machine = (props) => {
 
                             <div 
                                 onClick={() => modalToggle(washersData[WasherId].cicle_1, washersData[WasherId].price_1,washersData[WasherId].time_1)} 
-                                className={["col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}
+                                className={["btn col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}
                             > 
-                                {washersData[WasherId].cicle_1} 
-                                <br/> 
-                                &#128178; {washersData[WasherId].price_1}
+                                <i style={{color: "black"}}>{washersData[WasherId].cicle_1}</i>
                                 <br/>
                                 &#128336; {washersData[WasherId].time_1} min
+                                <br/> 
+                                <h3><span className="badge badge-success">&#128178; {washersData[WasherId].price_1}</span></h3>
                                
                             </div>
 
                             <div 
                                 onClick={() => modalToggle(washersData[WasherId].cicle_2,washersData[WasherId].price_2,washersData[WasherId].time_2)} 
-                                className={["col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}
+                                className={["btn col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}
                             >
                                 
-                                    {washersData[WasherId].cicle_2} 
-                                    <br/> 
-                                    &#128178; {washersData[WasherId].price_2}
+                                    <i style={{color: "black"}}>{washersData[WasherId].cicle_2} </i>
                                     <br/>
                                     &#128336; {washersData[WasherId].time_2} min
+                                    <br/> 
+                                    <h3><span className="badge badge-success">&#128178; {washersData[WasherId].price_2}</span></h3>
                                
                             </div>
 
                             <div 
                                 onClick={() => modalToggle(washersData[WasherId].cicle_3,washersData[WasherId].price_3,washersData[WasherId].time_3)} 
-                                className={["col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}
+                                className={["btn col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}
                             >   
-                                {washersData[WasherId].cicle_3} 
-                                <br/> 
-                                &#128178; {washersData[WasherId].price_3}
+                                <i style={{color: "black"}}>{washersData[WasherId].cicle_3}</i>
                                 <br/>
                                 &#128336; {washersData[WasherId].time_3} min
+                                <br/> 
+                                <h3><span className="badge badge-success">&#128178; {washersData[WasherId].price_3}</span></h3>
                             </div>
 
                             <div 
                                 onClick={() => modalToggle(washersData[WasherId].cicle_4,washersData[WasherId].price_4,washersData[WasherId].time_4)} 
-                                className={["col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}
+                                className={["btn col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}
                             > 
-                                {washersData[WasherId].cicle_4} 
-                                <br/> 
-                                &#128178; {washersData[WasherId].price_4}
+                                <i style={{color: "black"}}>{washersData[WasherId].cicle_4}</i>
                                 <br/>
                                 &#128336; {washersData[WasherId].time_4} min
+                                <br/> 
+                                <h3><span className="badge badge-success">&#128178; {washersData[WasherId].price_4}</span></h3>
                             </div>
 
                             <div 
                                 onClick={() => modalToggle(washersData[WasherId].cicle_5,washersData[WasherId].price_5,washersData[WasherId].time_5)} 
-                                className={["col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}
+                                className={["btn col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}
                             >
-                                {washersData[WasherId].cicle_5} 
-                                <br/> 
-                                &#128178; {washersData[WasherId].price_5}
+                                <i style={{color: "black"}}>{washersData[WasherId].cicle_5} </i>
                                 <br/>
                                 &#128336; {washersData[WasherId].time_5} min
+                                <br/> 
+                                <h3><span className="badge badge-success">&#128178; {washersData[WasherId].price_5}</span></h3> 
                             </div>
                         </div>
                     </div>
