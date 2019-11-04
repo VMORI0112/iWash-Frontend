@@ -189,10 +189,13 @@ const Machine = (props) => {
             <div className={["modal", modalVisible].join(' ')}>
                 <div className="modal-content">
                     <span onClick={modalToggle} className="close">&times;</span>
-                    <h1>{washersData[WasherId].name} Number: {washersData[WasherId].number}</h1>
-                    <h2>{modalCycle}</h2>
-                    <h2>{modalPrice}</h2>
-                    <h2>{modalTime}</h2>
+                    <h1 className="text-center" >{washersData[WasherId].name} Number: {washersData[WasherId].number}</h1>
+                    <div className="alert alert-warning text-center" role="alert">
+                        <i className="m-3" style={{color: "black"}}> {modalCycle} </i>
+                        <span className="m-3">&#128336; {modalTime} </span>
+                        <span className="badge badge-success">&#128178; {modalPrice} </span>
+                    </div>
+                   
                     <p>1 - put your clothes inside the washing machine</p>
                     <p>2 - insert detergent / softener</p>
                     <p>3 - make sure the door is closed</p>
