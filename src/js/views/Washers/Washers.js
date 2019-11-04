@@ -195,15 +195,15 @@ const Machine = (props) => {
                         <span className="m-3">&#128336; {modalTime} </span>
                         <span className="badge badge-success">&#128178; {modalPrice} </span>
                     </div>
-                   <div className="ml-5">
+                   <div className="alert alert-danger ml-5">
                         <p>1 - put your clothes inside the washing machine</p>
                         <p>2 - insert detergent / softener</p>
                         <p>3 - make sure the door is closed</p>
                    </div>
-                   <hr className={styles.hr} />
-                    <h3>Are you ready to start?</h3>
+                   
+                    <h3 className="text-center">Are you ready to start?</h3>
                     <div className="row">
-                        <div className="col">
+                        <div className="col text-right">
                             <button 
                                 onClick={modalToggle} 
                                 className="btn btn-danger"
@@ -211,7 +211,7 @@ const Machine = (props) => {
                                 NO, CANCEL
                             </button>
                         </div>
-                        <div className="col text-right">
+                        <div className="col text-left">
                             <button 
                                 onClick={() => startMachine(modalCycle, modalPrice, modalTime)} 
                                 className="btn btn-success"
