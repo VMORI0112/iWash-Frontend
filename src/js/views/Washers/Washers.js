@@ -195,10 +195,12 @@ const Machine = (props) => {
                         <span className="m-3">&#128336; {modalTime} </span>
                         <span className="badge badge-success">&#128178; {modalPrice} </span>
                     </div>
-                   
-                    <p>1 - put your clothes inside the washing machine</p>
-                    <p>2 - insert detergent / softener</p>
-                    <p>3 - make sure the door is closed</p>
+                   <div className="ml-5">
+                        <p>1 - put your clothes inside the washing machine</p>
+                        <p>2 - insert detergent / softener</p>
+                        <p>3 - make sure the door is closed</p>
+                   </div>
+                   <hr className={styles.hr} />
                     <h3>Are you ready to start?</h3>
                     <div className="row">
                         <div className="col">
