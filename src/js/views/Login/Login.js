@@ -29,6 +29,8 @@ const Login = () => {
                 let email = response.email;
                 let firstname = response.firstname;
                 let lastname = response.lastname;
+                let avatar = response.avatar;
+                let wallet = response.wallet;
                 if (!token && !email && !firstname && !lastname ) {
                     alert("Sorry we couldn't find an account with that email.\n\n Try to register first.")
                 } else {
@@ -37,11 +39,15 @@ const Login = () => {
                     localStorage.setItem('email', email);
                     localStorage.setItem('firstname', firstname);
                     localStorage.setItem('lastname', lastname);
+                    localStorage.setItem('avatar', avatar);
+                    localStorage.setItem('wallet', wallet);
                     setAuth({
                         'token': token,
                         'email': email,
                         'firstname': firstname,
-                        'lastname': lastname
+                        'lastname': lastname,
+                        'avatar': avatar,
+                        'wallet': wallet
                     })
                     history.push('/');
                 }
