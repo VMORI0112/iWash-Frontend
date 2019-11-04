@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 import styles from './Navbar.module.css';
 import coin from '../../../img/coin.png';
-// import avatar from '../../../img/avatar/avatar.png';
 
 const IwashNavBar = () => {
     
@@ -40,7 +39,7 @@ const IwashNavBar = () => {
                             </Link>
                             <div className="btn-group">
                                 <button className={["dropdown-toggle", styles.dropBtn].join(' ')} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src={avatar} alt="avatar" width="30px" /> {firstname} {lastname}
+                                <img src={process.env.PUBLIC_URL + '/img/avatar/' + avatar} alt="avatar" width="30px" /> {firstname} {lastname}
                                 </button>
                                 <div className="dropdown-menu dropdown-menu-right">
                                     <Link className="dropdown-item" to="/" >Home</Link>
