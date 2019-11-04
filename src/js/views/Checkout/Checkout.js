@@ -47,7 +47,7 @@ function Product({ product }) {
       <div>
         {error && <div>Uh oh, an error occurred! {error.message}</div>}
         <h1>
-          {product.description} for ${product.price}
+          {product.description}  ${product.price}
         </h1>
         <div ref={paypalRef} />
       </div>
@@ -57,14 +57,14 @@ function Product({ product }) {
 const Checkout = () => {
 
     const product = {
-        price: 10.07,
-        name: 'comfy chair',
-        description: 'fancy chair, like new'
+        price: 0.07,
+        name: 'add value',
+        description: 'add value selected: '
       };
 
     return (
         <section className={styles.section}>
-            <div className="container text-center">
+            <div className={["container text-center", styles.payment].join(' ')}>
                 <Product product={product} />
             </div>
         </section>
