@@ -69,14 +69,7 @@ const Machine = (props) => {
                   .then(res => console.log(res))
                   .catch(error => console.log(error));
                 console.log(washingNow);
-
-
-
-
-
-
-
-                // history.push('/current-wash');
+                history.push('/current-wash');
             } else {
                 setErrorMsg('Something went wrong');
             }
@@ -128,9 +121,9 @@ const Machine = (props) => {
                             > 
                                 <i style={{color: "black"}}>{washersData[WasherId].cicle_1}</i>
                                 <br/>
-                                &#128336; {washersData[WasherId].time_1} min
+                                <span role="img" aria-label="time">&#128336;</span>  {washersData[WasherId].time_1} min
                                 <br/> 
-                                <h3><span className="badge badge-success">&#128178; {washersData[WasherId].price_1}</span></h3>
+                                <h3><span className="badge badge-success"><span role="img" aria-label="price">&#128178;</span> {washersData[WasherId].price_1}</span></h3>
                                
                             </div>
 
@@ -141,9 +134,9 @@ const Machine = (props) => {
                                 
                                     <i style={{color: "black"}}>{washersData[WasherId].cicle_2} </i>
                                     <br/>
-                                    &#128336; {washersData[WasherId].time_2} min
+                                    <span role="img" aria-label="time">&#128336;</span> {washersData[WasherId].time_2} min
                                     <br/> 
-                                    <h3><span className="badge badge-success">&#128178; {washersData[WasherId].price_2}</span></h3>
+                                    <h3><span className="badge badge-success"><span role="img" aria-label="time">&#128178;</span> {washersData[WasherId].price_2}</span></h3>
                                
                             </div>
 
@@ -153,9 +146,9 @@ const Machine = (props) => {
                             >   
                                 <i style={{color: "black"}}>{washersData[WasherId].cicle_3}</i>
                                 <br/>
-                                &#128336; {washersData[WasherId].time_3} min
+                                <span role="img" aria-label="time">&#128336;</span> {washersData[WasherId].time_3} min
                                 <br/> 
-                                <h3><span className="badge badge-success">&#128178; {washersData[WasherId].price_3}</span></h3>
+                                <h3><span className="badge badge-success"><span role="img" aria-label="time">&#128178;</span> {washersData[WasherId].price_3}</span></h3>
                             </div>
 
                             <div 
@@ -164,9 +157,9 @@ const Machine = (props) => {
                             > 
                                 <i style={{color: "black"}}>{washersData[WasherId].cicle_4}</i>
                                 <br/>
-                                &#128336; {washersData[WasherId].time_4} min
+                                <span role="img" aria-label="time">&#128336;</span> {washersData[WasherId].time_4} min
                                 <br/> 
-                                <h3><span className="badge badge-success">&#128178; {washersData[WasherId].price_4}</span></h3>
+                                <h3><span className="badge badge-success"><span role="img" aria-label="time">&#128178;</span> {washersData[WasherId].price_4}</span></h3>
                             </div>
 
                             <div 
@@ -175,9 +168,9 @@ const Machine = (props) => {
                             >
                                 <i style={{color: "black"}}>{washersData[WasherId].cicle_5} </i>
                                 <br/>
-                                &#128336; {washersData[WasherId].time_5} min
+                                <span role="img" aria-label="time">&#128336;</span> {washersData[WasherId].time_5} min
                                 <br/> 
-                                <h3><span className="badge badge-success">&#128178; {washersData[WasherId].price_5}</span></h3> 
+                                <h3><span className="badge badge-success"><span role="img" aria-label="time">&#128178;</span> {washersData[WasherId].price_5}</span></h3> 
                             </div>
                         </div>
                     </div>
@@ -192,8 +185,8 @@ const Machine = (props) => {
                     <h1 className="text-center" >{washersData[WasherId].name} Number: {washersData[WasherId].number}</h1>
                     <div className="alert alert-warning text-center" role="alert">
                         <i className="m-3" style={{color: "black", fontWeight: "bold", fontSize: "24px"}}> {modalCycle} </i>
-                        <span className="m-3">&#128336; {modalTime} minutes</span>
-                        <span className="badge badge-success">&#128178; {modalPrice} </span>
+                        <span className="m-3"><span role="img" aria-label="time">&#128336;</span> {modalTime} minutes</span>
+                        <span className="badge badge-success"><span role="img" aria-label="time">&#128178;</span> {modalPrice} </span>
                     </div>
                    <div className="alert alert-danger ml-5">
                         <p>1 - make sure the washing machine is loaded</p>
