@@ -57,14 +57,16 @@ function Product({ product }) {
 const Checkout = () => {
 
     const product = {
-        price: 777.77,
+        price: 10.07,
         name: 'comfy chair',
         description: 'fancy chair, like new'
       };
 
     return (
         <section className={styles.section}>
-            <Product product={product} />
+            <div className="container text-center">
+                <Product product={product} />
+            </div>
         </section>
     );
 };
