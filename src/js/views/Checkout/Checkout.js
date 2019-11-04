@@ -3,11 +3,10 @@ import { UserContext } from '../../../UserContext';
 import styles from './Checkout.module.css';
 
 let userID = localStorage.getItem('userID');
+let userEmail = localStorage.getItem('email');
 let currentWallet = localStorage.getItem('wallet');
 
 function Product({ product }) {
-
-    // let wallet = localStorage.getItem('wallet');
 
     const [paidFor, setPaidFor] = useState(false);
     const [error, setError] = useState(null);
@@ -34,13 +33,30 @@ function Product({ product }) {
                 let amount = details.purchase_units[0].amount.value;
                 let name = details.payer.name.given_name;
                 let newWallet = (Number(currentWallet) + Number(amount));
+                let timeCreated = details.create_time;
+                let idTrans = details.id;
+                let status = details.status;
+                let payerEmail = details.payer.email_address;
+                let payerSurname = details.payer.name.surname;
+                let payerId = details.payer.payer_id;
+
                 let transDatas = JSON.stringify({
-                  id: userID,
-                  amount: newWallet
+                  trans_time: timeCreated,
+                  trans_id: idTrans,
+                  trans_status: status,
+                  paypal_payer_email: payerEmail,
+                  paypal_payer_name: name,
+                  paypal_payer_surname: payerSurname,
+                  paypal_payer_id: payerId,
+                  old_amount: currentWallet,
+                  trans_amount: amount,
+                  new_amount: newWallet,
+                  user_id: userID,
+                  user_email: userEmail
                 })
                 // fetch Post update wallet users table and add new transaction
                 fetch('http://0.0.0.0:3000/transaction', {
-                method: 'PUT',
+                method: 'POST',
                 body: transDatas,
                 headers:{
                     'Content-Type': 'application/json'
@@ -49,7 +65,7 @@ function Product({ product }) {
                 .then(res => {
                         localStorage.setItem('wallet', newWallet);
                         alert("Transaction Completed.\n" + name + ", You Added $" + amount + " to your Wallet");
-                        console.log(res);
+                        console.log(details);
                         window.location.href = "http://localhost:3001/";
                 })
                 .catch(error => {
