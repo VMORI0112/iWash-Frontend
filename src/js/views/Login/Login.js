@@ -26,6 +26,7 @@ const Login = () => {
             }).then(res => res.json())
             .then(response => {
                 let token = response.token;
+                let userID = response.id;
                 let email = response.email;
                 let firstname = response.firstname;
                 let lastname = response.lastname;
@@ -36,6 +37,7 @@ const Login = () => {
                 } else {
                     alert('LOGIN SUCCESSFUL');
                     localStorage.setItem('token', token);
+                    localStorage.setItem('userID', userID);
                     localStorage.setItem('email', email);
                     localStorage.setItem('firstname', firstname);
                     localStorage.setItem('lastname', lastname);
@@ -43,6 +45,7 @@ const Login = () => {
                     localStorage.setItem('wallet', wallet);
                     setAuth({
                         'token': token,
+                        'userID': userID,
                         'email': email,
                         'firstname': firstname,
                         'lastname': lastname,
