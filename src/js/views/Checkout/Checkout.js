@@ -1,4 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useContext, useState, useRef, useEffect } from 'react';
+import { UserContext } from '../../../UserContext'; 
 import styles from './Checkout.module.css';
 
 function Product({ product }) {
@@ -23,9 +24,13 @@ function Product({ product }) {
             });
           },
           onApprove: async (data, actions) => {
-            const order = await actions.order.capture();
+              await actions.order.capture().then(function(details) {
+                let amount = details.purchase_units[0].amount.value;
+                let name = details.payer.name.given_name;
+                alert("Transaction Completed.\n" + name + ", You Added $" + amount + " to your Wallet");
+                console.log(details.purchase_units[0].amount.value)
+            })
             setPaidFor(true);
-            console.log(order);
           },
           onError: err => {
             setError(err);
@@ -38,7 +43,7 @@ function Product({ product }) {
     if (paidFor) {
       return (
         <div>
-          <h1>Congrats, you just bought {product.name}!</h1>
+          <h2>Congrats, you just added ${product.price} to your wallet</h2>
         </div>
       );
     }
@@ -54,11 +59,15 @@ function Product({ product }) {
     );
   }
 
-const Checkout = () => {
+const Checkout = (props) => {
+
+    const {valuesData} = useContext(UserContext);
+
+    let valueID = props.match.params.amount;
 
     const product = {
-        price: 0.07,
-        name: 'add value',
+        price: valuesData[valueID].value,
+        name: valuesData[valueID].name,
         description: 'add value selected: '
       };
 

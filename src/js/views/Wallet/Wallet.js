@@ -22,7 +22,7 @@ const Wallet = () => {
                         return (
                             <Link 
                                 key={index}
-                                to='/checkout' 
+                                to={'/checkout/'+index} 
                                 className={["btn btn-lg m-3", styles.btnOrange].join(' ')}
                             > 
                                 + ${item.value}
@@ -32,12 +32,7 @@ const Wallet = () => {
                 )
 
                 }
-                {/* <Link to='/checkout' className={["btn btn-lg m-3", styles.btnOrange].join(' ')} > + $10</Link>
-                <Link to='/checkout' className={["btn btn-lg m-3", styles.btnOrange].join(' ')} > + $20</Link>
-                <Link to='/checkout' className={["btn btn-lg m-3", styles.btnOrange].join(' ')} > + $30</Link>
-                <Link to='/checkout' className={["btn btn-lg m-3", styles.btnOrange].join(' ')} > + $40</Link>
-                <Link to='/checkout' className={["btn btn-lg m-3", styles.btnOrange].join(' ')} > + $50</Link> */}
-            </div>
+                </div>
         </section>
     );
 };

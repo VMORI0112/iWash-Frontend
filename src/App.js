@@ -64,7 +64,7 @@ function App() {
               <Route path="/register" component={Register} />
               <Route path="/washers/:WID" component={Washers} />
               <Route path="/wallet" component={Wallet} />
-              <Route path="/checkout" component={Checkout} />
+              <Route path="/checkout/:amount" component={Checkout} />
               <Route path="/current-wash" component={CurrentWash} />
               <Route path="/rasp" component={Rasp} />
               <Route render={() => <NotFound/>} />
