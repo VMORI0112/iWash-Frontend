@@ -23,6 +23,7 @@ function App() {
 
   const [washersData, setWashersData] = useState();
   const [dryersData, setDryersData] = useState();
+  const [valuesData, setValuesData] = useState();
   
   const [user, setUser] = useState(null);
   const [Auth, setAuth] = useState(null);
@@ -42,8 +43,15 @@ function App() {
       .catch(error => console.log('error: ', error) );
   },[])
 
+  useEffect(() => {
+    fetch('http://0.0.0.0:3000/values')
+      .then(res => res.json())
+      .then(res => setValuesData(res))
+      .catch(error => console.log('error: ', error) );
+  },[])
 
-  const providerValue = useMemo(() => ({ user, setUser, Auth, setAuth, washersData, dryersData }), [user, setUser, Auth, setAuth, washersData, dryersData]);
+
+  const providerValue = useMemo(() => ({ user, setUser, Auth, setAuth, washersData, dryersData, valuesData, setValuesData }), [user, setUser, Auth, setAuth, washersData, dryersData, valuesData, setValuesData]);
 
   return (
     <Router>
