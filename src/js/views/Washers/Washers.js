@@ -191,12 +191,12 @@ const Machine = (props) => {
                     <span onClick={modalToggle} className="close">&times;</span>
                     <h1 className="text-center" >{washersData[WasherId].name} Number: {washersData[WasherId].number}</h1>
                     <div className="alert alert-warning text-center" role="alert">
-                        <i className="m-3" style={{color: "black"}}> {modalCycle} </i>
-                        <span className="m-3">&#128336; {modalTime} </span>
+                        <i className="m-3" style={{color: "black", fontWeight: "bold", fontSize: "24px"}}> {modalCycle} </i>
+                        <span className="m-3">&#128336; {modalTime} minutes</span>
                         <span className="badge badge-success">&#128178; {modalPrice} </span>
                     </div>
                    <div className="alert alert-danger ml-5">
-                        <p>1 - put your clothes inside the washing machine</p>
+                        <p>1 - make sure the washing machine is loaded</p>
                         <p>2 - insert detergent / softener</p>
                         <p>3 - make sure the door is closed</p>
                    </div>
