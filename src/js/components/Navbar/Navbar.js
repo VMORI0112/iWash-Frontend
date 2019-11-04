@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom';
 
 import styles from './Navbar.module.css';
 import coin from '../../../img/coin.png';
-import avatar from '../../../img/avatar/avatar.png';
+// import avatar from '../../../img/avatar/avatar.png';
 
 const IwashNavBar = () => {
     
     let tokenAuth = localStorage.getItem('token');
     let firstname = localStorage.getItem('firstname');
     let lastname = localStorage.getItem('lastname');
+    let avatar = localStorage.getItem('avatar');
+    let wallet = localStorage.getItem('wallet');
 
     return (
         <>
@@ -34,7 +36,7 @@ const IwashNavBar = () => {
                     : 
                         <li>
                             <Link className={styles.wallet} to="/wallet">
-                                $ 40
+                                $ {wallet}
                             </Link>
                             <div className="btn-group">
                                 <button className={["dropdown-toggle", styles.dropBtn].join(' ')} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
