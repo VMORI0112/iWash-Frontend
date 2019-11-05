@@ -3,12 +3,15 @@ import { UserContext } from '../../../UserContext';
 import styles from './Checkout.module.css';
 import swal from 'sweetalert';
 
+import cashSound from '../../../sounds/cash.mp3';
+
 let userID = localStorage.getItem('userID');
 let userEmail = localStorage.getItem('email');
 let currentWallet = localStorage.getItem('wallet');
 
 function Product({ product }) {
 
+    const [cash] = useState(new Audio(cashSound));
     const [paidFor, setPaidFor] = useState(false);
     const [error, setError] = useState(null);
     const paypalRef = useRef();
@@ -65,7 +68,7 @@ function Product({ product }) {
                 }).then(res => res.json())
                 .then(res => {
                         localStorage.setItem('wallet', newWallet);
-
+                        cash.play();
                         swal("Transaction Completed "+ name , "You Added $"+ amount + " to your Wallet", "success", {
                           button: "COOL",
                         }).then(() => {
@@ -93,7 +96,7 @@ function Product({ product }) {
           },
         })
         .render(paypalRef.current);
-    }, [product.description, product.price]);
+    }, [product.description, product.price, cash]);
   
     if (paidFor) {
       return (
