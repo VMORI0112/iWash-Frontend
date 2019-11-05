@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './Rasp.module.css';
 import swal from 'sweetalert';
 
@@ -7,6 +7,14 @@ const Rasp = () => {
     // const [show, setShow] = useState(false);
 
     const clik = () => {
+
+        swal("Good job!", "You clicked the button!", "success", {
+            button: "Aww yiss!",
+          }).then(() => {
+              alert('hellooo');
+          })
+
+
 
         // fetch('http://172.16.100.7:3000/iwash',{
         //     method: 'POST',
