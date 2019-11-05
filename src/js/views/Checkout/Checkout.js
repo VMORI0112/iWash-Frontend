@@ -1,6 +1,7 @@
 import React, { useContext, useState, useRef, useEffect } from 'react';
 import { UserContext } from '../../../UserContext'; 
 import styles from './Checkout.module.css';
+import swal from 'sweetalert';
 
 let userID = localStorage.getItem('userID');
 let userEmail = localStorage.getItem('email');
@@ -64,13 +65,20 @@ function Product({ product }) {
                 }).then(res => res.json())
                 .then(res => {
                         localStorage.setItem('wallet', newWallet);
-                        alert("Transaction Completed.\n" + name + ", You Added $" + amount + " to your Wallet");
+
+                        swal("Transaction Completed "+ name , "You Added $"+ amount + " to your Wallet", "success", {
+                          button: "COOL",
+                        }).then(() => {
+                            window.location.href = "http://localhost:3001/";
+                            });
                         console.log(details);
-                        window.location.href = "http://localhost:3001/";
+                        console.log(res);
                 })
                 .catch(error => {
                     console.log('Error:', error);
-                    alert("error", JSON.stringify(error));
+                    swal("Something Went Wrong!", JSON.stringify("error: => "+ error), "error", {
+                        button: "OK",
+                      })
                 });
 
             })
@@ -78,6 +86,9 @@ function Product({ product }) {
           },
           onError: err => {
             setError(err);
+            swal("Something Went Wrong!", JSON.stringify("error: => "+ err), "error", {
+              button: "OK",
+            })
             console.error(err);
           },
         })
@@ -120,7 +131,6 @@ const Checkout = (props) => {
     return (
         <section className={styles.section}>
             <div className={["container text-center p-5", styles.payment].join(' ')}>
-              {/* {userEmail} */}
                 <Product product={product} />
             </div>
         </section>
