@@ -21,12 +21,24 @@ const Register = () => {
     const registerFormHandler = () => {
         if (!firstname) {
             inputFname.current.style.border = "1px solid red";
-        } if (!lastname) {
+            swal("First Name Cannot be Empty", "Enter your First Name", "error", {
+                button: "OK",
+              })
+        } else if (!lastname) {
             inputLname.current.style.border = "1px solid red";
-        } if (!email) {
+            swal("Last Name Cannot be Empty", "Enter your Last Name", "error", {
+                button: "OK",
+              })
+        } else if (!email) {
             inputEmail.current.style.border = "1px solid red";
-        } if (!password) {
+            swal("Email Cannot be Empty", "Enter your Email", "error", {
+                button: "OK",
+              })
+        } else if (!password) {
             inputPass.current.style.border = "1px solid red";
+            swal("Password Cannot be Empty", "Enter your Password", "error", {
+                button: "OK",
+              })
         } else {
 
             let userRegisterData = JSON.stringify({
@@ -45,19 +57,19 @@ const Register = () => {
                 }
                 }).then(res => res.json())
                 .then(res => {
-
+                    console.log(res);
                     swal("ACCOUNT CREATED", "Welcome to iWash", "success", {
                         button: "LOGIN NOW",
                       }).then(() => {
                             history.push('/login');
                           });
-                        // alert('REGISTER SUCCESSFUL');
-                        // console.log(res);
-                        // history.push('/login');
                 })
                 .catch(error => {
                     console.log('Error:', error);
-                    alert("error", JSON.stringify(error));
+                    swal("Something Went Wrong!", JSON.stringify(error), "error", {
+                        button: "OK",
+                      })
+                    // alert("error", JSON.stringify(error));
                 });
             }
     }
