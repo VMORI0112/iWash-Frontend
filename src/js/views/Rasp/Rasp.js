@@ -8,10 +8,13 @@ const Rasp = () => {
 
     const clik = () => {
 
-        swal("Good job!", "You clicked the button!", "success", {
-            button: "Aww yiss!",
-          }).then(() => {
-              alert('hellooo');
+        // swal("Good job!", "You clicked the button!", "success", {
+        //     button: "Aww yiss!",
+        //   }).then(() => {
+        //       alert('hellooo');
+        //   })
+        swal("Sorry we couldn't find an account with that email.", "Try to register first.!", "error", {
+            button: "TRY AGAIN!",
           })
 
 

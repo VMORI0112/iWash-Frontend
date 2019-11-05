@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { UserContext } from '../../../UserContext';
 import styles from './Login.module.css';
+import swal from 'sweetalert';
 
 import coin from '../../../img/coin.png';
 
@@ -33,9 +34,12 @@ const Login = () => {
                 let avatar = response.avatar;
                 let wallet = response.wallet;
                 if (!token && !email && !firstname && !lastname ) {
-                    alert("Sorry we couldn't find an account with that email.\n\n Try to register first.")
+                    swal("Sorry we couldn't find an account with that email.", "Try to register first.!", "error", {
+                        button: "TRY AGAIN!",
+                      })
+                    // alert("Sorry we couldn't find an account with that email.\n\n Try to register first.")
                 } else {
-                    alert('LOGIN SUCCESSFUL');
+                    // alert('LOGIN SUCCESSFUL');
                     localStorage.setItem('token', token);
                     localStorage.setItem('userID', userID);
                     localStorage.setItem('email', email);
@@ -52,12 +56,18 @@ const Login = () => {
                         'avatar': avatar,
                         'wallet': wallet
                     })
-                    history.push('/');
+                    swal("LOGIN SUCCESSFUL!", "Welcome to iWash", "success", {
+                        button: "Let's Wash",
+                      }).then(() => {
+                            history.push('/');
+                          });
+                    
                 }
             })
             .catch(error => {
-                alert('Something Went Wrong, Try again');
-                console.log('Error:', error);
+                swal("Something Went Wrong!", "Try again!", "error", {
+                    button: "OK",
+                  })
             });
     }
 
