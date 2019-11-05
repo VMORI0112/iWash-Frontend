@@ -11,6 +11,9 @@ const Machine = (props) => {
 
     let history = useHistory();
 
+    let userID = localStorage.getItem('userID');
+    let userEmail = localStorage.getItem('email');
+
     const {washersData} = useContext(UserContext);
     const [modalVisible, setModalVisible] = useState('invisible');
 
@@ -34,6 +37,8 @@ const Machine = (props) => {
 
         let washingNow = JSON.stringify({
             machineId: machineId,
+            userID: userID,
+            userEmail: userEmail,
             locationNum: locationNum,
             price: price,
             cicle: cycle,
