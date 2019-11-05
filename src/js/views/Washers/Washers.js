@@ -44,7 +44,7 @@ const Machine = (props) => {
         modalToggle();
         // to have the right address ip, type in rasp terminal: ifconfig wlan0
         // once you get that address, change it here and in the rasp app.py
-        fetch('http://192.168.0.83:3000/iwash',{
+        fetch('http://172.16.100.7:3000/iwash',{
             method: 'POST',
             body: JSON.stringify({
                 "action": cycle,
