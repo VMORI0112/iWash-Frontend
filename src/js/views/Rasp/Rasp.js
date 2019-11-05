@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import styles from './Rasp.module.css';
-import SweetAlert from 'sweetalert-react';
+import swal from 'sweetalert';
 
 const Rasp = () => {
 
-    const [show, setShow] = useState(false);
+    // const [show, setShow] = useState(false);
 
     const clik = () => {
 
@@ -28,12 +28,12 @@ const Rasp = () => {
             Rasp home
             <button onClick={clik} >Get from rasp</button>
 
-            <SweetAlert
+            {/* <SweetAlert
                 show={show}
                 title="Demo"
                 text="SweetAlert in React"
                 onConfirm={() => setShow(false) }
-            />
+            /> */}
         </section>
     );
 };
