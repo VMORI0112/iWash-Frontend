@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react';
 import { useHistory } from 'react-router-dom'
 import { UserContext } from '../../../UserContext';
 import styles from './Washers.module.css';
+import swal from 'sweetalert';
+
 
 import washerClose from '../../../img/washing/w2.png';
 
@@ -11,7 +13,6 @@ const Machine = (props) => {
 
     const {washersData} = useContext(UserContext);
     const [modalVisible, setModalVisible] = useState('invisible');
-    const [errorMsg, setErrorMsg] = useState('');
 
     const [modalCycle, setCycle] = useState('');
     const [modalPrice, setPrice] = useState('');
@@ -68,13 +69,20 @@ const Machine = (props) => {
                 }).then(res => res.json())
                   .then(res => console.log(res))
                   .catch(error => console.log(error));
-                console.log(washingNow);
+                // console.log(washingNow);
                 history.push('/current-wash');
             } else {
-                setErrorMsg('Something went wrong');
+                swal("Something Went Wrong!", "Try again!", "error", {
+                    button: "OK",
+                  })
             }
         })
-        .catch(error => console.log('error: ', error) );
+        .catch(error => {
+            swal("Error!", JSON.stringify("error: => "+ error), "error", {
+                button: "OK",
+              })
+            console.log('error: ', error)
+        });
     }
 
     let WasherId = props.match.params.WID;
@@ -82,12 +90,6 @@ const Machine = (props) => {
     return (
         <section className={styles.section}>
             <div className="container text-center">
-                {errorMsg ? 
-                    <div className="alert alert-danger" role="alert">
-                    {errorMsg}
-                    </div>
-                    : ''
-                }
                 <div className="row">
                     <div className="col">
 

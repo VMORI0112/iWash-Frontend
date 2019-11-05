@@ -66,7 +66,7 @@ const Register = () => {
                 })
                 .catch(error => {
                     console.log('Error:', error);
-                    swal("Something Went Wrong!", JSON.stringify(error), "error", {
+                    swal("Something Went Wrong!", JSON.stringify("error: => "+ error), "error", {
                         button: "OK",
                       })
                     // alert("error", JSON.stringify(error));
