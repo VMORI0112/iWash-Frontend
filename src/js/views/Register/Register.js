@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import styles from './Register.module.css';
+import swal from 'sweetalert';
 
 import coin from '../../../img/coin.png';
 
@@ -44,9 +45,15 @@ const Register = () => {
                 }
                 }).then(res => res.json())
                 .then(res => {
-                        alert('REGISTER SUCCESSFUL');
-                        console.log(res);
-                        history.push('/login');
+
+                    swal("ACCOUNT CREATED", "Welcome to iWash", "success", {
+                        button: "LOGIN NOW",
+                      }).then(() => {
+                            history.push('/login');
+                          });
+                        // alert('REGISTER SUCCESSFUL');
+                        // console.log(res);
+                        // history.push('/login');
                 })
                 .catch(error => {
                     console.log('Error:', error);
