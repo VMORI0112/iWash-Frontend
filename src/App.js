@@ -33,28 +33,28 @@ function App() {
   let userEmail = localStorage.getItem('email');
 
   useEffect(() => {
-    fetch('http://0.0.0.0:3000/washers')
+    fetch('http://iwash-backend.herokuapp.com/washers')
       .then(res => res.json())
       .then(res => setWashersData(res))
       .catch(error => console.log('error: ', error) );
   },[])
 
   useEffect(() => {
-    fetch('http://0.0.0.0:3000/dryers')
+    fetch('http://iwash-backend.herokuapp.com/dryers')
       .then(res => res.json())
       .then(res => setDryersData(res))
       .catch(error => console.log('error: ', error) );
   },[])
 
   useEffect(() => {
-    fetch('http://0.0.0.0:3000/values')
+    fetch('http://iwash-backend.herokuapp.com/values')
       .then(res => res.json())
       .then(res => setValuesData(res))
       .catch(error => console.log('error: ', error) );
   },[])
 
   useEffect(() => {
-    fetch('http://0.0.0.0:3000/user_wash', {
+    fetch('http://iwash-backend.herokuapp.com/user_wash', {
       method: 'POST',
       cors: '*cors',
       body: JSON.stringify({
