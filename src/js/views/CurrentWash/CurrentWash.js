@@ -1,20 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { UserContext } from '../../../UserContext';
 import styles from './CurrentWash.module.css';
+import Timer from '../../components/Timer/Timer';
 
 const CurrentWash = () => {
 
-    const {currentWashing} = useContext(UserContext);
-
-    // const [time, setTime] = useState(0)
-
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         setTime(time + 1);
-    //     },1000)
-    // },[time])
-
-    // console.log(time);  
+    const {currentWashing} = useContext(UserContext); 
 
     return (
         <section className={styles.section}>
@@ -24,6 +15,10 @@ const CurrentWash = () => {
                     return (
                         <div key={index}>
                             {item.cicle} - start: {item.start} - End: {item.end}
+                            {item.time}
+                            <br/>
+                            <Timer time={item.time} />
+                            <br/>
                         </div>
                     )
                 })}

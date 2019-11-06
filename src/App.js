@@ -68,7 +68,7 @@ function App() {
       .then(res => res.json())
       .then(res => setCurrentWashing(res))
       .catch(error => console.log('error: ', error) );
-  },[userId, userEmail])
+  },[userId, userEmail, currentWashing])
 
 
   const providerValue = useMemo(() => ({ user, setUser, Auth, setAuth, washersData, dryersData, valuesData, setValuesData, currentWashing }), [user, setUser, Auth, setAuth, washersData, dryersData, valuesData, setValuesData, currentWashing]);
