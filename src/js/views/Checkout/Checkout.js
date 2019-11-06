@@ -59,7 +59,7 @@ function Product({ product }) {
                   user_email: userEmail
                 })
                 // fetch Post update wallet users table and add new transaction
-                fetch('http://0.0.0.0:3000/transaction', {
+                fetch('http://iwash-backend.herokuapp.com/transaction', {
                 method: 'POST',
                 body: transDatas,
                 headers:{
