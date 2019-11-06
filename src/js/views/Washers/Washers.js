@@ -64,7 +64,7 @@ const Machine = (props) => {
         // .then(res => {
         //     console.log(res.msg);
         //     if (res.msg === 'success') {
-                fetch('http://0.0.0.0:3000/start_washing',{
+                fetch('http://iwash-backend.herokuapp.com/start_washing',{
                     method: 'POST',
                     cors: '*cors',
                     body: washingNow,
