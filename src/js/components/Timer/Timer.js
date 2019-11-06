@@ -14,6 +14,8 @@ const Timer = (props) => {
     let howTimeLeft;
     let secondLeft;
 
+    let remind = Math.floor(howTimeLeftSecond % 60);
+
     if (howTimeLeftMinutes > 0) {
         howTimeLeft = howTimeLeftMinutes;
         secondLeft = howTimeLeftSecond;
@@ -41,7 +43,9 @@ const Timer = (props) => {
         <>
         {/* here : {count} || now: {hours + " - " + minutes + " - " + seconds} */}
         <br/>
-        time left: = {howTimeLeft} || seconds left: = {secondLeft}
+        time left: = {howTimeLeft} || seconds left: = {secondLeft} 
+        <br/>
+        reminder: => <h3>{howTimeLeft}:{remind}</h3>
 
         </>
     );
