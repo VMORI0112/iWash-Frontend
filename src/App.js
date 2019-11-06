@@ -24,10 +24,13 @@ function App() {
   const [washersData, setWashersData] = useState();
   const [dryersData, setDryersData] = useState();
   const [valuesData, setValuesData] = useState();
+  const [currentWashing, setCurrentWashing] = useState();
   
   const [user, setUser] = useState(null);
   const [Auth, setAuth] = useState(null);
   let tokenAuth = localStorage.getItem('token');
+  let userId = localStorage.getItem('userID');
+  let userEmail = localStorage.getItem('email');
 
   useEffect(() => {
     fetch('http://0.0.0.0:3000/washers')
@@ -50,8 +53,25 @@ function App() {
       .catch(error => console.log('error: ', error) );
   },[])
 
+  useEffect(() => {
+    fetch('http://0.0.0.0:3000/user_wash', {
+      method: 'POST',
+      cors: '*cors',
+      body: JSON.stringify({
+        user_id: userId,
+        user_email: userEmail
+      }),
+      headers:{
+          'Content-Type': 'application/json'
+      }
+    })
+      .then(res => res.json())
+      .then(res => setCurrentWashing(res))
+      .catch(error => console.log('error: ', error) );
+  },[userId, userEmail])
 
-  const providerValue = useMemo(() => ({ user, setUser, Auth, setAuth, washersData, dryersData, valuesData, setValuesData }), [user, setUser, Auth, setAuth, washersData, dryersData, valuesData, setValuesData]);
+
+  const providerValue = useMemo(() => ({ user, setUser, Auth, setAuth, washersData, dryersData, valuesData, setValuesData, currentWashing }), [user, setUser, Auth, setAuth, washersData, dryersData, valuesData, setValuesData, currentWashing]);
 
   return (
     <Router>

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom';
 import { UserContext } from '../../../UserContext';
 import styles from './Washers.module.css';
 import swal from 'sweetalert';
@@ -11,8 +11,8 @@ const Machine = (props) => {
 
     let history = useHistory();
 
-    let userID = localStorage.getItem('userID');
-    let userEmail = localStorage.getItem('email');
+    let user_id = localStorage.getItem('userID');
+    let user_email = localStorage.getItem('email');
 
     const {washersData} = useContext(UserContext);
     const [modalVisible, setModalVisible] = useState('invisible');
@@ -37,8 +37,8 @@ const Machine = (props) => {
 
         let washingNow = JSON.stringify({
             machineId: machineId,
-            userID: userID,
-            userEmail: userEmail,
+            userID: user_id,
+            userEmail: user_email,
             locationNum: locationNum,
             price: price,
             cicle: cycle,
@@ -50,20 +50,20 @@ const Machine = (props) => {
         modalToggle();
         // to have the right address ip, type in rasp terminal: ifconfig wlan0
         // once you get that address, change it here and in the rasp app.py
-        fetch('http://172.16.100.7:3000/iwash',{
-            method: 'POST',
-            body: JSON.stringify({
-                "action": cycle,
-                "msg": cycle+" WASHING"
-            }),
-            headers:{
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(res => res.json())
-        .then(res => {
-            console.log(res.msg);
-            if (res.msg === 'success') {
+        // fetch('http://172.16.100.7:3000/iwash',{
+        //     method: 'POST',
+        //     body: JSON.stringify({
+        //         "action": cycle,
+        //         "msg": cycle+" WASHING"
+        //     }),
+        //     headers:{
+        //         'Content-Type': 'application/json'
+        //     }
+        // })
+        // .then(res => res.json())
+        // .then(res => {
+        //     console.log(res.msg);
+        //     if (res.msg === 'success') {
                 fetch('http://0.0.0.0:3000/start_washing',{
                     method: 'POST',
                     cors: '*cors',
@@ -75,19 +75,25 @@ const Machine = (props) => {
                   .then(res => console.log(res))
                   .catch(error => console.log(error));
                 // console.log(washingNow);
-                history.push('/current-wash');
-            } else {
-                swal("Something Went Wrong!", "Try again!", "error", {
-                    button: "OK",
-                  })
-            }
-        })
-        .catch(error => {
-            swal("Error!", JSON.stringify("error: => "+ error), "error", {
-                button: "OK",
-              })
-            console.log('error: ', error)
-        });
+
+                swal("The Machine Started " , "You can go grab a coffee and come back when it's over", "success", {
+                    button: "Let iWash Wash",
+                  }).then(() => {
+                    history.push('/current-wash');
+                      });
+
+        //     } else {
+        //         swal("Something Went Wrong!", "Try again!", "error", {
+        //             button: "OK",
+        //           })
+        //     }
+        // })
+        // .catch(error => {
+        //     swal("Error!", JSON.stringify("error: => "+ error), "error", {
+        //         button: "OK",
+        //       })
+        //     console.log('error: ', error)
+        // });
     }
 
     let WasherId = props.match.params.WID;
