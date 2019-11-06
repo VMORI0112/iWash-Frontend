@@ -3,10 +3,13 @@ import React, { useEffect, useState } from 'react';
 const Timer = (props) => {
 
     // const [newTime, setNewTime] = useState(0)
-    const [count, setCount] = useState(Math.floor(props.time*60));
+    const [count, setCount] = useState(Math.floor(props.time));
 
     var date = new Date();
-    var timestamp = date.getTime();
+    // var timestamp = date.getTime();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
 
     useEffect(() => {
         const timeout = setTimeout(() => {
@@ -21,7 +24,7 @@ const Timer = (props) => {
 
     return (
         <>
-        here : {count} || now: {timestamp}
+        here : {count} || now: {hours + " - " + minutes + " - " + seconds}
 
         </>
     );

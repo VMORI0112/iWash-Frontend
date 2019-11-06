@@ -13,8 +13,9 @@ const CurrentWash = () => {
                 <h2 className="text-center">your current wash</h2>
                 {!currentWashing ? 'Loading...' : currentWashing.map((item,index) => {
                     return (
-                        <div key={index}>
-                            {item.cicle} - start: {item.start} - End: {item.end}
+                        <div key={index} className="alert alert-primary" >
+                            <h4>Cycle: {item.cicle} || Time: {item.time} minutes</h4>
+                            start: {item.start} - End: {item.end}
                             {item.time}
                             <br/>
                             <Timer time={item.time} />
