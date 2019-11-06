@@ -48,7 +48,7 @@ const Register = () => {
                 password: password
             });
             // console.log(userRegisterData)
-            fetch('http://0.0.0.0:3000/register', {
+            fetch('http://iwash-backend.herokuapp.com/register', {
                 method: 'POST',
                 body: userRegisterData,
                 // cors: 'no-cors',

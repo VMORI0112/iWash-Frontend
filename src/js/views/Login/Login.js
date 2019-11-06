@@ -17,7 +17,7 @@ const Login = () => {
             "email": email,
             "password": password
         });
-        fetch('http://0.0.0.0:3000/login', {
+        fetch('http://iwash-backend.herokuapp.com/login', {
             method: 'POST',
             body: userLoginData,
             cors: 'no-cors',
