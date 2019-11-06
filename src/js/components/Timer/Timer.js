@@ -17,12 +17,12 @@ const Timer = (props) => {
 
     let remind = Math.floor(howTimeLeftSecond % 60);
 
-    if (howTimeLeftMinutes > 0) {
+    if (howTimeLeftSecond > 0) {
         howTimeLeft = howTimeLeftMinutes;
         secondLeft = remind;
-     } else if (howTimeLeftMinutes === 0) {
-        swal("The Machine Started " , "You can go grab a coffee and come back when it's over", "success", {
-            button: "Let iWash Wash",
+     } else if (howTimeLeftSecond === 0) {
+        swal("The Machine is Done" , "You can now pick up your lanudry", "success", {
+            button: "Done",
           })
     } else {
         howTimeLeft = '00';
