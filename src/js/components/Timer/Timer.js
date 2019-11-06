@@ -6,10 +6,25 @@ const Timer = (props) => {
     const [count, setCount] = useState(Math.floor(props.time));
 
     var date = new Date();
-    // var timestamp = date.getTime();
-    var hours = date.getHours();
-    var minutes = date.getMinutes();
-    var seconds = date.getSeconds();
+    var timestamp = date.getTime();
+    console.log(props.start);
+
+    let howTimeLeftMinutes = Math.floor((props.end - timestamp) / 60000);
+    let howTimeLeftSecond = Math.floor((props.end - timestamp) / 1000);
+    let howTimeLeft;
+    let secondLeft;
+
+    if (howTimeLeftMinutes > 0) {
+        howTimeLeft = howTimeLeftMinutes;
+        secondLeft = howTimeLeftSecond;
+    } else {
+        howTimeLeft = 0;
+        secondLeft = 0;
+    }
+    
+    // var hours = date.getHours();
+    // var minutes = date.getMinutes();
+    // var seconds = date.getSeconds();
 
     useEffect(() => {
         const timeout = setTimeout(() => {
@@ -20,11 +35,13 @@ const Timer = (props) => {
          }
     },[count])
 
-    console.log(count);  
+    // console.log(count);  
 
     return (
         <>
-        here : {count} || now: {hours + " - " + minutes + " - " + seconds}
+        {/* here : {count} || now: {hours + " - " + minutes + " - " + seconds} */}
+        <br/>
+        time left: = {howTimeLeft} || seconds left: = {secondLeft}
 
         </>
     );

@@ -18,7 +18,7 @@ const CurrentWash = () => {
                             start: {item.start} - End: {item.end}
                             {item.time}
                             <br/>
-                            <Timer time={item.time} />
+                            <Timer start={item.start} end={item.end} />
                             <br/>
                         </div>
                     )
