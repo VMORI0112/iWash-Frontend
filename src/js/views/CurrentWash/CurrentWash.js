@@ -5,8 +5,6 @@ import styles from './CurrentWash.module.css';
 const CurrentWash = () => {
 
     const {currentWashing} = useContext(UserContext);
-    
-    // currentWashing && console.log(JSON.parse(currentWashing));
 
     return (
         <section className={styles.section}>

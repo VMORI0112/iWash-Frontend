@@ -24,6 +24,7 @@ const LoggedHome = () => {
     const {washersData} = useContext(UserContext);
     const {dryersData} = useContext(UserContext);
 
+
     return (
         <>
         <section className={styles.section}>
