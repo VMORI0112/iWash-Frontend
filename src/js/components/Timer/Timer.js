@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import swal from 'sweetalert';
 
 const Timer = (props) => {
 
@@ -18,10 +19,14 @@ const Timer = (props) => {
 
     if (howTimeLeftMinutes > 0) {
         howTimeLeft = howTimeLeftMinutes;
-        secondLeft = howTimeLeftSecond;
+        secondLeft = remind;
+     } else if (howTimeLeftMinutes === 0) {
+        swal("The Machine Started " , "You can go grab a coffee and come back when it's over", "success", {
+            button: "Let iWash Wash",
+          })
     } else {
-        howTimeLeft = 0;
-        secondLeft = 0;
+        howTimeLeft = '00';
+        secondLeft = '00';
     }
     
     // var hours = date.getHours();
@@ -41,11 +46,8 @@ const Timer = (props) => {
 
     return (
         <>
-        {/* here : {count} || now: {hours + " - " + minutes + " - " + seconds} */}
         <br/>
-        time left: = {howTimeLeft} || seconds left: = {secondLeft} 
-        <br/>
-        reminder: => <h3>{howTimeLeft}:{remind}</h3>
+        reminder: => <h3>{howTimeLeft}:{secondLeft}</h3>
 
         </>
     );
