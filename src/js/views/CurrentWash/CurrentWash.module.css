@@ -3,3 +3,18 @@
     background-color: #eeeeee;
     min-height: 600px!important;
 }
+
+.alertBlue {
+    background-color: rgb(158, 220, 249);
+    border: 1px solid #7CD1F9;
+    color: black;
+}
+.cycle {
+    font-size: 2rem;
+}
+.time {
+    font-size: 2rem;
+}
+.number {
+    font-size: 2rem;
+}

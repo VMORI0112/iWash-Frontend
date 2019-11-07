@@ -4,7 +4,7 @@
 .btnGreen {
     background-color: #f8b663!important;
     border-color: transparent!important;
-    color: #fff!important;
+    color: #000000!important;
     font-weight: bold;
     margin-left: 20px;
 }
@@ -17,7 +17,7 @@
 .dropBtn {
     background-color: #f8b663;
     border: none;
-    color: #ffffff;
+    color: #000000;
     outline: none;
     padding: 5px 10px 5px 10px;
     border-radius: 4px;
@@ -26,14 +26,13 @@
 }
 .dropBtn:hover {
     background-color: #f7b057;
-    color: #ffffff;
 }
 .dropBtn:focus {
     outline: none;
 }
 .wallet {
     background-color: #f8b663;
-    color: #ffffff;
+    color: #000000;
     padding: 10px;
     border-radius: 100px;
     font-weight: bold;
@@ -41,6 +40,5 @@
 }
 .wallet:hover {
     background-color: #f7b057;
-    color: #eeeeee;
     text-decoration: none;
 }
