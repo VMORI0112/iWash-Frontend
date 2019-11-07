@@ -11,13 +11,14 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const {setAuth} = useContext(UserContext);
+    const {backen_url} = useContext(UserContext);
 
     const loginFormHandler = () => {
         let userLoginData = JSON.stringify({
             "email": email,
             "password": password
         });
-        fetch('http://iwash-backend.herokuapp.com/login', {
+        fetch(backen_url+'/login', {
             method: 'POST',
             body: userLoginData,
             cors: 'no-cors',

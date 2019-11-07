@@ -14,7 +14,7 @@ const CurrentWash = () => {
                 {!currentWashing ? 'Loading...' : currentWashing.map((item,index) => {
                     return (
                         <div key={index} className="alert alert-primary" >
-                            <h4>Cycle: {item.cicle} || Time: {item.time} minutes</h4>
+                            <h4>{item.cicle} || {item.time}min || #{item.machineNumber}</h4>
                             start: {item.start} - End: {item.end}
                             {item.time}
                             <br/>

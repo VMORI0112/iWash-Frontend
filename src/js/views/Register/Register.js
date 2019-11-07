@@ -1,11 +1,14 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useContext } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import { UserContext } from '../../../UserContext';
 import styles from './Register.module.css';
 import swal from 'sweetalert';
 
 import coin from '../../../img/coin.png';
 
 const Register = () => {
+    const {backen_url} = useContext(UserContext);
+
     let history = useHistory();
     const inputFname = useRef(null);
     const inputLname = useRef(null);
@@ -48,7 +51,7 @@ const Register = () => {
                 password: password
             });
             // console.log(userRegisterData)
-            fetch('http://iwash-backend.herokuapp.com/register', {
+            fetch(backen_url+'/register', {
                 method: 'POST',
                 body: userRegisterData,
                 // cors: 'no-cors',

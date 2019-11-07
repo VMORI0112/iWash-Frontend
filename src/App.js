@@ -21,6 +21,8 @@ const Rasp = lazy(() => import('./js/views/Rasp/Rasp'));
 
 function App() {
 
+  const [backen_url] = useState('http://iwash-backend.herokuapp.com');
+
   const [washersData, setWashersData] = useState();
   const [dryersData, setDryersData] = useState();
   const [valuesData, setValuesData] = useState();
@@ -33,28 +35,28 @@ function App() {
   let userEmail = localStorage.getItem('email');
 
   useEffect(() => {
-    fetch('http://iwash-backend.herokuapp.com/washers')
+    fetch(backen_url+'/washers')
       .then(res => res.json())
       .then(res => setWashersData(res))
       .catch(error => console.log('error: ', error) );
-  },[])
+  },[backen_url])
 
   useEffect(() => {
-    fetch('http://iwash-backend.herokuapp.com/dryers')
+    fetch(backen_url+'/dryers')
       .then(res => res.json())
       .then(res => setDryersData(res))
       .catch(error => console.log('error: ', error) );
-  },[])
+  },[backen_url])
 
   useEffect(() => {
-    fetch('http://iwash-backend.herokuapp.com/values')
+    fetch(backen_url+'/values')
       .then(res => res.json())
       .then(res => setValuesData(res))
       .catch(error => console.log('error: ', error) );
-  },[])
+  },[backen_url])
 
   useEffect(() => {
-    fetch('http://iwash-backend.herokuapp.com/user_wash', {
+    fetch(backen_url+'/user_wash', {
       method: 'POST',
       cors: '*cors',
       body: JSON.stringify({
@@ -68,10 +70,10 @@ function App() {
       .then(res => res.json())
       .then(res => setCurrentWashing(res))
       .catch(error => console.log('error: ', error) );
-  },[userId, userEmail, currentWashing])
+  },[userId, userEmail, currentWashing, backen_url])
 
 
-  const providerValue = useMemo(() => ({ user, setUser, Auth, setAuth, washersData, dryersData, valuesData, setValuesData, currentWashing }), [user, setUser, Auth, setAuth, washersData, dryersData, valuesData, setValuesData, currentWashing]);
+  const providerValue = useMemo(() => ({ user, setUser, Auth, setAuth, washersData, dryersData, valuesData, setValuesData, currentWashing, backen_url }), [user, setUser, Auth, setAuth, washersData, dryersData, valuesData, setValuesData, currentWashing, backen_url]);
 
   return (
     <Router>

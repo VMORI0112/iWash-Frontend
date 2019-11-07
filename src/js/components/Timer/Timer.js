@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import swal from 'sweetalert';
+import styles from './Timer.module.css';
 
 const Timer = (props) => {
 
@@ -30,9 +31,9 @@ const Timer = (props) => {
 
     return (
         <>
-        <br/>
-        reminder: => <h3>{howTimeLeft}:{secondLeft}</h3>
-
+            <div>
+                <span className={styles.minutes}>{howTimeLeft}</span><span className={styles.colone}>:</span><span className={styles.seconds} >{secondLeft}</span>
+            </div> 
         </>
     );
 };

@@ -9,6 +9,8 @@ import washerClose from '../../../img/washing/w2.png';
 
 const Machine = (props) => {
 
+    const {backen_url} = useContext(UserContext);
+
     let history = useHistory();
 
     let user_id = localStorage.getItem('userID');
@@ -32,19 +34,25 @@ const Machine = (props) => {
         console.log(cycle);
         let machineId = washersData[WasherId].id;
         let locationNum = washersData[WasherId].locationNum;
+        let numMachine = washersData[WasherId].number;
+        let comp = 'no';
         let start_at = Date.now();
         let end_at = (Date.now() + ((Number(time)*60)*1000))
 
+        console.log('the machine number  '+numMachine);
+
         let washingNow = JSON.stringify({
-            machineId: machineId,
             userID: user_id,
             userEmail: user_email,
+            machineId: machineId,
+            machineNumber: numMachine,
             locationNum: locationNum,
             price: price,
             cicle: cycle,
             time: time,
             start_at: start_at,
-            end_at: end_at
+            end_at: end_at,
+            cycleComplete: comp
         })
         
         modalToggle();
@@ -64,7 +72,7 @@ const Machine = (props) => {
         // .then(res => {
         //     console.log(res.msg);
         //     if (res.msg === 'success') {
-                fetch('http://iwash-backend.herokuapp.com/start_washing',{
+                fetch(backen_url+'/start_washing',{
                     method: 'POST',
                     cors: '*cors',
                     body: washingNow,
@@ -103,7 +111,7 @@ const Machine = (props) => {
             <div className="container text-center">
                 <div className="row">
                     <div className="col">
-
+                    
                         <div className="card">
                             <div className="card-body">
                                 <div className="card-text">
