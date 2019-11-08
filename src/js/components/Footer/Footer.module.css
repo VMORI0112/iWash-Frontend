@@ -38,8 +38,8 @@
     -ms-transition: 0.5s all;
 }
 .socialBtn ul li a span:hover {
-    color: #ffffff;
-    background: #f8b663;
+    color: #000000;
+    background: #7CD1F9;
 }
 
 @media (max-width: 1366px) {

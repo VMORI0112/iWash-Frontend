@@ -6,19 +6,17 @@
      text-align: left;
 }
 .available {
-    /* color: #7CD1F9; */
-    color: #F1B361;
+    color: #7CD1F9;
     font-size: 3rem;
     border-radius: 100%;
-    /* background-color: black; */
-    background-color: #171109;
+    background-color: black;
 }
 .noavailable {
     width: 70%;
     opacity: 0.3;
 }
 .machineName {
-    color: #171109;
+    color: #000000;
     font-weight: bold;
 }
 .machinChoice:hover {
@@ -26,7 +24,7 @@
 }
 .btnIwash {
     margin: 10px;
-    background-color: #f8b663;
+    background-color: #7CD1F9;
     color: #000000;
     padding: 10px;
     border-radius: 100px;
@@ -34,20 +32,20 @@
     text-decoration: none;
 }
 .btnIwash:hover {
-    background-color: #f7b057;
+    background-color: #BBD5E4;
     text-decoration: none;
 }
 .number {
     font-size: 2rem;
-    background-color: #F1B361;
-    color: #171109;
-    border: 1px solid #171109;
+    background-color: #7CD1F9;
+    color: #000000;
+    border: 1px solid #000000;
 }
 .links {
     text-decoration: none;
-    color: #f8b663;
+    color: #000000;
 }
 .links:hover {
     text-decoration: none!important;
-    color: #0b383b;
+    color: #000000;
 }

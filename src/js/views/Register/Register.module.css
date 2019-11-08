@@ -17,16 +17,16 @@
     border-color: #B5B5B8;
 }
 .inputForm:focus {
-    border-color: #0b383b;
+    border-color: #7CD1F9;
 }
 .buttLogin {
-    background-color: #f8b663!important;
-    border-color: transparent!important;
+    background-color: #7CD1F9!important;
+    border-color: #BBD5E4!important;
     color: #000000!important;
     font-weight: bold;
 }
 .buttLogin:hover {
-    background-color: #f7b057!important;
+    background-color: #9BDCFA!important;
 }
 .forgotP {
     font-size: 0.8rem;
