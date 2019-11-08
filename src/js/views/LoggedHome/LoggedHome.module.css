@@ -6,12 +6,18 @@
      text-align: left;
 }
 .available {
-    color: blue;
+    color: #7CD1F9;
     font-size: 3rem;
+    background-color: black;
+    border-radius: 100%;
 }
 .noavailable {
     width: 70%;
     opacity: 0.3;
+}
+.machineName {
+    color: black;
+    font-weight: bold;
 }
 .machinChoice:hover {
     opacity: 0.5;
@@ -31,6 +37,9 @@
 }
 .number {
     font-size: 2rem;
+    background-color: #7CD1F9;
+    color: black;
+    border: 1px solid black;
 }
 .links {
     text-decoration: none;
