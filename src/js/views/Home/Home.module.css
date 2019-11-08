@@ -1,8 +1,17 @@
 .section {
     padding-top: 60px;
 }
-.main {
+/* .main {
     background: url(../../../img/home/w.jpg) no-repeat center;
+    background-size: cover;
+} */
+.main {
+    background: 
+    linear-gradient(
+      rgba(155, 220, 250, 0.45), 
+      rgba(124, 209, 249, 0.65)
+    ),
+    url(../../../img/home/w.jpg);
     background-size: cover;
 }
 .bannerInfo {

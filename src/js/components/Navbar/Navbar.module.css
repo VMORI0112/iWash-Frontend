@@ -2,22 +2,22 @@
     background-color: white;
 }
 .btnGreen {
-    background-color: #f8b663!important;
-    border-color: transparent!important;
+    background-color: #7CD1F9!important;
+    border-color: #BBD5E4!important;
     color: #000000!important;
     font-weight: bold;
     margin-left: 20px;
 }
 .btnGreen:hover {
-    background-color: #f7b057!important;
+    background-color: #9BDCFA!important;
 }
 .wash {
     vertical-align: text-top;
 }
 .dropBtn {
-    background-color: #f8b663;
-    border: none;
-    color: #171109;
+    background-color: #7CD1F9;
+    border-color: #BBD5E4!important;
+    color: #000000;
     outline: none;
     padding: 5px 10px 5px 10px;
     border-radius: 4px;
@@ -25,20 +25,21 @@
     font-weight: bold;
 }
 .dropBtn:hover {
-    background-color: #836234;
+    background-color: #9BDCFA;
 }
 .dropBtn:focus {
     outline: none;
 }
 .wallet {
-    background-color: #f8b663;
+    background-color: #7CD1F9;
     color: #000000;
     padding: 10px;
     border-radius: 100px;
     font-weight: bold;
     text-decoration: none;
+    border-color: #BBD5E4!important;
 }
 .wallet:hover {
-    background-color: #f7b057;
+    background-color: #9BDCFA;
     text-decoration: none;
 }
