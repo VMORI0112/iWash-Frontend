@@ -1,6 +1,38 @@
 body{
     font-family: 'Libre Franklin', sans-serif;
 }
+/* Color Palette */
+.textRajah {
+  color: #F5B663;
+}
+.BgRajah {
+  background-color: #F5B663;
+}
+.textBistre {
+  color: #3C2D18;
+}
+.BgBistre {
+  background-color: #3C2D18;
+}
+.textCoyoteBrown {
+  color: #836234;
+}
+.BgCoyoteBrown {
+  background-color: #836234;
+}
+.textSandyBrown {
+  color: #F1B361;
+}
+.BgSandyBrown {
+  background-color: #F1B361;
+}
+.textLicorice {
+  color: #171109;
+}
+.BgLicorice {
+  background-color: #171109;
+}
+/* End Color Palette */
 .textWhite {
     color: white;
 }
