@@ -6,7 +6,8 @@
      text-align: left;
 }
 .available {
-    width: 100%;
+    color: blue;
+    font-size: 3rem;
 }
 .noavailable {
     width: 70%;
