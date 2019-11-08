@@ -25,16 +25,14 @@ const Home = () => {
                 <div className="container py-xl-5 py-lg-3">
                     <div className="row">
                         <div className="col-lg-6 about-left-w3pvt pr-lg-5">
-                            <h4 className="textOrange">Who we are?</h4>
+                            <h4 className={styles.whoText}>Who we are?</h4>
                             <h3 className="tittle-w3layouts text-uppercase mt-3">
                                 Laundry and Dry 
                                 <br/>
                                 Cleaning Services
                             </h3>
                             <p className="para-text mt-5">
-                                We are the Best Laundry Services 
-                                <br/>
-                                est qui dolorem Lorem int ipsum dolor.
+                                We are using the latest technology to meet your laundry needs. We are putting at your fingertips, through your mobile phone; the ability to use and cotrol the washing and drying machines of our establishments using the Internet.
                             </p>
                         </div>
                         <div className="col-lg-6 about-right">

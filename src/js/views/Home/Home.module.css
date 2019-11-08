@@ -14,6 +14,9 @@
     url(../../../img/home/w.jpg);
     background-size: cover;
 }
+.whoText {
+    color: #7CD1F9;
+}
 .bannerInfo {
     padding-top: 15em;
     color: #000000;

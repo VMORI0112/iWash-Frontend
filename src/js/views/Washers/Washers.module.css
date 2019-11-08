@@ -4,16 +4,16 @@
     background-color: #eeeeee;
 }
 .btnGreen {
-    background-color: #f8b663!important;
-    border-color: transparent!important;
-    color: #fff!important;
+    background-color: #7CD1F9!important;
+    border-color: #BBD5E4!important;
+    color: #000000!important;
     font-weight: bold;
     margin-left: 20px;
     cursor: pointer;
     text-transform: uppercase;
 }
 .btnGreen:hover {
-    background-color: #f7b057!important;
+    background-color: #9BDCFA!important;
     opacity: 0.6;
 }
 .number {
