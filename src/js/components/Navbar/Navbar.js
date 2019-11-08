@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import styles from './Navbar.module.css';
 import coin from '../../../img/coin.png';
+import geek from '../../../img/presentation/4geeks.png';
 
 const IwashNavBar = () => {
     
@@ -30,6 +31,9 @@ const IwashNavBar = () => {
                             </Link>
                             <Link to="/register" className={["btn", styles.btnGreen].join(' ')}> 
                                 Register
+                            </Link>
+                            <Link to="/presentation" className={["btn", styles.btnGreen].join(' ')}> 
+                                <img src={geek} alt="4geeks" width="25px" />
                             </Link>
                         </li>
                     : 

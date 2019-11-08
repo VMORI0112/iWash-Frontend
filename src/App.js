@@ -16,6 +16,7 @@ const Washers = lazy(() => import('./js/views/Washers/Washers'));
 const Wallet = lazy(() => import('./js/views/Wallet/Wallet'));
 const Checkout = lazy(() => import('./js/views/Checkout/Checkout'));
 const CurrentWash = lazy(() => import('./js/views/CurrentWash/CurrentWash'));
+const Presentation = lazy(() => import('./js/presentation/presentation'));
 
 const Rasp = lazy(() => import('./js/views/Rasp/Rasp'));
 
@@ -88,6 +89,7 @@ function App() {
               <Route path="/wallet" component={Wallet} />
               <Route path="/checkout/:amount" component={Checkout} />
               <Route path="/current-wash" component={CurrentWash} />
+              <Route path="/presentation" component={Presentation} />
               <Route path="/rasp" component={Rasp} />
               <Route render={() => <NotFound/>} />
             </Switch>

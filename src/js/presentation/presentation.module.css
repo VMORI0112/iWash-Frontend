@@ -1,0 +1,16 @@
+.section {
+    padding-top: 60px;
+    background-color: #eeeeee;
+    min-height: 600px!important;
+}
+.firstPage {
+    background-color: white;
+}
+.header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+.firstPage h1 {
+    text-align: center;
+}
