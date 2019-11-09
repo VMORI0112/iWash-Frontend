@@ -3,6 +3,7 @@ import styles from './presentation.module.css';
 
 import geek from '../../img/presentation/4geeks.png';
 import bootstrap from '../../img/presentation/bootstrap.png';
+import js from '../../img/presentation/js.png';
 
 const Presentation = () => {
 
@@ -25,6 +26,7 @@ const Presentation = () => {
                     <h1>Page 2</h1>
                 </div>
                 <img src={bootstrap} alt="b" width="200px" />
+                <img src={js} alt="b" width="100px" />
                 hey two
                 <br/>
                 <a href="#one">previous</a>
