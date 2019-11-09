@@ -10,7 +10,7 @@ const Presentation = () => {
     return (
         <section className={styles.section}>
             <div id="one" className={styles.firstPage} style={{height: windowHeight}}>
-                <div className={styles.header}>
+                <div className={styles.headerPage1}>
                     <img src={geek} width="50px" alt="mm"/>
                     <h1>iWash Smart Laundromat</h1>
                 </div>
