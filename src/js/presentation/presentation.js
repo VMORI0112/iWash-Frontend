@@ -29,8 +29,10 @@ const Presentation = () => {
                 <a href="#three">next</a>
             </div>
             <div id="three" style={{height: windowHeight, backgroundColor: "black"}}>
-                <h1>three page</h1>
-                <img src={geek} width="50px" alt="mm"/>
+                <div className={styles.header}>
+                    <img src={geek} width="50px" alt="mm"/>
+                    <h1>Page 2</h1>
+                </div>
                 hey three
                 <br/>
                 <a href="#two">previous</a>

@@ -11,6 +11,11 @@
     color: white;
     height: 70%;
 }
+.header {
+    background-color: black;
+    color: white;
+    height: 40%;
+}
 .firstPage h1 {
     text-align: center;
 }
