@@ -5,6 +5,7 @@ import geek from '../../img/presentation/4geeks.png';
 import bootstrap from '../../img/presentation/bootstrap.png';
 import js from '../../img/presentation/js.png';
 import python from '../../img/presentation/python.png';
+import react from '../../img/presentation/react.png';
 
 const Presentation = () => {
 
@@ -29,6 +30,7 @@ const Presentation = () => {
                 <img src={bootstrap} alt="b" width="200px" />
                 <img src={js} alt="b" width="100px" />
                 <img src={python} alt="b" width="200px" />
+                <img src={react} alt="b" width="100px" />
                 hey two
                 <br/>
                 <a href="#one">previous</a>
