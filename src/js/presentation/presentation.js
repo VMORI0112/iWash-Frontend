@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './presentation.module.css';
 
 import geek from '../../img/presentation/4geeks.png';
+import bootstrap from '../../img/presentation/bootstrap.png';
 
 const Presentation = () => {
 
@@ -23,6 +24,7 @@ const Presentation = () => {
                     <img src={geek} width="50px" alt="mm"/>
                     <h1>Page 2</h1>
                 </div>
+                <img src={bootstrap} alt="b" width="30px" />
                 hey two
                 <br/>
                 <a href="#one">previous</a>
