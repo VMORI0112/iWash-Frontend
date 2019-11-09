@@ -18,7 +18,7 @@ const Presentation = () => {
                 <br/>
                 <a href="#two">next</a>
             </div>
-            <div id="two" style={{height: windowHeight, backgroundColor: "white"}}>
+            <div id="two" style={{height: windowHeight}}>
                 <div className={styles.header}>
                     <img src={geek} width="50px" alt="mm"/>
                     <h1>Page 2</h1>
@@ -28,7 +28,7 @@ const Presentation = () => {
                 <a href="#one">previous</a>
                 <a href="#three">next</a>
             </div>
-            <div id="three" style={{height: windowHeight, backgroundColor: "black"}}>
+            <div id="three" style={{height: windowHeight}}>
                 <div className={styles.header}>
                     <img src={geek} width="50px" alt="mm"/>
                     <h1>Page 3</h1>
@@ -38,7 +38,7 @@ const Presentation = () => {
                 <a href="#two">previous</a>
                 <a href="#four">next</a>
             </div>
-            <div id="four" style={{height: windowHeight, backgroundColor: "white"}}>
+            <div id="four" style={{height: windowHeight}}>
                 <div className={styles.header}>
                     <img src={geek} width="50px" alt="mm"/>
                     <h1>Page 4</h1>
@@ -48,7 +48,7 @@ const Presentation = () => {
                 <a href="#three">previous</a>
                 <a href="#five">next</a>
             </div>
-            <div id="five" style={{height: windowHeight, backgroundColor: "black"}}>
+            <div id="five" style={{height: windowHeight}}>
                 <div className={styles.header}>
                     <img src={geek} width="50px" alt="mm"/>
                     <h1>Page 5</h1>
