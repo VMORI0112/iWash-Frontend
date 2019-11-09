@@ -24,7 +24,7 @@ const Presentation = () => {
                     <img src={geek} width="50px" alt="mm"/>
                     <h1>Page 2</h1>
                 </div>
-                <img src={bootstrap} alt="b" width="30px" />
+                <img src={bootstrap} alt="b" width="200px" />
                 hey two
                 <br/>
                 <a href="#one">previous</a>
