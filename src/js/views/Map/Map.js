@@ -9,6 +9,8 @@ const Map = () => {
     return (
         <section className={styles.section} style={{minHeight: windowHeight}}>
         map here
+        <br/>
+        {windowHeight}
         </section>
     );
 };

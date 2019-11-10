@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../../UserContext';
 import styles from './presentation.module.css';
 
 import geek from '../../img/presentation/4geeks.png';
@@ -9,7 +10,7 @@ import react from '../../img/presentation/react.png';
 
 const Presentation = () => {
 
-    const [windowHeight] = useState(window.innerHeight);
+    const {windowHeight} = useContext(UserContext);
 
     return (
         <section className={styles.section}>

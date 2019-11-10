@@ -38,8 +38,12 @@ function App() {
   let userEmail = localStorage.getItem('email');
 
   useEffect(() => {
-    setWindowHeight(window.innerHeight);
-  },[windowHeight])
+    const handleResize = () => setWindowHeight(window.innerHeight);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  },[])
 
   useEffect(() => {
     fetch(backen_url+'/washers')
