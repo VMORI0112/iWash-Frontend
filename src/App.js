@@ -22,6 +22,7 @@ const Rasp = lazy(() => import('./js/views/Rasp/Rasp'));
 
 function App() {
 
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const [backen_url] = useState('http://iwash-backend.herokuapp.com');
 
   const [washersData, setWashersData] = useState();
@@ -34,6 +35,10 @@ function App() {
   let tokenAuth = localStorage.getItem('token');
   let userId = localStorage.getItem('userID');
   let userEmail = localStorage.getItem('email');
+
+  useEffect(() => {
+    setWindowHeight(window.innerHeight);
+  },[windowHeight])
 
   useEffect(() => {
     fetch(backen_url+'/washers')
@@ -74,7 +79,7 @@ function App() {
   },[userId, userEmail, currentWashing, backen_url])
 
 
-  const providerValue = useMemo(() => ({ user, setUser, Auth, setAuth, washersData, dryersData, valuesData, setValuesData, currentWashing, backen_url }), [user, setUser, Auth, setAuth, washersData, dryersData, valuesData, setValuesData, currentWashing, backen_url]);
+  const providerValue = useMemo(() => ({ user, setUser, Auth, setAuth, washersData, dryersData, valuesData, setValuesData, currentWashing, backen_url, windowHeight }), [user, setUser, Auth, setAuth, washersData, dryersData, valuesData, setValuesData, currentWashing, backen_url, windowHeight]);
 
   return (
     <Router>
