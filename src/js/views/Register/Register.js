@@ -11,7 +11,7 @@ const Register = () => {
     let history = useHistory();
 
     const {backen_url} = useContext(UserContext);
-    
+    const {windowHeight} = useContext(UserContext);
 
     const inputFname = useRef(null);
     const inputLname = useRef(null);
@@ -81,7 +81,7 @@ const Register = () => {
     }
 
     return (
-        <section className={styles.section}>
+        <section className={styles.section} style={{minHeight: windowHeight}}>
             
                 <img className={styles.coin} src={coin} alt="coin"/>
                 <br/>
