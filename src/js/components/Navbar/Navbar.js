@@ -47,10 +47,10 @@ const IwashNavBar = () => {
                                 </button>
                                 <div className="dropdown-menu dropdown-menu-right">
                                     <Link className="dropdown-item" to="/" >Home</Link>
-                                    <Link className="dropdown-item" to="/wallet" >Wallet</Link>
-                                    <Link className="dropdown-item" to="/map" >Map</Link>
+                                    <Link className="dropdown-item" to="/wallet" >Add Money</Link>
+                                    <Link className="dropdown-item" to="/map" >Stores</Link>
                                     <Link className="dropdown-item" to="/current-wash" >Current Wash</Link>
-                                    <Link className="dropdown-item" to="/rasp" >RaspberryPi</Link>
+                                    {/* <Link className="dropdown-item" to="/rasp" >RaspberryPi</Link> */}
                                     <button 
                                         className="dropdown-item" 
                                         onClick={async () => {
