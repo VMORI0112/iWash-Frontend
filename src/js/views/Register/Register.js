@@ -7,9 +7,12 @@ import swal from 'sweetalert';
 import coin from '../../../img/coin.png';
 
 const Register = () => {
-    const {backen_url} = useContext(UserContext);
-
+    
     let history = useHistory();
+
+    const {backen_url} = useContext(UserContext);
+    
+
     const inputFname = useRef(null);
     const inputLname = useRef(null);
     const inputEmail = useRef(null);

@@ -7,11 +7,15 @@ import swal from 'sweetalert';
 import coin from '../../../img/coin.png';
 
 const Login = () => {
+
     let history = useHistory();
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
     const {setAuth} = useContext(UserContext);
     const {backen_url} = useContext(UserContext);
+    const {windowHeight} = useContext(UserContext);
 
     const loginFormHandler = () => {
         let userLoginData = JSON.stringify({
@@ -73,7 +77,7 @@ const Login = () => {
     }
 
     return (
-        <section className={styles.section}>
+        <section className={styles.section} style={{minHeight: windowHeight}} >
             
                 <img className={styles.coin} src={coin} alt="coin"/>
                 <br/>
