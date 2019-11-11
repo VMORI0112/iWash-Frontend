@@ -137,7 +137,7 @@ const Dryers = (props) => {
                         <div className="row">
 
                             <div 
-                                onClick={() => modalToggle(dryersData[WasherId].cicle_1, dryersData[WasherId].price_1,dryersData[WasherId].time_1)} 
+                                onClick={() => modalToggle(dryersData[WasherId].cicle, dryersData[WasherId].price,dryersData[WasherId].time)} 
                                 className={["btn col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}
                             > 
                                 <i style={{color: "black"}}>{dryersData[WasherId].cicle}</i>
@@ -165,9 +165,9 @@ const Dryers = (props) => {
                         <span className="badge badge-success"><span role="img" aria-label="time">&#128178;</span> {modalPrice} </span>
                     </div>
                    <div className="alert alert-danger ml-5">
-                        <p>1 - make sure the washing machine is loaded</p>
-                        <p>2 - insert detergent / softener</p>
-                        <p>3 - make sure the door is closed</p>
+                        <p>1 - Make Sure the Dryer Machine is Loaded</p>
+                        <p>2 - Insert sheets softener</p>
+                        <p>3 - Make sure the door is closed</p>
                    </div>
                    
                     <h3 className="text-center">Are you ready to start?</h3>
