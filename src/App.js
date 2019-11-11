@@ -25,6 +25,7 @@ function App() {
 
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const [backen_url] = useState('http://iwash-backend.herokuapp.com');
+  const [mapBoxPublicToken] = useState('pk.eyJ1Ijoic2FtaXJiZW56YWRhIiwiYSI6ImNrMnV1MG9vYjB6aW4zZXFjNGs1aHkxbmkifQ.rXgK6pv70xZsGs-NwOmodw');
 
   const [washersData, setWashersData] = useState();
   const [dryersData, setDryersData] = useState();
