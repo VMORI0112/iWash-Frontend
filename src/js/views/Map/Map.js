@@ -15,19 +15,20 @@ const styles = {
 const Map = () => {
 
     const {windowHeight} = useContext(UserContext);
+    const {mapBoxPublicToken} = useContext(UserContext);
     const { latitude, longitude, timestamp, accuracy, error } = usePosition();
 
     const [map, setMap] = useState(null);
     const mapContainer = useRef(null);
 
     useEffect(() => {
-        mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_KEY;
+        mapboxgl.accessToken = mapBoxPublicToken;
         const initializeMap = ({ setMap, mapContainer }) => {
           const map = new mapboxgl.Map({
             container: mapContainer.current,
             style: "mapbox://styles/mapbox/streets-v11", // stylesheet location
-            center: [0, 0],
-            zoom: 5
+            center: [-80.1281881, 25.8568052],
+            zoom: 16
           });
     
           map.on("load", () => {
@@ -37,7 +38,7 @@ const Map = () => {
         };
     
         if (!map) initializeMap({ setMap, mapContainer });
-      }, [map]);
+      }, [map, mapBoxPublicToken]);
 
     // console.log(navigator.geolocation);
 
