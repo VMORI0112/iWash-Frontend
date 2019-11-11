@@ -91,6 +91,7 @@ function App() {
       <UserContext.Provider value={providerValue}>
         <Suspense fallback={<div>Loading...</div>}>
           <IwashNavBar/>
+          <section style={{minHeight: windowHeight}}>
             <Switch>
               {!tokenAuth ? <Route exact path="/" component={Home} /> : <Route exact path="/" component={LoggedHome}/> }
               <Route path="/login" component={Login} />
@@ -104,6 +105,7 @@ function App() {
               <Route path="/rasp" component={Rasp} />
               <Route render={() => <NotFound/>} />
             </Switch>
+            </section>
           <Footer/>
         </Suspense>
       </UserContext.Provider>

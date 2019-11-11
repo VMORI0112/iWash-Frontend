@@ -15,7 +15,6 @@ const Login = () => {
 
     const {setAuth} = useContext(UserContext);
     const {backen_url} = useContext(UserContext);
-    const {windowHeight} = useContext(UserContext);
 
     const loginFormHandler = () => {
         let userLoginData = JSON.stringify({
@@ -77,7 +76,7 @@ const Login = () => {
     }
 
     return (
-        <section className={styles.section} style={{minHeight: windowHeight}} >
+        <section className={styles.section} >
             
                 <img className={styles.coin} src={coin} alt="coin"/>
                 <br/>
