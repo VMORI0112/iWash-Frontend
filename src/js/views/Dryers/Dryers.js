@@ -16,7 +16,7 @@ const Dryers = (props) => {
     let user_id = localStorage.getItem('userID');
     let user_email = localStorage.getItem('email');
 
-    const {washersData} = useContext(UserContext);
+    const {dryersData} = useContext(UserContext);
     const [modalVisible, setModalVisible] = useState('invisible');
 
     const [modalCycle, setCycle] = useState('');
@@ -32,9 +32,9 @@ const Dryers = (props) => {
 
     const startMachine = (cycle, price, time) => {
         console.log(cycle);
-        let machineId = washersData[WasherId].id;
-        let locationNum = washersData[WasherId].locationNum;
-        let numMachine = washersData[WasherId].number;
+        let machineId = dryersData[WasherId].id;
+        let locationNum = dryersData[WasherId].locationNum;
+        let numMachine = dryersData[WasherId].number;
         let comp = 'no';
         let start_at = Date.now();
         let end_at = (Date.now() + ((Number(time)*60)*1000))
@@ -115,13 +115,13 @@ const Dryers = (props) => {
                         <div className="card">
                             <div className="card-body">
                                 <div className="card-text">
-                                    <h4 className="text-center" >{washersData[WasherId].name}</h4>
+                                    <h4 className="text-center" >{dryersData[WasherId].name}</h4>
                                     <div className="row">
                                         <div className="col">
                                             <span className={["badge badge-success m-1", styles.available].join(' ')}>Available</span>
                                         </div>
                                         <div className="col">
-                                            <span className={["badge badge-pill badge-primary", styles.number].join(' ')}>{washersData[WasherId].number}</span>
+                                            <span className={["badge badge-pill badge-primary", styles.number].join(' ')}>{dryersData[WasherId].number}</span>
                                         </div>
                                     </div>
                                     
@@ -137,62 +137,17 @@ const Dryers = (props) => {
                         <div className="row">
 
                             <div 
-                                onClick={() => modalToggle(washersData[WasherId].cicle_1, washersData[WasherId].price_1,washersData[WasherId].time_1)} 
+                                onClick={() => modalToggle(dryersData[WasherId].cicle_1, dryersData[WasherId].price_1,dryersData[WasherId].time_1)} 
                                 className={["btn col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}
                             > 
-                                <i style={{color: "black"}}>{washersData[WasherId].cicle_1}</i>
+                                <i style={{color: "black"}}>{dryersData[WasherId].cicle}</i>
                                 <br/>
-                                <span role="img" aria-label="time">&#128336;</span>  {washersData[WasherId].time_1} min
+                                <span role="img" aria-label="time">&#128336;</span>  {dryersData[WasherId].time} min
                                 <br/> 
-                                <h3><span className="badge badge-success"><span role="img" aria-label="price">&#128178;</span> {washersData[WasherId].price_1}</span></h3>
+                                <h3><span className="badge badge-success"><span role="img" aria-label="price">&#128178;</span> {dryersData[WasherId].price}</span></h3>
                                
                             </div>
 
-                            <div 
-                                onClick={() => modalToggle(washersData[WasherId].cicle_2,washersData[WasherId].price_2,washersData[WasherId].time_2)} 
-                                className={["btn col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}
-                            >
-                                
-                                    <i style={{color: "black"}}>{washersData[WasherId].cicle_2} </i>
-                                    <br/>
-                                    <span role="img" aria-label="time">&#128336;</span> {washersData[WasherId].time_2} min
-                                    <br/> 
-                                    <h3><span className="badge badge-success"><span role="img" aria-label="time">&#128178;</span> {washersData[WasherId].price_2}</span></h3>
-                               
-                            </div>
-
-                            <div 
-                                onClick={() => modalToggle(washersData[WasherId].cicle_3,washersData[WasherId].price_3,washersData[WasherId].time_3)} 
-                                className={["btn col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}
-                            >   
-                                <i style={{color: "black"}}>{washersData[WasherId].cicle_3}</i>
-                                <br/>
-                                <span role="img" aria-label="time">&#128336;</span> {washersData[WasherId].time_3} min
-                                <br/> 
-                                <h3><span className="badge badge-success"><span role="img" aria-label="time">&#128178;</span> {washersData[WasherId].price_3}</span></h3>
-                            </div>
-
-                            <div 
-                                onClick={() => modalToggle(washersData[WasherId].cicle_4,washersData[WasherId].price_4,washersData[WasherId].time_4)} 
-                                className={["btn col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}
-                            > 
-                                <i style={{color: "black"}}>{washersData[WasherId].cicle_4}</i>
-                                <br/>
-                                <span role="img" aria-label="time">&#128336;</span> {washersData[WasherId].time_4} min
-                                <br/> 
-                                <h3><span className="badge badge-success"><span role="img" aria-label="time">&#128178;</span> {washersData[WasherId].price_4}</span></h3>
-                            </div>
-
-                            <div 
-                                onClick={() => modalToggle(washersData[WasherId].cicle_5,washersData[WasherId].price_5,washersData[WasherId].time_5)} 
-                                className={["btn col-sm-12 col-md-5 col-lg-5 m-1", styles.btnGreen].join(' ')}
-                            >
-                                <i style={{color: "black"}}>{washersData[WasherId].cicle_5} </i>
-                                <br/>
-                                <span role="img" aria-label="time">&#128336;</span> {washersData[WasherId].time_5} min
-                                <br/> 
-                                <h3><span className="badge badge-success"><span role="img" aria-label="time">&#128178;</span> {washersData[WasherId].price_5}</span></h3> 
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -203,7 +158,7 @@ const Dryers = (props) => {
             <div className={["modal", modalVisible].join(' ')}>
                 <div className="modal-content">
                     <span onClick={modalToggle} className="close">&times;</span>
-                    <h1 className="text-center" >{washersData[WasherId].name} Number: {washersData[WasherId].number}</h1>
+                    <h1 className="text-center" >{dryersData[WasherId].name} Number: {dryersData[WasherId].number}</h1>
                     <div className="alert alert-warning text-center" role="alert">
                         <i className="m-3" style={{color: "black", fontWeight: "bold", fontSize: "24px"}}> {modalCycle} </i>
                         <span className="m-3"><span role="img" aria-label="time">&#128336;</span> {modalTime} minutes</span>

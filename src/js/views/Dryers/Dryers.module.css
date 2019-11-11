@@ -1,0 +1,24 @@
+.section {
+    padding-top: 100px;
+    min-height: 600px!important;
+    background-color: #eeeeee;
+}
+.btnGreen {
+    background-color: #7CD1F9!important;
+    border-color: #BBD5E4!important;
+    color: #000000!important;
+    font-weight: bold;
+    margin-left: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.btnGreen:hover {
+    background-color: #9BDCFA!important;
+    opacity: 0.6;
+}
+.number {
+    font-size: 2rem;
+}
+.available {
+    font-size: 2rem;
+}
