@@ -13,6 +13,7 @@ const LoggedHome = lazy(() => import('./js/views/LoggedHome/LoggedHome'));
 const Login = lazy(() => import('./js/views/Login/Login'));
 const Register = lazy(() => import('./js/views/Register/Register'));
 const Washers = lazy(() => import('./js/views/Washers/Washers'));
+const Dryers = lazy(() => import('./js/views/Dryers/Dryers'));
 const Wallet = lazy(() => import('./js/views/Wallet/Wallet'));
 const Checkout = lazy(() => import('./js/views/Checkout/Checkout'));
 const CurrentWash = lazy(() => import('./js/views/CurrentWash/CurrentWash'));
@@ -98,6 +99,7 @@ function App() {
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />
               <Route path="/washers/:WID" component={Washers} />
+              <Route path="/dryers/:WID" component={Dryers} />
               <Route path="/wallet" component={Wallet} />
               <Route path="/checkout/:amount" component={Checkout} />
               <Route path="/current-wash" component={CurrentWash} />
