@@ -69,8 +69,8 @@ const LoggedHome = () => {
                                         <div className="card-body">
                                             <div className="card-text">
                                                 <h4 className={["text-center", styles.machineName].join(' ')} >{item.name}</h4>
-                                                {item.available === "available" ? <span className="badge badge-success">Available</span> : <span className="badge badge-danger">Not Available</span>}
-                                                <span className={["badge badge-pill badge-primary float-right", styles.number].join(' ')}>{item.number}</span>
+                                                {item.available === "available" ? <i className={["fas fa-check-circle", styles.available].join(' ')}></i> : <i class="fas fa-times-circle" style={{color: "red"}}></i>}
+                                                <span className={["badge badge-pill float-right", styles.number].join(' ')}>{item.number}</span>
                                             </div>
                                         </div>
                                         <img src={dryerClose} className="card-img-top" alt={item.name} />
