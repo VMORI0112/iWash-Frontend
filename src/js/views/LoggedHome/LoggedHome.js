@@ -64,11 +64,11 @@ const LoggedHome = () => {
                     {!dryersData ? 'loading' : dryersData.map((item,index) => {
                         return (
                             <div key={index} className={["col-sm-12 col-md-3 col-lg-3 my-3", item.available].join(' ')}>
-                                <Link className={styles.links} to={"machine/"+index} >
+                                <Link className={styles.links} to={"dryers/"+index} >
                                     <div className="card">
                                         <div className="card-body">
                                             <div className="card-text">
-                                                <h4 className="text-center" >{item.name}</h4>
+                                                <h4 className={["text-center", styles.machineName].join(' ')} >{item.name}</h4>
                                                 {item.available === "available" ? <span className="badge badge-success">Available</span> : <span className="badge badge-danger">Not Available</span>}
                                                 <span className={["badge badge-pill badge-primary float-right", styles.number].join(' ')}>{item.number}</span>
                                             </div>
