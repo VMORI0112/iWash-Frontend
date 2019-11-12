@@ -98,11 +98,20 @@ const Presentation = () => {
 
             <div id="five" className='pt-5' style={{height: windowHeight}}>
                 <div className={styles.header}>
-                    <h1 className={styles.title}>TITLE</h1>
+                    <h1 className={styles.title}>BEHIND THE PROJECT</h1>
                 </div>
                 <ul className={["mt-5",styles.listExperience].join(' ')}>
                     <li>
-                        text here
+                        (Victor) Before I started the 4Geeks Academy program, I was an Analyst/Program for an iSeries environment, using the programming languages as RPG-IV and Free-Format. I decided to update my programming skills with the new technologies and 4Geeks Academy was a good decision.  Because, right now I can use HTML, CSS, javaScript and React.js as Frontend and Phyton/Flask and MySql as Backend, to build web applications. 
+                    </li>
+                    <li>
+                        (Samir) Before I started the 4Geeks Academy program, I was coding with Html,Css and PHP. I learn by myself, it was very hard specially when you struggle. So I decide to have help from the Best School in Miami. 
+                    </li>
+                    <li>
+                        90% of current jobs require digital skills. 
+                    </li>
+                    <li>
+                        There are 500K open positions in the US for software developers. 
                     </li>
                 </ul>
                 <br/>
@@ -114,17 +123,24 @@ const Presentation = () => {
 
             <div id="six" className='pt-5' style={{height: windowHeight}}>
                 <div className={styles.header}>
-                    <h1 className={styles.title}>TITLE</h1>
+                    <h1 className={styles.title}>HOW WAS IT BUILT</h1>
                 </div>
-                <img src={bootstrap} alt="b" width="200px" />
-                <img src={js} alt="b" width="100px" />
-                <img src={python} alt="b" width="200px" />
-                <img src={react} alt="b" width="100px" />
-                <ul className={["mt-5",styles.listExperience].join(' ')}>
-                    <li>
-                        list here
-                    </li>
-                </ul>
+                <div className="m-3">
+                    <img src={bootstrap} alt="b" width="200px" />
+                    <img src={js} alt="b" width="100px" />
+                    <img src={python} alt="b" width="200px" />
+                    <img src={react} alt="b" width="100px" />
+                </div>
+                <div className="container">
+                    <ul className={["mt-5",styles.listExperience].join(' ')}>
+                        <li>
+                            We are using HTML, CSS, Bootstrap, React.js (javaScript), Python and Python Flask, MySql Database and Raspberry Pi.
+                        </li>
+                        <li>
+                            We choose to use as Third Party, Google Maps, PayPal payment method.
+                        </li>
+                    </ul>
+                </div>
                 <br/>
                 <div className={styles.bouttons}>
                     <a href="#five" className={["scroll mr-3", styles.buttonStyle].join(' ')}>previous</a>
