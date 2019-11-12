@@ -6,15 +6,22 @@
 .firstPage {
     background-color: white;
 }
+.i {
+    color: #7CD1F9!important;
+}
 .headerPage1 {
     background-color: black;
     color: white;
-    height: 70%;
+    height: 60%;
+}
+.icon4geeks {
+    text-align: right!important;
+    padding: 20px;
 }
 .header {
     background-color: black;
     color: white;
-    height: 30%;
+    height: 40%;
 }
 .firstPage h1 {
     text-align: center;

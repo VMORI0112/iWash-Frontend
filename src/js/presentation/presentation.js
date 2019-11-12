@@ -16,8 +16,10 @@ const Presentation = () => {
         <section className={styles.section}>
             <div id="one" className={styles.firstPage} style={{height: windowHeight}}>
                 <div className={styles.headerPage1}>
-                    <img src={geek} width="100px" alt="mm"/>
-                    <h1>iWash Smart Laundromat</h1>
+                    <div className={styles.icon4geeks}>
+                        <img src={geek} width="100px" alt="mm"/>
+                    </div>
+                    <h1><i className={["fas fa-info align-top", styles.i].join(' ')}></i>Wash Smart Laundromat</h1>
                 </div>
                 <h3>Laundry services web application</h3>
                 <br/>
