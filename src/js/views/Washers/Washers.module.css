@@ -16,13 +16,19 @@
     color: #000000;
     font-weight: bold;
 }
+.available {
+    color: #7CD1F9;
+    font-size: 3rem;
+    border-radius: 100%;
+    background-color: black;
+}
 .btnGreen:hover {
     background-color: #9BDCFA!important;
     opacity: 0.6;
 }
 .number {
     font-size: 2rem;
-}
-.available {
-    font-size: 2rem;
+    background-color: #7CD1F9;
+    color: #000000;
+    border: 1px solid #000000;
 }

@@ -118,10 +118,10 @@ const Machine = (props) => {
                                     <h4 className={["text-center", styles.machineName].join(' ')} >{washersData[WasherId].name}</h4>
                                     <div className="row">
                                         <div className="col">
-                                            <span className={["badge badge-success m-1", styles.available].join(' ')}>Available</span>
+                                            {washersData[WasherId].available === "available" ? <i className={["fas fa-check-circle", styles.available].join(' ')}></i> : <i class="fas fa-times-circle" style={{color: "red"}}></i>}
                                         </div>
                                         <div className="col">
-                                            <span className={["badge badge-pill badge-primary", styles.number].join(' ')}>{washersData[WasherId].number}</span>
+                                            <span className={["badge badge-pill", styles.number].join(' ')}>{washersData[WasherId].number}</span>
                                         </div>
                                     </div>
                                     
@@ -144,7 +144,7 @@ const Machine = (props) => {
                                 <br/>
                                 <span role="img" aria-label="time">&#128336;</span>  {washersData[WasherId].time_1} min
                                 <br/> 
-                                <h3><span className="badge badge-success"><span role="img" aria-label="price">&#128178;</span> {washersData[WasherId].price_1}</span></h3>
+                                <h3><span className="badge badge-info"><span role="img" aria-label="price">&#128178;</span> {washersData[WasherId].price_1}</span></h3>
                                
                             </div>
 
@@ -157,7 +157,7 @@ const Machine = (props) => {
                                     <br/>
                                     <span role="img" aria-label="time">&#128336;</span> {washersData[WasherId].time_2} min
                                     <br/> 
-                                    <h3><span className="badge badge-success"><span role="img" aria-label="time">&#128178;</span> {washersData[WasherId].price_2}</span></h3>
+                                    <h3><span className="badge badge-info"><span role="img" aria-label="time">&#128178;</span> {washersData[WasherId].price_2}</span></h3>
                                
                             </div>
 
@@ -169,7 +169,7 @@ const Machine = (props) => {
                                 <br/>
                                 <span role="img" aria-label="time">&#128336;</span> {washersData[WasherId].time_3} min
                                 <br/> 
-                                <h3><span className="badge badge-success"><span role="img" aria-label="time">&#128178;</span> {washersData[WasherId].price_3}</span></h3>
+                                <h3><span className="badge badge-info"><span role="img" aria-label="time">&#128178;</span> {washersData[WasherId].price_3}</span></h3>
                             </div>
 
                             <div 
@@ -180,7 +180,7 @@ const Machine = (props) => {
                                 <br/>
                                 <span role="img" aria-label="time">&#128336;</span> {washersData[WasherId].time_4} min
                                 <br/> 
-                                <h3><span className="badge badge-success"><span role="img" aria-label="time">&#128178;</span> {washersData[WasherId].price_4}</span></h3>
+                                <h3><span className="badge badge-info"><span role="img" aria-label="time">&#128178;</span> {washersData[WasherId].price_4}</span></h3>
                             </div>
 
                             <div 
@@ -191,7 +191,7 @@ const Machine = (props) => {
                                 <br/>
                                 <span role="img" aria-label="time">&#128336;</span> {washersData[WasherId].time_5} min
                                 <br/> 
-                                <h3><span className="badge badge-success"><span role="img" aria-label="time">&#128178;</span> {washersData[WasherId].price_5}</span></h3> 
+                                <h3><span className="badge badge-info"><span role="img" aria-label="time">&#128178;</span> {washersData[WasherId].price_5}</span></h3> 
                             </div>
                         </div>
                     </div>
