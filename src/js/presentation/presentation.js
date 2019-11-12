@@ -21,9 +21,11 @@ const Presentation = () => {
                     </div>
                     <h1><i className={["fas fa-info align-top", styles.i].join(' ')}></i>Wash Smart Laundromat</h1>
                 </div>
-                <h3>Laundry services web application</h3>
+                <h2 className="text-center pt-4">Laundry services web application</h2>
                 <br/>
-                <a href="#two" className={["scroll mr-3", styles.buttonStyle].join(' ')}>next</a>
+                <div className={styles.bouttons}>
+                    <a href="#two" className={["scroll mr-3", styles.buttonStyle].join(' ')}>next</a>
+                </div>
             </div>
             <div id="two" style={{height: windowHeight}}>
                 <div className={styles.header}>

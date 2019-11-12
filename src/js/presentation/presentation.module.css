@@ -9,6 +9,10 @@
 .i {
     color: #7CD1F9!important;
 }
+.bouttons {
+    text-align: right!important;
+    padding: 20px;
+}
 .buttonStyle {
     padding: 11px 30px;
     border: none;
