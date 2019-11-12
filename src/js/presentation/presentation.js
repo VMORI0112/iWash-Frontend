@@ -7,6 +7,7 @@ import bootstrap from '../../img/presentation/bootstrap.png';
 import js from '../../img/presentation/js.png';
 import python from '../../img/presentation/python.png';
 import react from '../../img/presentation/react.png';
+import demo from '../../img/presentation/demo.png';
 
 const Presentation = () => {
 
@@ -134,7 +135,7 @@ const Presentation = () => {
                 <div className="container">
                     <ul className={["mt-5",styles.listExperience].join(' ')}>
                         <li>
-                            We are using HTML, CSS, Bootstrap, React.js (javaScript), Python and Python Flask, MySql Database and Raspberry Pi.
+                            We are using HTML, CSS, Bootstrap, React.js (javaScript), Phyton3/Flask, MySql Database and Raspberry Pi.
                         </li>
                         <li>
                             We choose to use as Third Party, Google Maps, PayPal payment method.
@@ -150,15 +151,14 @@ const Presentation = () => {
 
             <div id="seven" className='pt-5' style={{height: windowHeight}}>
                 <div className={styles.header}>
-                    <h1 className={styles.title}>TITLE</h1>
+                    <h1 className={styles.title}>DEMO TIME</h1>
                 </div>
-                <ul className={["mt-5",styles.listExperience].join(' ')}>
-                    <li>
-                        list here
-                    </li>
-                </ul>
+                <div className="container mt-2">
+                    <img src={demo} alt="demo" width="100%" height="100%" />
+                </div>
                 <br/>
                 <div className={styles.bouttons}>
+                    <a href="/" className={["scroll mr-3", styles.buttonStyle].join(' ')} style={{color:"black"}}>DEMO</a>
                     <a href="#six" className={["scroll mr-3", styles.buttonStyle].join(' ')}>previous</a>
                     <a href="#height" className={["scroll mr-3", styles.buttonStyle].join(' ')}>next</a>
                 </div>
@@ -166,13 +166,22 @@ const Presentation = () => {
 
             <div id="height" className='pt-5' style={{height: windowHeight}}>
                 <div className={styles.header}>
-                    <h1 className={styles.title}>TITLE</h1>
+                    <h1 className={styles.title}>THANK YOU</h1>
                 </div>
-                <ul className={["mt-5",styles.listExperience].join(' ')}>
-                    <li>
-                        list here
-                    </li>
-                </ul>
+                <div className="container">
+                    <ul className={["mt-5",styles.listExperience].join(' ')}>
+                        <h2>A Big Thank you to 4Geeks Academy <img src={geek} width="100px" alt="mm"/></h2>
+                        <li>
+                            Marcelo and Alejandro.
+                        </li>
+                        <li>
+                            Colby, Paolo, Hernán.
+                        </li>
+                        <li>
+                            Daniela and Bridget.
+                        </li>
+                    </ul>
+                </div>
                 <br/>
                 <div className={styles.bouttons}>
                     <a href="#seven" className={["scroll mr-3", styles.buttonStyle].join(' ')}>previous</a>
@@ -180,20 +189,7 @@ const Presentation = () => {
                 </div>
             </div>
                 
-            <div id="nine" className='pt-5' style={{height: windowHeight}}>
-                <div className={styles.header}>
-                    <h1 className={styles.title}>TITLE</h1>
-                </div>
-                <ul className={["mt-5",styles.listExperience].join(' ')}>
-                    <li>
-                        list here
-                    </li>
-                </ul>
-                <br/>
-                <div className={styles.bouttons}>
-                    <a href="#three" className={["scroll mr-3", styles.buttonStyle].join(' ')}>previous</a>
-                </div>
-            </div>
+            
         </section>
     );
 };
