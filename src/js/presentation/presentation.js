@@ -23,7 +23,7 @@ const Presentation = () => {
                 </div>
                 <h3>Laundry services web application</h3>
                 <br/>
-                <a href="#two">next</a>
+                <a href="#two" className={["scroll mr-3", styles.buttonStyle].join(' ')}>next</a>
             </div>
             <div id="two" style={{height: windowHeight}}>
                 <div className={styles.header}>

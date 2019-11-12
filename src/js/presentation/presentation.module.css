@@ -9,6 +9,34 @@
 .i {
     color: #7CD1F9!important;
 }
+.buttonStyle {
+    padding: 11px 30px;
+    border: none;
+    color: #ffffff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    border: 2px solid #BBD5E4;
+    background: #7CD1F9;
+    display: inline-block;
+}
+.buttonStyle:hover {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+}
 .headerPage1 {
     background-color: black;
     color: white;
