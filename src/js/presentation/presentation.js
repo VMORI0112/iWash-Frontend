@@ -16,10 +16,10 @@ const Presentation = () => {
         <section className={styles.section}>
             <div id="one" className={styles.firstPage} style={{height: windowHeight}}>
                 <div className={styles.headerPage1}>
-                    <img src={geek} width="50px" alt="mm"/>
+                    <img src={geek} width="100px" alt="mm"/>
                     <h1>iWash Smart Laundromat</h1>
                 </div>
-                hey one
+                <h3>Laundry services web application</h3>
                 <br/>
                 <a href="#two">next</a>
             </div>
