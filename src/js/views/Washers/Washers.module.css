@@ -12,6 +12,10 @@
     cursor: pointer;
     text-transform: uppercase;
 }
+.machineName {
+    color: #000000;
+    font-weight: bold;
+}
 .btnGreen:hover {
     background-color: #9BDCFA!important;
     opacity: 0.6;

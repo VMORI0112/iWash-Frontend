@@ -115,7 +115,7 @@ const Machine = (props) => {
                         <div className="card">
                             <div className="card-body">
                                 <div className="card-text">
-                                    <h4 className="text-center" >{washersData[WasherId].name}</h4>
+                                    <h4 className={["text-center", styles.machineName].join(' ')} >{washersData[WasherId].name}</h4>
                                     <div className="row">
                                         <div className="col">
                                             <span className={["badge badge-success m-1", styles.available].join(' ')}>Available</span>

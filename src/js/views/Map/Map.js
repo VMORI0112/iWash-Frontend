@@ -52,7 +52,7 @@ const Map = () => {
     return (
         <section className={mystyles.section} style={{minHeight: windowHeight}}>
         
-        lat: {latitude} - Long: {longitude} - t: {timestamp} - acc: {accuracy} - error: {error}
+        {/* lat: {latitude} - Long: {longitude} - t: {timestamp} - acc: {accuracy} - error: {error} */}
 
         <h3 className="text-center">Laundromat Uses iWash App Arround You</h3>
 
