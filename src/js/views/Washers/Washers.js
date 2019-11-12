@@ -204,10 +204,10 @@ const Machine = (props) => {
                 <div className="modal-content">
                     <span onClick={modalToggle} className="close">&times;</span>
                     <h1 className="text-center" >{washersData[WasherId].name} Number: {washersData[WasherId].number}</h1>
-                    <div className="alert alert-warning text-center" role="alert">
+                    <div className={["alert","text-center", styles.modalCycle].join(' ')} role="alert">
                         <i className="m-3" style={{color: "black", fontWeight: "bold", fontSize: "24px"}}> {modalCycle} </i>
                         <span className="m-3"><span role="img" aria-label="time">&#128336;</span> {modalTime} minutes</span>
-                        <span className="badge badge-success"><span role="img" aria-label="time">&#128178;</span> {modalPrice} </span>
+                        <span className="badge badge-info"><span role="img" aria-label="time">&#128178;</span> {modalPrice} </span>
                     </div>
                    <div className="alert alert-danger ml-5">
                         <p>1 - make sure the washing machine is loaded</p>
