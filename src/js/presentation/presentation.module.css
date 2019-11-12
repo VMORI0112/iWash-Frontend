@@ -1,6 +1,5 @@
 .section {
     padding-top: 60px;
-    background-color: #eeeeee;
     min-height: 600px!important;
 }
 .firstPage {
@@ -53,7 +52,21 @@
 .header {
     background-color: black;
     color: white;
-    height: 40%;
+    height: 20%;
+    padding-top: 40px;
+}
+.listNumber {
+    list-style-type:decimal;
+    color: black;
+    font-size: 1.5rem;
+}
+.listExperience {
+    color: black;
+    font-size: 1.5rem;
+}
+.title {
+    padding-left: 40px;
+    font-weight: bold;
 }
 .firstPage h1 {
     text-align: center;

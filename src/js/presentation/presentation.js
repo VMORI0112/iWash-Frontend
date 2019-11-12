@@ -27,45 +27,82 @@ const Presentation = () => {
                     <a href="#two" className={["scroll mr-3", styles.buttonStyle].join(' ')}>next</a>
                 </div>
             </div>
-            <div id="two" style={{height: windowHeight}}>
+            <div id="two" className='pt-5' style={{height: windowHeight}}>
+                <div className={styles.header}>
+                    <h1 className={styles.title}>TABLE OF CONTENTS</h1>
+                </div>
+                <ol className={["mt-5",styles.listNumber].join(' ')}>
+                    <li>
+                        Web application to use and control the laundry services throughout the Internet, and using your mobile phone.
+                    </li>
+                    <li>
+                        Team Members: Samir Benzaba/Victor Mori. 
+                    </li>
+                    <li>
+                        Design views and tables , define Raspberry Pi interface, coding frontend and backend, coding interface and test all the project.
+                    </li>
+                    <li>
+                        Platform : Gitpod, HTML, CSS, javaScript, React.js, Python/Flask, MySql Database and Raspberry Pi.
+                    </li>
+                    <li>
+                        Challenges: Use MySQL Database with the backend, and Raspberry Pi interface.
+                    </li>
+                    <li>
+                        Next feature: Prepare the web application to be loaded on the mobile phone.
+                    </li>
+                </ol>
+                <br/>
+                <div className={styles.bouttons}>
+                    <a href="#one" className={["scroll mr-3", styles.buttonStyle].join(' ')}>previous</a>
+                    <a href="#three" className={["scroll mr-3", styles.buttonStyle].join(' ')}>next</a>
+                </div>
+            </div>
+            <div id="three" className='pt-5' style={{height: windowHeight}}>
+                <div className={styles.header}>
+                    <h1 className={styles.title}>OUR EXPERIENCE AT 4GEEKS ACADEMY</h1>
+                </div>
+                <ul className={["mt-5",styles.listExperience].join(' ')}>
+                    <li>
+                        I did enjoy all my learning time in 4Geeks Academy, because everyday I did learn new and interesting things for my career.
+                    </li>
+                    <li>
+                        I really liked the fact that we have one teacher for 2 students, that make it very easier to learn.
+                    </li>
+                </ul>
+                <br/>
+                <div className={styles.bouttons}>
+                    <a href="#two" className={["scroll mr-3", styles.buttonStyle].join(' ')}>previous</a>
+                    <a href="#four" className={["scroll mr-3", styles.buttonStyle].join(' ')}>next</a>
+                </div>
+            </div>
+            <div id="four" className='pt-5' style={{height: windowHeight}}>
+                <div className={styles.header}>
+                    <h1 className={styles.title}>WHAT IS &nbsp; <i className={["fas fa-info align-top", styles.i].join(' ')}></i>Wash</h1>
+                </div>
+                <ul className={["mt-5",styles.listExperience].join(' ')}>
+                    <li>
+                        iWash is a web application throughout you can handle your laundry services using the internet. You can , use and control the washer and dryer machines through your mobile phone.For example you can  to start the washing cycle as  your needs and verify the remaining time for each machine that you did choosed. Also, you can add money from your credit card to make your payments.
+                    </li>
+                    <li>
+                        My classmate  Samir and I, we both did use the laundry coins service before, and we got coincidence to found the same problem: sometimes there are no coins anywhere to use the laundry service. 
+                        That was the reason that we decided to make a web application to solve that problem and provide more facilities to the users.
+                    </li>
+                </ul>
+                <br/>
+                <div className={styles.bouttons}>
+                    <a href="#three" className={["scroll mr-3", styles.buttonStyle].join(' ')}>previous</a>
+                    <a href="#five" className={["scroll mr-3", styles.buttonStyle].join(' ')}>next</a>
+                </div>
+            </div>
+            <div id="five" className='pt-5' style={{height: windowHeight}}>
                 <div className={styles.header}>
                     <img src={geek} width="50px" alt="mm"/>
-                    <h1>Page 2</h1>
+                    <h1>Page 5</h1>
                 </div>
                 <img src={bootstrap} alt="b" width="200px" />
                 <img src={js} alt="b" width="100px" />
                 <img src={python} alt="b" width="200px" />
                 <img src={react} alt="b" width="100px" />
-                hey two
-                <br/>
-                <a href="#one">previous</a>
-                <a href="#three">next</a>
-            </div>
-            <div id="three" style={{height: windowHeight}}>
-                <div className={styles.header}>
-                    <img src={geek} width="50px" alt="mm"/>
-                    <h1>Page 3</h1>
-                </div>
-                hey three
-                <br/>
-                <a href="#two">previous</a>
-                <a href="#four">next</a>
-            </div>
-            <div id="four" style={{height: windowHeight}}>
-                <div className={styles.header}>
-                    <img src={geek} width="50px" alt="mm"/>
-                    <h1>Page 4</h1>
-                </div>
-                hey four
-                <br/>
-                <a href="#three">previous</a>
-                <a href="#five">next</a>
-            </div>
-            <div id="five" style={{height: windowHeight}}>
-                <div className={styles.header}>
-                    <img src={geek} width="50px" alt="mm"/>
-                    <h1>Page 5</h1>
-                </div>
                 hey five
                 <br/>
                 <a href="#four">previous</a>
