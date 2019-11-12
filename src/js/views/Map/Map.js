@@ -20,21 +20,21 @@ const Map = () => {
     const {mapBoxPublicToken} = useContext(UserContext);
     const { latitude, longitude, timestamp, accuracy, error } = usePosition();
     // const [centerPos, setCenterPos] = useState();
-    const [lat, setLat] = useState(25.7617);
-    const [long, setLong] = useState(80.1918);
+    // const [lat, setLat] = useState(25.7617);
+    // const [long, setLong] = useState(80.1918);
 
     const [map, setMap] = useState(null);
     const mapContainer = useRef(null);
 
     useEffect(() => {
-        if (latitude) setLat(latitude);
-        if (longitude) setLong(longitude);
+        // if (latitude) setLat(latitude);
+        // if (longitude) setLong(longitude);
         mapboxgl.accessToken = mapBoxPublicToken;
         const initializeMap = ({ setMap, mapContainer }) => {
           const map = new mapboxgl.Map({
             container: mapContainer.current,
             style: "mapbox://styles/mapbox/streets-v11", // stylesheet location
-            center: [long, lat],
+            center: [-80.1918, 25.7741664],
             zoom: 15
           });
     
@@ -45,14 +45,14 @@ const Map = () => {
         };
     
         if (!map) initializeMap({ setMap, mapContainer });
-      }, [map, mapBoxPublicToken, long, lat, latitude, longitude]);
+      }, [map, mapBoxPublicToken]);
 
     // console.log(navigator.geolocation);
 
     return (
         <section className={mystyles.section} style={{minHeight: windowHeight}}>
         
-        {/* lat: {latitude} - Long: {longitude} - t: {timestamp} - acc: {accuracy} - error: {error} */}
+        lat: {latitude} - Long: {longitude} - t: {timestamp} - acc: {accuracy} - error: {error}
 
         <h3 className="text-center">Laundromat Uses iWash App Arround You</h3>
 
