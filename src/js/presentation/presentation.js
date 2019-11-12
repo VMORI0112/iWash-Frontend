@@ -8,6 +8,8 @@ import js from '../../img/presentation/js.png';
 import python from '../../img/presentation/python.png';
 import react from '../../img/presentation/react.png';
 import demo from '../../img/presentation/demo.png';
+import marcelo from '../../img/presentation/marcelo.jpg';
+import alejandro from '../../img/presentation/alejandro.jpg';
 
 const Presentation = () => {
 
@@ -172,7 +174,7 @@ const Presentation = () => {
                     <ul className={["mt-5",styles.listExperience].join(' ')}>
                         <h2>A Big Thank you to 4Geeks Academy <img src={geek} width="100px" alt="mm"/></h2>
                         <li>
-                            Marcelo and Alejandro.
+                            <img src={marcelo} width="40px" alt="marcelo"/> Marcelo and <img src={alejandro} width="40px" alt="alejandro"/> Alejandro.
                         </li>
                         <li>
                             Colby, Paolo, Hernán.
