@@ -74,7 +74,7 @@ const Presentation = () => {
                         I did enjoy all my learning time in 4Geeks Academy, because everyday I did learn new and interesting things for my career.
                     </li>
                     <li>
-                        I really liked the fact that we have one teacher for 2 students, that make it very easier to learn.
+                        I really liked the fact that we have one teacher for 2 students, that make it very easy to learn.
                     </li>
                 </ul>
                 <br/>
