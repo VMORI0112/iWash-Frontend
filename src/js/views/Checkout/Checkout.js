@@ -11,6 +11,7 @@ let currentWallet = localStorage.getItem('wallet');
 
 function Product({ product }) {
 
+    const {backen_url} = useContext(UserContext);
     const [cash] = useState(new Audio(cashSound));
     const [paidFor, setPaidFor] = useState(false);
     const [error, setError] = useState(null);
@@ -59,7 +60,7 @@ function Product({ product }) {
                   user_email: userEmail
                 })
                 // fetch Post update wallet users table and add new transaction
-                fetch('http://0.0.0.0:3000/transaction', {
+                fetch(backen_url+'/transaction', {
                 method: 'POST',
                 body: transDatas,
                 headers:{
@@ -72,7 +73,7 @@ function Product({ product }) {
                         swal("Transaction Completed "+ name , "You Added $"+ amount + " to your Wallet", "success", {
                           button: "COOL",
                         }).then(() => {
-                            window.location.href = "http://localhost:3001/";
+                            window.location.href = "http://localhost:3000/";
                             });
                         console.log(details);
                         console.log(res);
@@ -96,7 +97,7 @@ function Product({ product }) {
           },
         })
         .render(paypalRef.current);
-    }, [product.description, product.price, cash]);
+    }, [product.description, product.price, cash, backen_url]);
   
     if (paidFor) {
       return (

@@ -15,6 +15,7 @@ const Machine = (props) => {
 
     let user_id = localStorage.getItem('userID');
     let user_email = localStorage.getItem('email');
+    let user_wallet = localStorage.getItem('wallet');
 
     const {washersData} = useContext(UserContext);
     const [modalVisible, setModalVisible] = useState('invisible');
@@ -31,15 +32,16 @@ const Machine = (props) => {
     }
 
     const startMachine = (cycle, price, time) => {
-        console.log(cycle);
+        // console.log(cycle);
         let machineId = washersData[WasherId].id;
         let locationNum = washersData[WasherId].locationNum;
         let numMachine = washersData[WasherId].number;
         let comp = 'no';
         let start_at = Date.now();
-        let end_at = (Date.now() + ((Number(time)*60)*1000))
+        let end_at = (Date.now() + ((Number(time)*60)*1000));
+        let new_amount = Number(user_wallet) - Number(price);
 
-        console.log('the machine number  '+numMachine);
+        // console.log('the machine number  '+numMachine);
 
         let washingNow = JSON.stringify({
             userID: user_id,
@@ -52,7 +54,8 @@ const Machine = (props) => {
             time: time,
             start_at: start_at,
             end_at: end_at,
-            cycleComplete: comp
+            cycleComplete: comp,
+            new_wallet: new_amount
         })
         
         modalToggle();
@@ -80,7 +83,10 @@ const Machine = (props) => {
                         'Content-Type': 'application/json'
                     }
                 }).then(res => res.json())
-                  .then(res => console.log(res))
+                  .then(res => {
+                      console.log(res);
+                      localStorage.setItem('wallet', new_amount);
+                    })
                   .catch(error => console.log(error));
                 // console.log(washingNow);
 
