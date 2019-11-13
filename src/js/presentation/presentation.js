@@ -19,7 +19,20 @@ import iphone from '../../img/presentation/iphone.png';
 import washer from '../../img/presentation/w2.png';
 import nocoin from '../../img/presentation/nocoin.png';
 import nocard from '../../img/presentation/nocard.png';
+import angry from '../../img/presentation/angry.png';
+import guyPhone from '../../img/presentation/guyPhone.png';
+import idea from '../../img/presentation/idea.png';
 
+import angryComputer from '../../img/presentation/angryComputer.png';
+import happyCoder from '../../img/presentation/happyCoder.png';
+import school from '../../img/presentation/school.png';
+
+import google from '../../img/presentation/google.jpg';
+import html from '../../img/presentation/html.png';
+import paypal from '../../img/presentation/paypal.png';
+import raspberry from '../../img/presentation/raspberry.png';
+import flask from '../../img/presentation/flask.png';
+import mysql from '../../img/presentation/mysql.png';
 
 const Presentation = () => {
 
@@ -111,17 +124,19 @@ const Presentation = () => {
             </div>
 
             <div id="five" className='pt-5' style={{height: windowHeight}}>
-                <div className={styles.header}>
-                    <h1 className={styles.title}>WHAT IS &nbsp; <i className={["fas fa-info align-top", styles.i].join(' ')}></i>Wash</h1>
+            <div className={styles.header}>
+                    <h1 className={styles.title}>HOW &nbsp; <i className={["fas fa-info align-top", styles.i].join(' ')}></i>Wash WORKS</h1>
                 </div>
-                <h1 className="text-center mt-2">Make Your Laundry Easier, Smarter and Efficient.</h1>
-                <div className="row mt-2">
-                    <div className="col text-right">
-                        <img src={iphone} width="45%" alt="iphone"/>
+                <h1 className="text-center mt-2">Website/Application Helps you to forget the complexity and hustle of using Coins and Cards.</h1>
+                <div className="row mt-2 text-center">
+                    <div className="col">
+                        <img src={nocoin} width="45%" alt="iphone"/>
                     </div>
-
-                    <div className="col text-left">
-                        <img src={washer} width="35%" alt="iphone"/>
+                    <div className="col">
+                        <img src={nocard} width="55%" alt="iphone"/>
+                    </div>
+                    <div className="col">
+                        <img src={iphone} width="55%" alt="iphone"/>
                     </div>
                 </div>
                 <br/>
@@ -133,18 +148,18 @@ const Presentation = () => {
 
             <div id="six" className='pt-5' style={{height: windowHeight}}>
                 <div className={styles.header}>
-                    <h1 className={styles.title}>HOW &nbsp; <i className={["fas fa-info align-top", styles.i].join(' ')}></i>Wash WORKS</h1>
+                    <h1 className={styles.title}>WHY &nbsp; <i className={["fas fa-info align-top", styles.i].join(' ')}></i>Wash?</h1>
                 </div>
-                <h1 className="text-center mt-2">Website/Application Helps you to forget the complexity and hustle of using Coins and Cards.</h1>
-                <div className="row mt-2">
-                    <div className="col text-right">
-                        <img src={nocoin} width="45%" alt="iphone"/>
+                <h1 className="text-center mt-2">When you forgot your wallet and or your card to pay, you still can use your phone!</h1>
+                <div className="row mt-2 text-center">
+                    <div className="col">
+                        <img src={angry} width="45%" alt="iphone"/>
                     </div>
-                    <div className="col text-right">
-                        <img src={nocard} width="45%" alt="iphone"/>
+                    <div className="col">
+                        <img src={idea} width="45%" alt="iphone"/>
                     </div>
-                    <div className="col text-left">
-                        <img src={iphone} width="35%" alt="iphone"/>
+                    <div className="col">
+                        <img src={guyPhone} width="105%" alt="iphone"/>
                     </div>
                 </div>
                 <br/>
@@ -158,20 +173,24 @@ const Presentation = () => {
                 <div className={styles.header}>
                     <h1 className={styles.title}>BEHIND THE PROJECT</h1>
                 </div>
-                <ul className={["mt-5",styles.listExperience].join(' ')}>
-                    <li>
-                        (Victor) Before I started the 4Geeks Academy program, I was an Analyst/Program for an iSeries environment, using the programming languages as RPG-IV and Free-Format. I decided to update my programming skills with the new technologies and 4Geeks Academy was a good decision.  Because, right now I can use HTML, CSS, javaScript and React.js as Frontend and Phyton/Flask and MySql as Backend, to build web applications. 
-                    </li>
-                    <li>
-                        (Samir) Before 4Geeks Academy, 
-                    </li>
-                    <li>
-                        90% of current jobs require digital skills. 
-                    </li>
-                    <li>
-                        There are 500K open positions in the US for software developers. 
-                    </li>
-                </ul>
+                <h1 className="text-center mt-2">OUR STORY...</h1>
+                <div className="row mt-2 text-center">
+                    <div className="col">
+                        <img src={angryComputer} width="55%" alt="iphone"/>
+                        <br/>
+                        <h3>Before 4Geeks</h3>
+                    </div>
+                    <div className="col">
+                        <img src={school} width="55%" alt="iphone"/>
+                        <br/>
+                        <h3>4Geeks Academy</h3>
+                    </div>
+                    <div className="col">
+                        <img src={happyCoder} width="55%" alt="iphone"/>
+                        <br/>
+                        <h3>After 4Geeks</h3>
+                    </div>
+                </div>
                 <br/>
                 <div className={styles.bouttons}>
                     <a href="#six" className={["scroll mr-3", styles.buttonStyle].join(' ')}>previous</a>
@@ -183,11 +202,17 @@ const Presentation = () => {
                 <div className={styles.header}>
                     <h1 className={styles.title}>HOW WAS IT BUILT</h1>
                 </div>
-                <div className="m-3">
-                    <img src={bootstrap} alt="b" width="200px" />
-                    <img src={js} alt="b" width="100px" />
-                    <img src={python} alt="b" width="200px" />
-                    <img src={react} alt="b" width="100px" />
+                <div className="m-3 text-center">
+                    <img className="m-2" src={html} alt="b" width="100px" />
+                    <img className="m-2" src={bootstrap} alt="b" width="100px" />
+                    <img className="m-2" src={js} alt="b" width="100px" />
+                    <img className="m-2" src={react} alt="b" width="100px" />
+                    <img className="m-2" src={python} alt="b" width="100px" />
+                    <img className="m-2" src={flask} alt="b" width="100px" />
+                    <img className="m-2" src={mysql} alt="b" width="100px" />
+                    <img className="m-2" src={raspberry} alt="b" width="100px" />
+                    <img className="m-2" src={paypal} alt="b" width="100px" />
+                    <img className="m-2" src={google} alt="b" width="100px" />
                 </div>
                 <div className="container">
                     <ul className={["mt-5",styles.listExperience].join(' ')}>
