@@ -68,22 +68,22 @@ function App() {
       .catch(error => console.log('error: ', error) );
   },[backen_url])
 
-  // useEffect(() => {
-  //   fetch(backen_url+'/user_wash', {
-  //     method: 'POST',
-  //     cors: '*cors',
-  //     body: JSON.stringify({
-  //       user_id: userId,
-  //       user_email: userEmail
-  //     }),
-  //     headers:{
-  //         'Content-Type': 'application/json'
-  //     }
-  //   })
-  //     .then(res => res.json())
-  //     .then(res => setCurrentWashing(res))
-  //     .catch(error => console.log('error: ', error) );
-  // },[userId, userEmail, currentWashing, backen_url])
+  useEffect(() => {
+    fetch(backen_url+'/user_wash', {
+      method: 'POST',
+      cors: '*cors',
+      body: JSON.stringify({
+        user_id: userId,
+        user_email: userEmail
+      }),
+      headers:{
+          'Content-Type': 'application/json'
+      }
+    })
+      .then(res => res.json())
+      .then(res => setCurrentWashing(res))
+      .catch(error => console.log('error: ', error) );
+  },[userId, userEmail, currentWashing, backen_url])
 
 
   const providerValue = useMemo(() => ({ user, setUser, Auth, setAuth, washersData, dryersData, valuesData, setValuesData, currentWashing, backen_url, windowHeight, mapBoxPublicToken }), [user, setUser, Auth, setAuth, washersData, dryersData, valuesData, setValuesData, currentWashing, backen_url, windowHeight, mapBoxPublicToken]);

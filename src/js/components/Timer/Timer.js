@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { UserContext } from '../../../UserContext';
 import swal from 'sweetalert';
 import styles from './Timer.module.css';
 
 const Timer = (props) => {
 
+    const {backen_url} = useContext(UserContext);
     const [swalAlert, setSwalAlert] = useState(true);
 
     var date = new Date();
@@ -20,6 +22,21 @@ const Timer = (props) => {
         howTimeLeft = howTimeLeftMinutes;
         secondLeft = remind;
      } else if (howTimeLeftSecond === 0 && swalAlert === true) {
+         
+        let updateBody = JSON.stringify({
+            id: props.id
+        })
+        fetch(backen_url+'/done_washing',{
+            method: 'PUT',
+            cors: '*cors',
+            body: updateBody,
+            headers:{
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json())
+          .then(res => console.log(res))
+          .catch(error => console.log(error));
+
         swal("The Machine is Done" , "You can now pick up your lanudry", "success", {
             button: "Done",
           })

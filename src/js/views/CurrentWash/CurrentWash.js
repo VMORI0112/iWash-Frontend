@@ -22,7 +22,7 @@ const CurrentWash = () => {
                                 <div className={["col", styles.number].join(' ')}> <span role="img" aria-label="ds">#️⃣</span> {item.machineNumber}</div>
                             </div>
                             <div className="text-center mt-3">
-                                <Timer start={item.start} end={item.end} />
+                                <Timer start={item.start} end={item.end} id={item.id} />
                             </div>
                             <br/>
                         </div>
