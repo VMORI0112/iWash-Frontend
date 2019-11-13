@@ -15,6 +15,11 @@ import hernan from '../../img/presentation/hernan.jpeg';
 import colby from '../../img/presentation/colby.jpeg';
 import bridget from '../../img/presentation/bridget.jpeg';
 import daniela from '../../img/presentation/daniela.jpeg';
+import iphone from '../../img/presentation/iphone.png';
+import washer from '../../img/presentation/w2.png';
+import nocoin from '../../img/presentation/nocoin.png';
+import nocard from '../../img/presentation/nocard.png';
+
 
 const Presentation = () => {
 
@@ -88,15 +93,16 @@ const Presentation = () => {
                 <div className={styles.header}>
                     <h1 className={styles.title}>WHAT IS &nbsp; <i className={["fas fa-info align-top", styles.i].join(' ')}></i>Wash</h1>
                 </div>
-                <ul className={["mt-5",styles.listExperience].join(' ')}>
-                    <li>
-                        iWash is a web application throughout you can handle your laundry services using the internet. You can , use and control the washer and dryer machines through your mobile phone.For example you can  to start the washing cycle as  your needs and verify the remaining time for each machine that you did choosed. Also, you can add money from your credit card to make your payments.
-                    </li>
-                    <li>
-                        My classmate  Samir and I, we both did use the laundry coins service before, and we got coincidence to found the same problem: sometimes there are no coins anywhere to use the laundry service. 
-                        That was the reason that we decided to make a web application to solve that problem and provide more facilities to the users.
-                    </li>
-                </ul>
+                <h1 className="text-center mt-2">Make Your Laundry Easier, Smarter and Efficient.</h1>
+                <div className="row mt-2">
+                    <div className="col text-right">
+                        <img src={iphone} width="45%" alt="iphone"/>
+                    </div>
+
+                    <div className="col text-left">
+                        <img src={washer} width="35%" alt="iphone"/>
+                    </div>
+                </div>
                 <br/>
                 <div className={styles.bouttons}>
                     <a href="#three" className={["scroll mr-3", styles.buttonStyle].join(' ')}>previous</a>
@@ -106,6 +112,50 @@ const Presentation = () => {
 
             <div id="five" className='pt-5' style={{height: windowHeight}}>
                 <div className={styles.header}>
+                    <h1 className={styles.title}>WHAT IS &nbsp; <i className={["fas fa-info align-top", styles.i].join(' ')}></i>Wash</h1>
+                </div>
+                <h1 className="text-center mt-2">Make Your Laundry Easier, Smarter and Efficient.</h1>
+                <div className="row mt-2">
+                    <div className="col text-right">
+                        <img src={iphone} width="45%" alt="iphone"/>
+                    </div>
+
+                    <div className="col text-left">
+                        <img src={washer} width="35%" alt="iphone"/>
+                    </div>
+                </div>
+                <br/>
+                <div className={styles.bouttons}>
+                    <a href="#four" className={["scroll mr-3", styles.buttonStyle].join(' ')}>previous</a>
+                    <a href="#six" className={["scroll mr-3", styles.buttonStyle].join(' ')}>next</a>
+                </div>
+            </div>
+
+            <div id="six" className='pt-5' style={{height: windowHeight}}>
+                <div className={styles.header}>
+                    <h1 className={styles.title}>HOW &nbsp; <i className={["fas fa-info align-top", styles.i].join(' ')}></i>Wash WORKS</h1>
+                </div>
+                <h1 className="text-center mt-2">Website/Application Helps you to forget the complexity and hustle of using Coins and Cards.</h1>
+                <div className="row mt-2">
+                    <div className="col text-right">
+                        <img src={nocoin} width="45%" alt="iphone"/>
+                    </div>
+                    <div className="col text-right">
+                        <img src={nocard} width="45%" alt="iphone"/>
+                    </div>
+                    <div className="col text-left">
+                        <img src={iphone} width="35%" alt="iphone"/>
+                    </div>
+                </div>
+                <br/>
+                <div className={styles.bouttons}>
+                    <a href="#five" className={["scroll mr-3", styles.buttonStyle].join(' ')}>previous</a>
+                    <a href="#seven" className={["scroll mr-3", styles.buttonStyle].join(' ')}>next</a>
+                </div>
+            </div>
+
+            <div id="seven" className='pt-5' style={{height: windowHeight}}>
+                <div className={styles.header}>
                     <h1 className={styles.title}>BEHIND THE PROJECT</h1>
                 </div>
                 <ul className={["mt-5",styles.listExperience].join(' ')}>
@@ -113,7 +163,7 @@ const Presentation = () => {
                         (Victor) Before I started the 4Geeks Academy program, I was an Analyst/Program for an iSeries environment, using the programming languages as RPG-IV and Free-Format. I decided to update my programming skills with the new technologies and 4Geeks Academy was a good decision.  Because, right now I can use HTML, CSS, javaScript and React.js as Frontend and Phyton/Flask and MySql as Backend, to build web applications. 
                     </li>
                     <li>
-                        (Samir) Before I started the 4Geeks Academy program, I was coding with Html,Css and PHP. I learn by myself, it was very hard specially when you struggle. So I decide to have help from the Best School in Miami. 
+                        (Samir) Before 4Geeks Academy, 
                     </li>
                     <li>
                         90% of current jobs require digital skills. 
@@ -124,12 +174,12 @@ const Presentation = () => {
                 </ul>
                 <br/>
                 <div className={styles.bouttons}>
-                    <a href="#four" className={["scroll mr-3", styles.buttonStyle].join(' ')}>previous</a>
-                    <a href="#six" className={["scroll mr-3", styles.buttonStyle].join(' ')}>next</a>
+                    <a href="#six" className={["scroll mr-3", styles.buttonStyle].join(' ')}>previous</a>
+                    <a href="#height" className={["scroll mr-3", styles.buttonStyle].join(' ')}>next</a>
                 </div>
             </div>
 
-            <div id="six" className='pt-5' style={{height: windowHeight}}>
+            <div id="height" className='pt-5' style={{height: windowHeight}}>
                 <div className={styles.header}>
                     <h1 className={styles.title}>HOW WAS IT BUILT</h1>
                 </div>
@@ -151,12 +201,12 @@ const Presentation = () => {
                 </div>
                 <br/>
                 <div className={styles.bouttons}>
-                    <a href="#five" className={["scroll mr-3", styles.buttonStyle].join(' ')}>previous</a>
-                    <a href="#seven" className={["scroll mr-3", styles.buttonStyle].join(' ')}>next</a>
+                    <a href="#seven" className={["scroll mr-3", styles.buttonStyle].join(' ')}>previous</a>
+                    <a href="#nine" className={["scroll mr-3", styles.buttonStyle].join(' ')}>next</a>
                 </div>
             </div>
 
-            <div id="seven" className='pt-5' style={{height: windowHeight}}>
+            <div id="nine" className='pt-5' style={{height: windowHeight}}>
                 <div className={styles.header}>
                     <h1 className={styles.title}>DEMO TIME</h1>
                 </div>
@@ -166,12 +216,12 @@ const Presentation = () => {
                 <br/>
                 <div className={styles.bouttons}>
                     <a href="/" className={["scroll mr-3", styles.buttonStyle].join(' ')} style={{color:"black"}}>DEMO</a>
-                    <a href="#six" className={["scroll mr-3", styles.buttonStyle].join(' ')}>previous</a>
-                    <a href="#height" className={["scroll mr-3", styles.buttonStyle].join(' ')}>next</a>
+                    <a href="#height" className={["scroll mr-3", styles.buttonStyle].join(' ')}>previous</a>
+                    <a href="#ten" className={["scroll mr-3", styles.buttonStyle].join(' ')}>next</a>
                 </div>
             </div>
 
-            <div id="height" className='pt-5' style={{height: windowHeight}}>
+            <div id="ten" className='pt-5' style={{height: windowHeight}}>
                 <div className={styles.header}>
                     <h1 className={styles.title}>THANK YOU</h1>
                 </div>
@@ -191,8 +241,7 @@ const Presentation = () => {
                 </div>
                 <br/>
                 <div className={styles.bouttons}>
-                    <a href="#seven" className={["scroll mr-3", styles.buttonStyle].join(' ')}>previous</a>
-                    <a href="#nine" className={["scroll mr-3", styles.buttonStyle].join(' ')}>next</a>
+                    <a href="#nine" className={["scroll mr-3", styles.buttonStyle].join(' ')}>previous</a>
                 </div>
             </div>
                 

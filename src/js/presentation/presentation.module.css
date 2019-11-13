@@ -58,11 +58,11 @@
 .listNumber {
     list-style-type:decimal;
     color: black;
-    font-size: 1.5rem;
+    font-size: 4vh;
 }
 .listExperience {
     color: black;
-    font-size: 1.5rem;
+    font-size: 4vh;
 }
 .title {
     padding-left: 40px;
