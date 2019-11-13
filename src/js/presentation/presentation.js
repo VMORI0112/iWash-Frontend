@@ -46,6 +46,10 @@ const Presentation = () => {
                         <img src={geek} width="100px" alt="mm"/>
                     </div>
                     <h1><i className={["fas fa-info align-top", styles.i].join(' ')}></i>Wash Smart Laundromat</h1>
+                    <br/><br/>
+                    <h2 className="text-right p-5">
+                        Victor F. Mori And Samir Benzada
+                    </h2>
                 </div>
                 <h2 className="text-center pt-4">Laundry services web application</h2>
                 <br/>
@@ -59,22 +63,25 @@ const Presentation = () => {
                 </div>
                 <ol className={["mt-5",styles.listNumber].join(' ')}>
                     <li>
-                        Web application to use and control the laundry services throughout the Internet, and using your mobile phone.
+                        OUR EXPERIENCE AT 4GEEKS ACADEMY
                     </li>
                     <li>
-                        Team Members: Samir Benzaba/Victor Mori. 
+                        WHAT IS IWASH
                     </li>
                     <li>
-                        Design views and tables , define Raspberry Pi interface, coding frontend and backend, coding interface and test all the project.
+                        HOW IWASH WORKS
                     </li>
                     <li>
-                        Platform : Gitpod, HTML, CSS, javaScript, React.js, Python/Flask, MySql Database and Raspberry Pi.
+                        WHY IWASH?
                     </li>
                     <li>
-                        Challenges: Use MySQL Database with the backend, and Raspberry Pi interface.
+                        BEHIND THE PROJECT
                     </li>
                     <li>
-                        Next feature: Prepare the web application to be loaded on the mobile phone.
+                        HOW WAS IT BUILT
+                    </li>
+                    <li>
+                        DEMO TIME
                     </li>
                 </ol>
                 <br/>
@@ -89,10 +96,13 @@ const Presentation = () => {
                 </div>
                 <ul className={["mt-5",styles.listExperience].join(' ')}>
                     <li>
-                        I did enjoy all my learning time in 4Geeks Academy, because everyday I did learn new and interesting things for my career.
+                        We enjoyed all my learning time in 4Geeks Academy, because everyday we did learn new and interesting things for our career.
                     </li>
                     <li>
-                        I really liked the fact that we have one teacher for 2 students, that make it very easy to learn.
+                        We really liked the fact that we have 1 teacher for 2 students, that make it very easy to learn.
+                    </li>
+                    <li>
+                        They Have amazing teachers.
                     </li>
                 </ul>
                 <br/>
@@ -127,7 +137,7 @@ const Presentation = () => {
             <div className={styles.header}>
                     <h1 className={styles.title}>HOW &nbsp; <i className={["fas fa-info align-top", styles.i].join(' ')}></i>Wash WORKS</h1>
                 </div>
-                <h1 className="text-center mt-2">Website/Application Helps you to forget the complexity and hustle of using Coins and Cards.</h1>
+                <h1 className="text-center mt-2">Website/Application Helps you forget the complexity and hustle of using Coins and Cards.</h1>
                 <div className="row mt-2 text-center">
                     <div className="col">
                         <img src={nocoin} width="45%" alt="iphone"/>
