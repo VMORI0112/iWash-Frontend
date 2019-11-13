@@ -10,6 +10,11 @@ import react from '../../img/presentation/react.png';
 import demo from '../../img/presentation/demo.png';
 import marcelo from '../../img/presentation/marcelo.jpg';
 import alejandro from '../../img/presentation/alejandro.jpg';
+import paolo from '../../img/presentation/paolo.png';
+import hernan from '../../img/presentation/hernan.jpeg';
+import colby from '../../img/presentation/colby.jpeg';
+import bridget from '../../img/presentation/bridget.jpeg';
+import daniela from '../../img/presentation/daniela.jpeg';
 
 const Presentation = () => {
 
@@ -177,10 +182,10 @@ const Presentation = () => {
                             <img src={marcelo} width="40px" alt="marcelo"/> Marcelo and <img src={alejandro} width="40px" alt="alejandro"/> Alejandro.
                         </li>
                         <li>
-                            Colby, Paolo, Hernán.
+                        <img src={colby} width="40px" alt="colby"/> Colby, <img src={paolo} width="40px" alt="paolo"/> Paolo, <img src={hernan} width="40px" alt="marcelo"/> Hernán.
                         </li>
                         <li>
-                            Daniela and Bridget.
+                        <img src={daniela} width="40px" alt="marcelo"/> Daniela and <img src={bridget} width="40px" alt="marcelo"/> Bridget.
                         </li>
                     </ul>
                 </div>

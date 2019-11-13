@@ -58,7 +58,7 @@ const Machine = (props) => {
         modalToggle();
         // to have the right address ip, type in rasp terminal: ifconfig wlan0
         // once you get that address, change it here and in the rasp app.py
-        // fetch('http://172.16.100.7:3000/iwash',{
+        // fetch('http://172.16.100.48:3000/iwash',{
         //     method: 'POST',
         //     body: JSON.stringify({
         //         "action": cycle,
@@ -90,19 +90,19 @@ const Machine = (props) => {
                     history.push('/current-wash');
                       });
 
-        //     } else {
-        //         swal("Something Went Wrong!", "Try again!", "error", {
-        //             button: "OK",
-        //           })
-        //     }
-        // })
-        // .catch(error => {
-        //     swal("Error!", JSON.stringify("error: => "+ error), "error", {
-        //         button: "OK",
-        //       })
-        //     console.log('error: ', error)
-        // });
-    }
+    //         } else {
+    //             swal("Something Went Wrong!", "Try again!", "error", {
+    //                 button: "OK",
+    //               })
+    //         }
+    //     })
+    //     .catch(error => {
+    //         swal("Error!", JSON.stringify("error: => "+ error), "error", {
+    //             button: "OK",
+    //           })
+    //         console.log('error: ', error)
+    //     });
+ }
 
     let WasherId = props.match.params.WID;
 
@@ -203,7 +203,7 @@ const Machine = (props) => {
             <div className={["modal", modalVisible].join(' ')}>
                 <div className="modal-content">
                     <span onClick={modalToggle} className="close">&times;</span>
-                    <h1 className="text-center" >{washersData[WasherId].name} Number: {washersData[WasherId].number}</h1>
+                    <h1 className="text-center" >{washersData[WasherId].name} #{washersData[WasherId].number}</h1>
                     <div className={["alert","text-center", styles.modalCycle].join(' ')} role="alert">
                         <i className="m-3" style={{color: "black", fontWeight: "bold", fontSize: "24px"}}> {modalCycle} </i>
                         <span className="m-3"><span role="img" aria-label="time">&#128336;</span> {modalTime} minutes</span>

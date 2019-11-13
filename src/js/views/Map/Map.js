@@ -23,6 +23,8 @@ const Map = () => {
     // const [lat, setLat] = useState(25.7617);
     // const [long, setLong] = useState(80.1918);
 
+    console.log("Lat: "+latitude + " || Long: " +  longitude + " time: "+ timestamp + " || "+ accuracy + " " + error)
+ 
     const [map, setMap] = useState(null);
     const mapContainer = useRef(null);
 
