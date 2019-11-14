@@ -5,12 +5,13 @@ import Timer from '../../components/Timer/Timer';
 
 const CurrentWash = () => {
 
+    const {windowHeight} = useContext(UserContext);
     const {currentWashing} = useContext(UserContext); 
 
     console.log(currentWashing);
 
     return (
-        <section className={styles.section}>
+        <section className={styles.section} style={{minHeight: windowHeight}}>
             <div className="container">
                 <h2 className="text-center">your current wash</h2>
                 {!currentWashing ? 'Loading...' : currentWashing.map((item,index) => {

@@ -56,7 +56,7 @@ const Map = () => {
         
         {/* lat: {latitude} - Long: {longitude} - t: {timestamp} - acc: {accuracy} - error: {error} */}
 
-        <h3 className="text-center">Laundromat Uses iWash App Arround You</h3>
+        <h3 className="text-center">iWash Laundromat Arround You</h3>
 
         <div ref={el => (mapContainer.current = el)} style={styles} />
 
