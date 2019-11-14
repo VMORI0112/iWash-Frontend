@@ -64,24 +64,24 @@ const Home = () => {
 
             <div className="container py-xl-5 pb-ly-3">
                 <h3 className="w3ls-title text-center font-weight-bold text-da mb-5 pb-lg-4">
-                    <span className={["mb-1", styles.ourService].join(' ')}>What we offer?</span>
-				    Our Services
+                    <span className={["mb-1", styles.ourService].join(' ')}>We Also offer</span>
+				    Laundry Services
                 </h3>
                 <div className="row text-center">
                     <div className="col-lg-4 services-w3ls-grid">
-                        <img src={fer} alt="" className="img-fluid" />
-                        <h4 className="mt-lg-5 mt-4 mb-sm-3 mb-2 text-da">Service 1</h4>
-                        <p>Ut enim ad minima veniam, quis nostrum ullam corporis suscipit laboriosam.</p>
+                        <img src={linge} alt="" className="img-fluid" />
+                        <h4 className="mt-lg-5 mt-4 mb-sm-3 mb-2 text-da">Pick Up Your Laundry</h4>
+                        <p>On our easy-to-use website from your computer, mobile device or tablet, select the options you want and place them in your shopping cart.</p>
                     </div>
                     <div className="col-lg-4 services-w3ls-grid my-lg-0 my-4">
                         <img src={lav} alt="" className="img-fluid" />
-                        <h4 className="mt-lg-5 mt-4 mb-sm-3 mb-2 text-da">Service 2</h4>
-                        <p>Ut enim ad minima veniam, quis nostrum ullam corporis suscipit laboriosam.</p>
+                        <h4 className="mt-lg-5 mt-4 mb-sm-3 mb-2 text-da">Wash Your laundry</h4>
+                        <p>We take pride in our expert ability to provide you with clean and fresh clothes.</p>
                     </div>
                     <div className="col-lg-4 services-w3ls-grid">
-                        <img src={linge} alt="" className="img-fluid" />
-                        <h4 className="mt-lg-5 mt-4 mb-sm-3 mb-2 text-da">Service 3</h4>
-                        <p>Ut enim ad minima veniam, quis nostrum ullam corporis suscipit laboriosam.</p>
+                        <img src={fer} alt="" className="img-fluid" />
+                        <h4 className="mt-lg-5 mt-4 mb-sm-3 mb-2 text-da">Iron Your Laundry</h4>
+                        <p>Iron and fold only orders are returned to you within 24-hours.</p>
                     </div>
                 </div>
             </div>

@@ -15,8 +15,11 @@
     background-size: cover;
 }
 .i {
-    /* color: #7CD1F9!important; */
-    color: black;
+    color: #7CD1F9!important;
+    background-color: black;
+    border-radius: 100%;
+    padding: 10px;
+    margin-top: -10px;
 }
 .whoText {
     color: #7CD1F9;
