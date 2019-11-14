@@ -50,6 +50,7 @@ const IwashNavBar = () => {
                                     <Link className="dropdown-item" to="/wallet" >Add Money</Link>
                                     <Link className="dropdown-item" to="/map" >Stores</Link>
                                     <Link className="dropdown-item" to="/current-wash" >Current Wash</Link>
+                                    <Link className="dropdown-item" to="/setting" >Setting</Link>
                                     {/* <Link className="dropdown-item" to="/rasp" >RaspberryPi</Link> */}
                                     <button 
                                         className="dropdown-item" 

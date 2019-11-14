@@ -3,7 +3,7 @@ import styles from './Setting.module.css';
 
 const Setting = () => {
     return (
-        <section className={styles}>
+        <section className={styles.section}>
             <h1>Setting</h1>
         </section>
     );
