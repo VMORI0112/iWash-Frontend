@@ -11,6 +11,7 @@ let currentWallet = localStorage.getItem('wallet');
 
 function Product({ product }) {
 
+    const {windowHeight} = useContext(UserContext);
     const {backen_url} = useContext(UserContext);
     const [cash] = useState(new Audio(cashSound));
     const [paidFor, setPaidFor] = useState(false);
@@ -133,7 +134,7 @@ const Checkout = (props) => {
       };
 
     return (
-        <section className={styles.section}>
+        <section className={styles.section} style={{minHeight: windowHeight}}>
             <div className={["container text-center p-5", styles.payment].join(' ')}>
                 <Product product={product} />
             </div>

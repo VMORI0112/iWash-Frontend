@@ -5,13 +5,15 @@ import styles from './Wallet.module.css';
 
 const Wallet = () => {
 
+    const {windowHeight} = useContext(UserContext);
+
     let wallet = localStorage.getItem('wallet');
     const {valuesData} = useContext(UserContext);
 
     console.log(valuesData);
 
     return (
-        <section className={styles.section}>
+        <section className={styles.section} style={{minHeight: windowHeight}}>
             <div className={["container text-center", styles.white].join(' ')}>
                 <h1>Wallet</h1>
                 <h3>Add more credit to your wallet.</h3>
