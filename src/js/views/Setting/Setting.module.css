@@ -2,3 +2,6 @@
     padding-top: 80px;
     background-color: #eeeeee;
 }
+.gotopres {
+    cursor: pointer;
+}

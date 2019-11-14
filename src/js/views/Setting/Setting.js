@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { UserContext } from '../../../UserContext';
 import styles from './Setting.module.css';
 import geeks from '../../../img/presentation/4geeks.png';
 
 const Setting = () => {
+
+    const {windowHeight} = useContext(UserContext);
+
+    const presentation = () => {
+        localStorage.clear();
+        window.location.href = "/presentation#ten";
+    }
+
     return (
-        <section className={styles.section}>
-            <h1>Setting</h1>
+        <section className={styles.section} style={{minHeight: windowHeight}}>
+            <h1 className="text-center mb-5">Setting</h1>
             <div className="container">
-                <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-user"></i>&nbsp;Update Profile</a>
-                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-hand-holding-usd"></i>&nbsp;My Wallet</a>
-                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-history"></i>&nbsp;My Washing History</a>
-                    <a href="#" class="list-group-item list-group-item-action"> <img src={geeks} alt="4geeks" width="30px" /> &nbsp;Back to Presentation</a>
+                <div className="list-group">
+                    <Link to="/" className="list-group-item list-group-item-action"><i className="fas fa-user"></i>&nbsp;Update Profile</Link>
+                    <Link to="/" className="list-group-item list-group-item-action"><i className="fas fa-hand-holding-usd"></i>&nbsp;My Wallet</Link>
+                    <Link to="/" className="list-group-item list-group-item-action"><i className="fas fa-history"></i>&nbsp;My Washing History</Link>
+                    <div onClick={presentation} className={["list-group-item list-group-item-action", styles.gotopres].join(' ')}> <img src={geeks} alt="4geeks" width="30px" /> &nbsp;Back to Presentation</div>
                 </div>
             </div>
         </section>
