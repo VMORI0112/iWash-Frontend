@@ -5,3 +5,10 @@
 .gotopres {
     cursor: pointer;
 }
+.list {
+    color: black;
+    font-weight: bold;
+}
+.list a:hover, .list div:hover {
+    background-color: #7CD1F9;
+}
