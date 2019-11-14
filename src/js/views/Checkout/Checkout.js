@@ -11,7 +11,6 @@ let currentWallet = localStorage.getItem('wallet');
 
 function Product({ product }) {
 
-    const {windowHeight} = useContext(UserContext);
     const {backen_url} = useContext(UserContext);
     const [cash] = useState(new Audio(cashSound));
     const [paidFor, setPaidFor] = useState(false);
@@ -112,7 +111,7 @@ function Product({ product }) {
       <div>
         {error && <div>Uh oh, an error occurred! {error.message}</div>}
         
-        <div className="alert alert-warning" role="alert">
+        <div className="alert alert-info" role="alert">
           <h1>{product.description}  ${product.price}</h1>
         </div>
     
@@ -123,6 +122,7 @@ function Product({ product }) {
 
 const Checkout = (props) => {
 
+    const {windowHeight} = useContext(UserContext);
     const {valuesData} = useContext(UserContext);
 
     let valueID = props.match.params.amount;
