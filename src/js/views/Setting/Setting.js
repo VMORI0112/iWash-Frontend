@@ -18,9 +18,9 @@ const Setting = () => {
             <h1 className="text-center mb-5">Setting</h1>
             <div className="container">
                 <div className={["list-group", styles.list].join(' ')}>
-                    <Link to="/" className="list-group-item list-group-item-action"><i className="fas fa-user fa-2x"></i>&nbsp;Update Profile</Link>
-                    <Link to="/" className="list-group-item list-group-item-action"><i className="fas fa-hand-holding-usd fa-2x"></i>&nbsp;My Wallet</Link>
-                    <Link to="/" className="list-group-item list-group-item-action"><i className="fas fa-history fa-2x"></i>&nbsp;My Washing History</Link>
+                    <Link to="/" className="list-group-item list-group-item-action"><i className="fas fa-user fa-2x"></i> &nbsp; &nbsp; Update Profile</Link>
+                    <Link to="/" className="list-group-item list-group-item-action"><i className="fas fa-hand-holding-usd fa-2x"></i> &nbsp; &nbsp; My Wallet</Link>
+                    <Link to="/" className="list-group-item list-group-item-action"><i className="fas fa-history fa-2x"></i> &nbsp; &nbsp; My Washing History</Link>
                     <div onClick={presentation} className={["list-group-item list-group-item-action", styles.gotopres].join(' ')}> <img src={geeks} alt="4geeks" width="50px" /> &nbsp;Back to Presentation</div>
                 </div>
             </div>
