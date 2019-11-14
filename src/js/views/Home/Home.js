@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
+import { UserContext } from '../../../UserContext';
 
 import fer from '../../../img/home/fer.png';
 import lav from '../../../img/home/lav.png';
@@ -9,10 +10,13 @@ import apple from '../../../img/home/apple.png';
 import google from '../../../img/home/google.png';
 
 const Home = () => {
+
+    const {windowHeight} = useContext(UserContext);
+
     return (
         <section className={styles.section}>
 
-            <div className={["text-center", styles.main].join(' ')}>
+            <div className={["text-center", styles.main].join(' ')} style={{minHeight: windowHeight}}>
                 <div className={styles.bannerInfo}>
                     <div className="container">
                         <div className="style-banner text-center">

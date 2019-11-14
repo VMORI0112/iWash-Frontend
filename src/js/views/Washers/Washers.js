@@ -61,10 +61,11 @@ const Machine = (props) => {
         modalToggle();
         // to have the right address ip, type in rasp terminal: ifconfig wlan0
         // once you get that address, change it here and in the rasp app.py
-        // fetch('http://172.16.100.48:3000/iwash',{
+        // fetch('http://172.16.100.47:3000/iwash',{
         //     method: 'POST',
         //     body: JSON.stringify({
         //         "action": cycle,
+        //         "time": time,
         //         "msg": cycle+" WASHING"
         //     }),
         //     headers:{
@@ -96,18 +97,18 @@ const Machine = (props) => {
                     history.push('/current-wash');
                       });
 
-    //         } else {
-    //             swal("Something Went Wrong!", "Try again!", "error", {
-    //                 button: "OK",
-    //               })
-    //         }
-    //     })
-    //     .catch(error => {
-    //         swal("Error!", JSON.stringify("error: => "+ error), "error", {
-    //             button: "OK",
-    //           })
-    //         console.log('error: ', error)
-    //     });
+        //     } else {
+        //         swal("Something Went Wrong!", "Try again!", "error", {
+        //             button: "OK",
+        //           })
+        //     }
+        // })
+        // .catch(error => {
+        //     swal("Error!", JSON.stringify("error: => "+ error), "error", {
+        //         button: "OK",
+        //       })
+        //     console.log('error: ', error)
+        // });
  }
 
     let WasherId = props.match.params.WID;
