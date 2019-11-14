@@ -9,12 +9,14 @@
     border-radius: 4px;
     padding-bottom: 10px;
 }
-.btnOrange {
-    background-color: #f8b663!important;
-    border-color: transparent!important;
+.btnBlue {
+    background-color: #7CD1F9!important;
+    border-color: #BBD5E4!important;
     color: #000000!important;
     font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
 }
-.btnOrange:hover {
-    background-color: #f7b057!important;
+.btnBlue:hover {
+    background-color: #9BDCFA!important;
 }

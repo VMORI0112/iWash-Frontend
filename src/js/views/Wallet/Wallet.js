@@ -23,7 +23,7 @@ const Wallet = () => {
                             <Link 
                                 key={index}
                                 to={'/checkout/'+index} 
-                                className={["btn btn-lg m-3", styles.btnOrange].join(' ')}
+                                className={["btn btn-lg m-3", styles.btnBlue].join(' ')}
                             > 
                                 + ${item.value}
                             </Link>
