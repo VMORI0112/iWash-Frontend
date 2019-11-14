@@ -29,9 +29,7 @@ const Home = () => {
                         <div className="col-lg-6 about-left-w3pvt pr-lg-5">
                             <h4 className={styles.whoText}>Who we are?</h4>
                             <h3 className="tittle-w3layouts text-uppercase mt-3">
-                                Laundry and Dry 
-                                <br/>
-                                Cleaning Services
+                                Make Your Laundry Easier, Smarter and Efficient.
                             </h3>
                             <p className="para-text mt-5">
                                 We are using the latest technology to meet your laundry needs. We are putting at your fingertips, through your mobile phone; the ability to use and cotrol the washing and drying machines of our establishments using the Internet.
@@ -55,9 +53,7 @@ const Home = () => {
                         <span className={styles.newCust}>
                             New customers save $10
                         </span>
-                        Ut enim ad nostrud ullamco laboris 
-                        <br/>
-                        Nisi ut aliquip ex consequat.
+                        Website / Application Helps you forget the complexity and hustle of using Coins and Cards.
                     </h3>
                     <div className="buttons-w3pvt text-center mt-lg-4 pb-lg-5">
                         <Link to="/about" className={["scroll mr-3", styles.buttonStyle].join(' ')}>Read More</Link>
