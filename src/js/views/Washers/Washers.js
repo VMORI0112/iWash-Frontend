@@ -33,6 +33,12 @@ const Machine = (props) => {
 
     const startMachine = (cycle, price, time) => {
 
+        swal("The Machine Started " , "You can go grab a coffee and come back when it's over", "success", {
+            button: "Let iWash Wash",
+          }).then(() => {
+            history.push('/current-wash');
+              });
+
         // console.log(cycle);
         let machineId = washersData[WasherId].id;
         let locationNum = washersData[WasherId].locationNum;
@@ -60,6 +66,20 @@ const Machine = (props) => {
         })
         
         modalToggle();
+        // start count for the machine
+        fetch(backen_url+'/start_washing',{
+            method: 'POST',
+            cors: '*cors',
+            body: washingNow,
+            headers:{
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json())
+          .then(res => {
+              console.log(res);
+              localStorage.setItem('wallet', new_amount);
+            })
+          .catch(error => console.log(error));
         // to have the right address ip, type in rasp terminal: ifconfig wlan0
         // once you get that address, change it here and in the rasp app.py
         fetch('http://172.16.100.47:3000/iwash',{
@@ -77,26 +97,7 @@ const Machine = (props) => {
         .then(res => {
             console.log(res.msg);
             if (res.msg === 'success') {
-                fetch(backen_url+'/start_washing',{
-                    method: 'POST',
-                    cors: '*cors',
-                    body: washingNow,
-                    headers:{
-                        'Content-Type': 'application/json'
-                    }
-                }).then(res => res.json())
-                  .then(res => {
-                      console.log(res);
-                      localStorage.setItem('wallet', new_amount);
-                    })
-                  .catch(error => console.log(error));
-                // console.log(washingNow);
-
-                swal("The Machine Started " , "You can go grab a coffee and come back when it's over", "success", {
-                    button: "Let iWash Wash",
-                  }).then(() => {
-                    history.push('/current-wash');
-                      });
+                console.log(washingNow);  
 
             } else {
                 swal("Something Went Wrong!", "Try again!", "error", {
