@@ -1,11 +1,12 @@
 import React, { useState, useContext } from 'react';
 import { UserContext } from '../../../UserContext';
-import swal from 'sweetalert';
+// import swal from 'sweetalert';
 import styles from './Timer.module.css';
 
 const Timer = (props) => {
 
     const {backen_url} = useContext(UserContext);
+    const {setCurrentWashDoneAlert} = useContext(UserContext);
     const [swalAlert, setSwalAlert] = useState(true);
 
     var date = new Date();
@@ -37,9 +38,11 @@ const Timer = (props) => {
           .then(res => console.log(res))
           .catch(error => console.log(error));
 
-        swal("The Machine is Done" , "You can now pick up your lanudry", "success", {
-            button: "Done",
-          })
+        // Moved to App.js
+        // swal("The Machine is Done" , "You can now pick up your lanudry", "success", {
+        //     button: "Done",
+        //   })
+        setCurrentWashDoneAlert(true);
         setSwalAlert(false);
     } else {
         howTimeLeft = '00';

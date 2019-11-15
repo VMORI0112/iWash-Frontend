@@ -2,6 +2,7 @@ import React, { Suspense, lazy, useState, useMemo, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import { UserContext } from './UserContext';
+import swal from 'sweetalert';
 
 import IwashNavBar from './js/components/Navbar/Navbar';
 import Footer from './js/components/Footer/Footer';
@@ -28,6 +29,7 @@ function App() {
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const [backen_url] = useState('http://iwash-backend.herokuapp.com');
   const [mapBoxPublicToken] = useState('pk.eyJ1Ijoic2FtaXJiZW56YWRhIiwiYSI6ImNrMnV1MG9vYjB6aW4zZXFjNGs1aHkxbmkifQ.rXgK6pv70xZsGs-NwOmodw');
+  const [currentWashDoneAlert, setCurrentWashDoneAlert] = useState(false);
 
   const [washersData, setWashersData] = useState();
   const [dryersData, setDryersData] = useState();
@@ -87,11 +89,14 @@ function App() {
   // },[])
   },[userId, userEmail, currentWashing, backen_url])
 
-  // setTimeout(() => {
-  //   alert('hello')
-  // },3000)
+  if (currentWashDoneAlert) {
+      swal("The Machine is Done" , "You can now pick up your lanudry", "success", {
+        button: "Done",
+      });
+      setCurrentWashDoneAlert(false);
+  }
 
-  const providerValue = useMemo(() => ({ user, setUser, Auth, setAuth, washersData, dryersData, valuesData, setValuesData, currentWashing, backen_url, windowHeight, mapBoxPublicToken }), [user, setUser, Auth, setAuth, washersData, dryersData, valuesData, setValuesData, currentWashing, backen_url, windowHeight, mapBoxPublicToken]);
+  const providerValue = useMemo(() => ({ user, setUser, Auth, setAuth, washersData, dryersData, valuesData, setValuesData, currentWashing, backen_url, windowHeight, mapBoxPublicToken, setCurrentWashDoneAlert }), [user, setUser, Auth, setAuth, washersData, dryersData, valuesData, setValuesData, currentWashing, backen_url, windowHeight, mapBoxPublicToken, setCurrentWashDoneAlert]);
 
   return (
     <Router>
