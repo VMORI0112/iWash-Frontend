@@ -87,6 +87,9 @@ function App() {
   // },[])
   },[userId, userEmail, currentWashing, backen_url])
 
+  // setTimeout(() => {
+  //   alert('hello')
+  // },3000)
 
   const providerValue = useMemo(() => ({ user, setUser, Auth, setAuth, washersData, dryersData, valuesData, setValuesData, currentWashing, backen_url, windowHeight, mapBoxPublicToken }), [user, setUser, Auth, setAuth, washersData, dryersData, valuesData, setValuesData, currentWashing, backen_url, windowHeight, mapBoxPublicToken]);
 
