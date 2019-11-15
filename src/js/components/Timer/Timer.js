@@ -37,9 +37,11 @@ const Timer = (props) => {
           .then(res => console.log(res))
           .catch(error => console.log(error));
 
-        swal("The Machine is Done" , "You can now pick up your lanudry", "success", {
-            button: "Done",
-          })
+        setTimeout(() => {
+            swal("The Machine is Done" , "You can now pick up your lanudry", "success", {
+                button: "Done",
+              })
+        },1000);
         setSwalAlert(false);
     } else {
         howTimeLeft = '00';
