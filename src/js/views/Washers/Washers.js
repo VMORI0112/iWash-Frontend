@@ -92,11 +92,11 @@ const Machine = (props) => {
                   .catch(error => console.log(error));
                 // console.log(washingNow);
 
-                // swal("The Machine Started " , "You can go grab a coffee and come back when it's over", "success", {
-                //     button: "Let iWash Wash",
-                //   }).then(() => {
-                //     history.push('/current-wash');
-                //       });
+                swal("The Machine Started " , "You can go grab a coffee and come back when it's over", "success", {
+                    button: "Let iWash Wash",
+                  }).then(() => {
+                    history.push('/current-wash');
+                      });
 
             } else {
                 swal("Something Went Wrong!", "Try again!", "error", {
@@ -110,13 +110,6 @@ const Machine = (props) => {
               })
             console.log('error: ', error)
         });
-        setTimeout(() => {
-            swal("The Machine Started " , "You can go grab a coffee and come back when it's over", "success", {
-                button: "Let iWash Wash",
-              }).then(() => {
-                history.push('/current-wash');
-                  });
-        },1000)
  }
 
     let WasherId = props.match.params.WID;
